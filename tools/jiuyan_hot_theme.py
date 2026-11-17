@@ -312,7 +312,7 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
         all_items, errors = [], []
         try:
             with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
-                futs = [ex.submit(theme_intel.fetch_channel, ch) for ch in channels]
+                futs = [ex.submit(theme_intel.fetch_channel, ch, t["name"]) for ch in channels]
                 for fut in concurrent.futures.as_completed(futs):
                     name, items, err = fut.result()
                     if err:
