@@ -99,12 +99,45 @@ def fetch_rss(channel):
     return out
 
 
-def fetch_channel(channel):
+def fetch_bridge(channel, theme=None):
+    """MCP/搜索桥接文件 → [{title, url, time, source}]。
+
+    通达信资讯/新华财经/题材专项网站都走这里。文件缺失/损坏返回空，不影响其他渠道。
+    若 channel 带 theme_key 或条目带 theme 字段，则按当前深挖题材过滤：
+    只返回属于该题材的条目（题材名互相包含也算命中），实现「每个题材专属信息源」。
+    """
+    p = ROOT / channel["file"]
+    if not p.exists():
+        return []
+    with open(p, encoding="utf-8") as f:
+        d = json.load(f)
+    out = []
+    for i, it in enumerate(d.get("items", []), 1):
+        title = it.get("title", "")
+        if not title:
+            continue
+        # 题材过滤：条目 theme 与当前题材互相包含即命中
+        item_theme = it.get("theme", "")
+        if theme and item_theme:
+            t = str(theme).lower()
+            itt = str(item_theme).lower()
+            if t not in itt and itt not in t and not any(
+                    seg and seg in itt for seg in re.split(r"[/／(（·、]", t) if len(seg) >= 2):
+                continue
+        out.append({"title": title, "url": it.get("url", ""), "rank": it.get("rank", i),
+                    "source": it.get("source", channel["name"]),
+                    "time": it.get("time") or it.get("pub", "")[:25] or ""})
+    return out
+
+
+def fetch_channel(channel, theme=None):
     try:
         if channel["type"] == "hot":
             return channel["name"], fetch_hot(channel), None
         elif channel["type"] == "rss":
             return channel["name"], fetch_rss(channel), None
+        elif channel["type"] == "bridge":
+            return channel["name"], fetch_bridge(channel, theme=theme), None
     except Exception as e:
         return channel["name"], [], f"{type(e).__name__}: {str(e)[:80]}"
     return channel["name"], [], "未知渠道类型"
