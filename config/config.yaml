@@ -127,6 +127,13 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
+    # 韭研公社（A股题材/异动逻辑社区）— 经 RSSHub 路由转 RSS
+    # 路由文档: https://docs.rsshub.app/routes/finance#jiuyangongshe
+    # 公共实例不稳定，若长期失效建议自托管 RSSHub 或换公共镜像
+    - id: "jiuyangongshe"
+      name: "韭研公社"
+      url: "https://rsshub.rssforever.com/jiuyangongshe/community"
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
