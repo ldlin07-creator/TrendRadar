@@ -1,38 +1,50 @@
 {
   "_说明": "题材类型 → 渠道路由表。type=自定义题材类型；channels 数组列出该类型要查的渠道 id。",
-  "_渠道类型": "hot=NewsNow热榜(按id) | rss=RSS订阅(按url)",
+  "_渠道类型": "hot=NewsNow热榜(按id) | rss=RSS订阅(按url) | bridge=MCP桥接文件(按file，本地任务写入)",
   "_用法": "python tools/theme_intel.py --theme 半导体 --type a_share；type 省略则查 all 全渠道",
+  "_政务说明": "部委官网RSS实测全部404(发改委/工信部/央行/财政部/商务部/国务院)，RSSHub政务路由503，无稳定公开源；政策维度改用 新华财经(新华社发布部委政策)+澎湃时政+财联社深度 覆盖",
 
   "channel_registry": {
     "cls-hot":       {"type": "hot", "name": "财联社热门", "id": "cls-hot"},
+    "cls-depth":     {"type": "hot", "name": "财联社深度·公告", "id": "cls-depth"},
+    "thepaper":      {"type": "hot", "name": "澎湃·时政", "id": "thepaper"},
     "wallstreetcn-hot": {"type": "hot", "name": "华尔街见闻", "id": "wallstreetcn-hot"},
     "weibo":         {"type": "hot", "name": "微博热搜", "id": "weibo"},
     "zhihu":         {"type": "hot", "name": "知乎热榜", "id": "zhihu"},
     "toutiao":       {"type": "hot", "name": "今日头条", "id": "toutiao"},
     "jiuyangongshe": {"type": "rss", "name": "韭研公社", "url": "https://rsshub.rssforever.com/jiuyangongshe/community"},
+    "leiphone":      {"type": "rss", "name": "雷锋网·AI科技", "url": "https://www.leiphone.com/feed"},
+    "qbitai":        {"type": "rss", "name": "量子位·AI", "url": "https://www.qbitai.com/feed"},
+    "huxiu":         {"type": "rss", "name": "虎嗅·商业财经", "url": "https://rsshub.rssforever.com/huxiu/moment"},
     "hacker-news":   {"type": "rss", "name": "Hacker News", "url": "https://hnrss.org/frontpage"},
-    "yahoo-finance": {"type": "rss", "name": "雅虎财经", "url": "https://finance.yahoo.com/news/rssindex"}
+    "yahoo-finance": {"type": "rss", "name": "雅虎财经", "url": "https://finance.yahoo.com/news/rssindex"},
+    "tdx-news":      {"type": "bridge", "name": "通达信资讯", "file": "config/tdx_news.json"},
+    "xinhua-hot":    {"type": "bridge", "name": "新华财经要闻", "file": "config/xinhua_hot.json"},
+    "theme-sites":   {"type": "bridge", "name": "题材专项网站(行业+公司)", "file": "config/theme_sites.json"}
   },
 
   "routes": {
     "a_share": {
       "name": "A股题材/概念/个股",
-      "channels": ["jiuyangongshe", "cls-hot", "wallstreetcn-hot", "weibo", "toutiao"],
+      "channels": ["jiuyangongshe", "cls-hot", "cls-depth", "wallstreetcn-hot", "thepaper", "toutiao",
+                   "tdx-news", "xinhua-hot", "theme-sites", "huxiu"],
       "keywords_expand": {"半导体": ["芯片", "光刻", "国产替代", "晶圆", "存储"], "算力": ["英伟达", "国产算力", "AI芯片", "服务器"]}
     },
     "tech": {
       "name": "科技/AI/互联网",
-      "channels": ["hacker-news", "zhihu", "wallstreetcn-hot", "cls-hot"],
+      "channels": ["leiphone", "qbitai", "hacker-news", "zhihu", "wallstreetcn-hot", "cls-hot", "tdx-news", "theme-sites"],
       "keywords_expand": {}
     },
     "macro": {
       "name": "宏观/政策/国际市场",
-      "channels": ["wallstreetcn-hot", "cls-hot", "yahoo-finance"],
+      "channels": ["xinhua-hot", "thepaper", "cls-depth", "wallstreetcn-hot", "huxiu", "theme-sites", "yahoo-finance"],
       "keywords_expand": {}
     },
     "all": {
       "name": "全渠道（默认）",
-      "channels": ["jiuyangongshe", "cls-hot", "wallstreetcn-hot", "weibo", "zhihu", "toutiao", "hacker-news", "yahoo-finance"],
+      "channels": ["jiuyangongshe", "cls-hot", "cls-depth", "wallstreetcn-hot", "thepaper", "weibo", "zhihu",
+                   "toutiao", "hacker-news", "yahoo-finance", "leiphone", "qbitai", "huxiu",
+                   "tdx-news", "xinhua-hot", "theme-sites"],
       "keywords_expand": {}
     }
   }
