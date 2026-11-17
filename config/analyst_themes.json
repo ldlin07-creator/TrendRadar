@@ -3,7 +3,7 @@
   "_维护": "由 bridge_workbench_themes.py 从 ResearchConsole 工作台题材矩阵自动生成，勿手工大改。watchlist 里的题材不参与深挖，仅跨轮复查防漏。",
   "_方法论": "源=工作台七字段题材矩阵；括号内细分拆独立词防嵌套遗漏；退潮/低动量题材进观察清单不丢弃。",
   "_来源文件": "D:\\ResearchConsole\\work\\analysis-20261117.json",
-  "updated_at": "2026-11-18 01:18",
+  "updated_at": "2026-11-18 01:20",
   "source": "工作台题材分析师 | target=2026-11-17 | generated=2026-11-17T21:15:00+08:00",
   "themes": [
     {
