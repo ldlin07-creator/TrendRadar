@@ -1,0 +1,58 @@
+{
+  "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
+  "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
+  "updated_at": "2026-11-18 02:06",
+  "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
+  "items": [
+    {
+      "theme": "半导体材料/设备国产替代链",
+      "company": "",
+      "kind": "industry",
+      "source": "SEMI大半导体产业网",
+      "site": "https://www.semi.org.cn",
+      "title": "SEMI与Linx联合发布《晶圆制造材料季度报告》：先进光刻胶占市场销售额80%以上",
+      "url": "https://www.semi.org.cn/site/semi/article/09e8fff68514461abce67ca187155e8e.html",
+      "time": ""
+    },
+    {
+      "theme": "半导体材料/设备国产替代链",
+      "company": "",
+      "kind": "industry",
+      "source": "SEMI大半导体产业网",
+      "site": "https://www.semi.org.cn",
+      "title": "SEMI：2025年全球半导体材料市场营收达732亿美元 创历史新高",
+      "url": "https://www.semi.org/index.php/zh/node/172076",
+      "time": ""
+    },
+    {
+      "theme": "半导体材料/设备国产替代链",
+      "company": "有研新材 600206",
+      "kind": "company",
+      "source": "有研新材官网",
+      "site": "http://www.griam.cn",
+      "title": "有研新材：高纯金属溅射靶材 / 蒸发镀膜材料 / 红外光学材料",
+      "url": "http://www.griam.cn",
+      "time": ""
+    },
+    {
+      "theme": "靶材",
+      "company": "有研新材 600206",
+      "kind": "company",
+      "source": "有研新材官网",
+      "site": "http://www.griam.cn",
+      "title": "有研新材 高纯金属溅射靶材产品与投资者关系",
+      "url": "http://www.griam.cn",
+      "time": ""
+    },
+    {
+      "theme": "贵金属/有色资源",
+      "company": "有研新材 600206",
+      "kind": "company",
+      "source": "有研新材官网",
+      "site": "http://www.griam.cn",
+      "title": "有研新材 稀土化合物材料 / 贵金属封装互联材料",
+      "url": "http://www.griam.cn",
+      "time": ""
+    }
+  ]
+}
