@@ -11,14 +11,24 @@
 用法：
   python tools/jiuyan_hot_theme.py
   python tools/jiuyan_hot_theme.py --json out.json --report out.html
+  python tools/jiuyan_hot_theme.py --push          # 推送到已配置的渠道（读环境变量）
+
+推送渠道（环境变量，与 TrendRadar 的 GitHub Secrets 对齐）：
+  WEWORK_WEBHOOK_URL   企业微信群机器人 webhook
+  GENERIC_WEBHOOK_URL  通用 webhook（钉钉/飞书/自建，自动识别格式）
+  NTFY_SERVER_URL + NTFY_TOPIC   ntfy（最简单，手机装 ntfy app 订阅 topic 即可）
+  可同时配多个，每个渠道独立推送。推送失败不影响其他渠道。
 """
 
 import argparse
 import concurrent.futures
 import html as html_mod
 import json
+import base64
+import os
 import re
 import ssl
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
@@ -225,10 +235,95 @@ ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{col
         f.write(doc)
 
 
+def build_markdown(data):
+    """把分析结果转成推送用的 Markdown 文本"""
+    lines = [f"## 韭研公社 · 24h 题材热度上升榜", ""]
+    lines.append(f"> {data['generated_at']} ｜ 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条")
+    lines.append("")
+    if not data["top"]:
+        lines.append("最近24小时未识别到明显题材聚集。")
+        return "\n".join(lines)
+    for i, t in enumerate(data["top"], 1):
+        delta = ""
+        if t["hist_delta"] is not None:
+            sign = "+" if t["hist_delta"] >= 0 else ""
+            delta = f"（较上次 {sign}{t['hist_delta']}）"
+        lines.append(f"**{i}. {t['theme']}** — 上升分 {t['rise']} · 近6h {t['hot']} 条{delta}")
+        for d in t["discussion"][:4]:
+            title = d["title"].replace("*", "＊")
+            tm = f"[{d['time']}] " if d["time"] else ""
+            if d.get("url"):
+                lines.append(f"  - {tm}[{title}]({d['url']})")
+            else:
+                lines.append(f"  - {tm}{title}")
+        lines.append("")
+    lines.append("— 游资视角题材热度信号，非投资建议")
+    return "\n".join(lines)
+
+
+def post_json(url, payload):
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(url, data=body,
+                                 headers={"Content-Type": "application/json", "User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
+        return r.status, r.read().decode("utf-8", "ignore")[:200]
+
+
+def push_all(data):
+    """按已配置的环境变量推送到各渠道，返回 {渠道: 成功/失败信息}"""
+    text = build_markdown(data)
+    result = {}
+
+    # 企业微信群机器人
+    ww = os.environ.get("WEWORK_WEBHOOK_URL", "").strip()
+    if ww:
+        try:
+            post_json(ww, {"msgtype": "markdown", "markdown": {"content": text}})
+            result["wework"] = "ok"
+        except Exception as e:
+            result["wework"] = f"FAIL {type(e).__name__}: {str(e)[:60]}"
+
+    # 通用 webhook：按 URL 猜测平台格式
+    gw = os.environ.get("GENERIC_WEBHOOK_URL", "").strip()
+    if gw:
+        try:
+            if "dingtalk" in gw:
+                payload = {"msgtype": "markdown", "markdown": {"title": "韭研题材热度", "text": text}}
+            elif "feishu" in gw or "larksuite" in gw:
+                payload = {"msg_type": "text", "content": {"text": text}}
+            else:
+                payload = {"title": "韭研题材热度", "content": text, "text": text}
+            post_json(gw, payload)
+            result["generic_webhook"] = "ok"
+        except Exception as e:
+            result["generic_webhook"] = f"FAIL {type(e).__name__}: {str(e)[:60]}"
+
+    # ntfy：最简单，手机装 app 订阅 topic
+    ntfy_server = os.environ.get("NTFY_SERVER_URL", "https://ntfy.sh").strip()
+    ntfy_topic = os.environ.get("NTFY_TOPIC", "").strip()
+    if ntfy_topic:
+        try:
+            url = f"{ntfy_server.rstrip('/')}/{urllib.parse.quote(ntfy_topic)}"
+            title_enc = "=?utf-8?b?" + base64.b64encode("韭研题材热度上升榜".encode("utf-8")).decode() + "?="
+            req = urllib.request.Request(
+                url, data=text.encode("utf-8"),
+                headers={"Title": title_enc,
+                         "Content-Type": "text/plain; charset=utf-8", "User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=20, context=_SSL) as r:
+                result["ntfy"] = f"ok({r.status})"
+        except Exception as e:
+            result["ntfy"] = f"FAIL {type(e).__name__}: {str(e)[:60]}"
+
+    if not result:
+        return {"_warn": "未配置任何推送渠道（需设置 WEWORK_WEBHOOK_URL / GENERIC_WEBHOOK_URL / NTFY_TOPIC）"}
+    return result
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", default="", help="结构化结果输出路径")
     ap.add_argument("--report", default="", help="HTML 报告输出路径")
+    ap.add_argument("--push", action="store_true", help="推送到环境变量配置的渠道")
     a = ap.parse_args()
 
     globals()["_last_snap"] = load_last_snapshot()
@@ -251,6 +346,12 @@ def main():
     rp = Path(a.report) if a.report else ROOT / f"韭研题材热度-{datetime.now(CST).strftime('%Y%m%d_%H%M')}.html"
     write_report(rp, data)
     print(f"[报告] {rp}")
+
+    if a.push:
+        print("\n[推送] 开始推送...")
+        res = push_all(data)
+        for ch, status in res.items():
+            print(f"  {ch}: {status}")
 
 
 if __name__ == "__main__":

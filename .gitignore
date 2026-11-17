@@ -1,5 +1,6 @@
 # 运行期生成的数据
 output/news/*.db
+output/jiuyan_heat/
 
 # Python 缓存
 __pycache__/
