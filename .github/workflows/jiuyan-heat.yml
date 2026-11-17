@@ -1,12 +1,14 @@
 name: 韭研题材热度推送
 
-# 北京时间 9:00 / 12:00 / 14:00 / 19:00 推送韭研公社 24h 热度上升最快题材
-# 发现热点后自动深挖：韭研 TOP3 + 题材分析师清单(config/analyst_themes.json)，详情一并推送
+# 周一到周五，北京时间 9:00-19:00 每小时跑一次（云端 GitHub Actions，不依赖本地电脑开机）
+# 覆盖 A 股交易时段与盘后；半夜社区无讨论且不发邮件，故不安排。
+# 抓取韭研公社 24h 热度上升最快题材，发现热点后自动深挖：
+# 韭研 TOP3 + 题材分析师清单(config/analyst_themes.json，由本地桥接任务推送到仓库)，详情一并推送
 # 推送渠道：邮件(HTML报告) / 企业微信 / 通用webhook / ntfy，取已配置的 Secrets
-# GitHub Actions cron 用 UTC：北京 = UTC+8，故 1/4/6/11 UTC 对应上述北京时间
+# GitHub Actions cron 用 UTC：北京 = UTC+8，故 UTC 1-11 点 = 北京 9-19 点；1-5 = 周一到周五
 on:
   schedule:
-    - cron: "0 1,4,6,11 * * *"
+    - cron: "0 1-11 * * 1-5"
   workflow_dispatch:
 
 concurrency:
