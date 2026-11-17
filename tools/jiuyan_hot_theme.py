@@ -36,13 +36,17 @@ import json
 import base64
 import os
 import re
+import smtplib
 import ssl
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
-from email.utils import parsedate_to_datetime
+from email.header import Header
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.utils import parsedate_to_datetime, formataddr, formatdate, make_msgid
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -55,6 +59,23 @@ MIRRORS = [
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36"
 CST = timezone(timedelta(hours=8))
 SNAPSHOT_DIR = ROOT / "output" / "jiuyan_heat"
+
+# 常见邮箱 SMTP 配置：domain -> (server, port, use_ssl)
+# use_ssl=True 用 SMTP_SSL(465)；False 用 STARTTLS(587)
+SMTP_CONFIGS = {
+    "qq.com": ("smtp.qq.com", 465, True),
+    "foxmail.com": ("smtp.qq.com", 465, True),
+    "163.com": ("smtp.163.com", 465, True),
+    "126.com": ("smtp.126.com", 465, True),
+    "gmail.com": ("smtp.gmail.com", 587, False),
+    "outlook.com": ("smtp-mail.outlook.com", 587, False),
+    "hotmail.com": ("smtp-mail.outlook.com", 587, False),
+    "live.com": ("smtp-mail.outlook.com", 587, False),
+    "sina.com": ("smtp.sina.com", 465, True),
+    "sohu.com": ("smtp.sohu.com", 465, True),
+    "icloud.com": ("smtp.mail.me.com", 587, False),
+    "139.com": ("smtp.139.com", 465, True),
+}
 
 _SSL = ssl.create_default_context()
 _SSL.check_hostname = False
@@ -222,9 +243,54 @@ def split_keywords(theme_name, expand):
     return out
 
 
-def deep_dive(top, top_n=3, per_theme=5):
-    """对 TOP N 热点题材，复用 theme_intel 的抓取+匹配做全渠道深挖。
-    返回 [{rank, theme, keyword, hits:[...], errors}]，单个题材失败不影响其他。
+def load_analyst_themes():
+    """读题材分析师清单 config/analyst_themes.json，返回启用中的题材任务列表。"""
+    cfg_path = ROOT / "config" / "analyst_themes.json"
+    if not cfg_path.exists():
+        return []
+    try:
+        with open(cfg_path, encoding="utf-8") as f:
+            cfg = json.load(f)
+        tasks = []
+        for t in cfg.get("themes", []):
+            if t.get("enabled", True) and t.get("name"):
+                tasks.append({"name": t["name"], "type": t.get("type", "a_share"),
+                              "source": "题材分析师", "reason": t.get("reason", ""),
+                              "updated_at": cfg.get("updated_at", ""),
+                              "rise": None, "hot": None})
+        return tasks
+    except Exception as e:
+        print(f"[深挖] 读取分析师题材清单失败: {type(e).__name__}: {str(e)[:60]}")
+        return []
+
+
+def build_dive_tasks(top, top_n=3, use_analyst=True):
+    """合并两路深挖题材：韭研热度 TOP N + 题材分析师清单。按归一化关键词去重。"""
+    tasks = []
+    # 第一路：韭研自动发现的热点
+    for t in top[:top_n]:
+        tasks.append({"name": t["theme"], "type": "a_share", "source": "韭研热点",
+                      "reason": f"近6h {t['hot']} 条 / 上升分 {t['rise']}",
+                      "rise": t["rise"], "hot": t["hot"]})
+    # 第二路：题材分析师给定题材
+    if use_analyst:
+        tasks.extend(load_analyst_themes())
+    # 去重：按核心词（第一段）判重，韭研热点优先保留
+    seen, uniq = set(), []
+    for t in tasks:
+        key = re.split(r"[/／(（·、]", t["name"], maxsplit=1)[0].strip().lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        uniq.append(t)
+    print(f"[深挖] 题材合并：韭研TOP{len(top[:top_n])} + 分析师{len(load_analyst_themes() if use_analyst else [])} "
+          f"→ 去重后 {len(uniq)} 个")
+    return uniq
+
+
+def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
+    """对「韭研 TOP N + 分析师题材」做全渠道深挖。
+    返回 [{rank, theme, keyword, source, reason, hits:[...], errors}]，单个题材失败不影响其他。
     """
     try:
         import theme_intel
@@ -234,14 +300,15 @@ def deep_dive(top, top_n=3, per_theme=5):
 
     cfg = theme_intel.load_routes()
     registry = cfg["channel_registry"]
-    route = cfg["routes"].get("a_share") or cfg["routes"].get("all")
-    channels = [registry[c] for c in route["channels"] if c in registry]
-    channel_names = [c["name"] for c in channels]
+    tasks = build_dive_tasks(top, top_n, use_analyst)
 
     results = []
-    for rank, t in enumerate(top[:top_n], 1):
-        keywords = split_keywords(t["theme"], route.get("keywords_expand", {}))
-        print(f"\n[深挖 {rank}/{top_n}] {t['theme']} → 关键词 {'/'.join(keywords[:6])}")
+    for rank, t in enumerate(tasks, 1):
+        route = cfg["routes"].get(t["type"]) or cfg["routes"].get("a_share") or cfg["routes"].get("all")
+        channels = [registry[c] for c in route["channels"] if c in registry]
+        channel_names = [c["name"] for c in channels]
+        keywords = split_keywords(t["name"], route.get("keywords_expand", {}))
+        print(f"\n[深挖 {rank}/{len(tasks)}] [{t['source']}] {t['name']} → 关键词 {'/'.join(keywords[:6])}")
         all_items, errors = [], []
         try:
             with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
@@ -267,17 +334,20 @@ def deep_dive(top, top_n=3, per_theme=5):
                       "source": h.get("source", ""), "time": h.get("time", ""),
                       "matched": h.get("matched", "")} for h in uniq[:per_theme]]
             print(f"  抓取 {len(all_items)} 条 / 命中 {len(uniq)} 条，保留 {len(clean)} 条")
-            results.append({"rank": rank, "theme": t["theme"],
+            results.append({"rank": rank, "theme": t["name"],
                             "keyword": "/".join(keywords[:6]),
-                            "rise": t["rise"], "hot": t["hot"],
+                            "source": t["source"], "reason": t.get("reason", ""),
+                            "rise": t.get("rise"), "hot": t.get("hot"),
+                            "type": t["type"],
                             "total_fetched": len(all_items), "hits_total": len(uniq),
                             "channels": channel_names, "errors": errors, "hits": clean})
         except Exception as e:
-            print(f"[深挖] {t['theme']} 失败: {type(e).__name__}: {str(e)[:60]}")
-            results.append({"rank": rank, "theme": t["theme"],
+            print(f"[深挖] {t['name']} 失败: {type(e).__name__}: {str(e)[:60]}")
+            results.append({"rank": rank, "theme": t["name"],
                             "keyword": "/".join(keywords[:6]),
-                            "rise": t["rise"], "hot": t["hot"], "hits": [],
-                            "errors": [("深挖", f"{type(e).__name__}: {str(e)[:60]}")]})
+                            "source": t["source"], "reason": t.get("reason", ""),
+                            "rise": t.get("rise"), "hot": t.get("hot"), "type": t["type"],
+                            "hits": [], "errors": [("深挖", f"{type(e).__name__}: {str(e)[:60]}")]})
     return results
 
 
@@ -317,12 +387,17 @@ def write_report(path, data):
             errs = ""
             if r.get("errors"):
                 errs = '<div class="warn">抓取异常: ' + "; ".join(f"{esc(n)}({esc(e)})" for n, e in r["errors"]) + "</div>"
+            src = esc(r.get("source", ""))
+            badge_cls = "analyst" if r.get("source") == "题材分析师" else "hot"
+            src_badge = f'<span class="badge {badge_cls}">{src}</span>'
+            reason = f'<div class="reason">{esc(r.get("reason", ""))}</div>' if r.get("reason") else ""
+            rise_txt = f' · 上升分 {r["rise"]}' if r.get("rise") is not None else ""
             dsecs.append(f"""<div class="theme">
-<div class="th"><span class="num dives">{r['rank']}</span>{esc(r['theme'])}</div>
-<div class="meta">关键词「{esc(r['keyword'])}」· 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条 · 上升分 {r['rise']}</div>
+<div class="th"><span class="num dives">{r['rank']}</span>{esc(r['theme'])}{src_badge}</div>
+{reason}<div class="meta">关键词「{esc(r['keyword'])}」· 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条{rise_txt}</div>
 {errs}<ul>{hit_list}</ul></div>""")
         deep_html = f"""<div class="card"><h2>🔥 热点深挖 · 全渠道详情</h2>
-<sub>对热度上升最快的 TOP{len(dd)} 题材自动检索，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
+<sub>韭研热点 + 题材分析师清单，共 {len(dd)} 个题材自动检索，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
 {''.join(dsecs)}</div>"""
 
     doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -334,6 +409,9 @@ h1{{font-size:21px;margin:0 0 4px}}h2{{font-size:14px;margin:0 0 12px;color:#444
 .meta{{color:#777;font-size:12px;margin:6px 0}}.theme{{padding:14px 0;border-top:1px solid #eee}}.theme:first-child{{border-top:0}}
 .th{{font-size:15px;font-weight:500;display:flex;align-items:center;gap:9px}}.num{{background:#c0392b;color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px}}
 .num.dives{{background:#2b5fa8}}
+.badge{{font-size:10px;font-weight:400;border-radius:4px;padding:2px 7px;margin-left:2px}}
+.badge.hot{{background:#fdece8;color:#c0392b}}.badge.analyst{{background:#eaf1fb;color:#2b5fa8}}
+.reason{{color:#888;font-size:11px;margin:5px 0 2px;line-height:1.5}}
 .delta{{color:#999;font-size:11px;font-weight:400}}
 .bar{{height:5px;background:#f0f0f0;border-radius:3px;margin:9px 0 5px}}.bar span{{display:block;height:100%;background:#c0392b;border-radius:3px}}
 ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{color:#2b5fa8;text-decoration:none}}a:hover{{text-decoration:underline}}
@@ -384,7 +462,9 @@ def build_markdown(data):
         lines.append("### 🔍 热点深挖 · 全渠道详情")
         for r in dd:
             lines.append("")
-            lines.append(f"**{r['rank']}. {r['theme']}** — 关键词「{r['keyword']}」，"
+            src = r.get("source", "")
+            tag = "【分析师】" if src == "题材分析师" else "【韭研热点】"
+            lines.append(f"**{r['rank']}. {tag}{r['theme']}** — 关键词「{r['keyword']}」，"
                          f"全渠道命中 {r.get('hits_total', len(r['hits']))} 条")
             for h in r["hits"][:4]:
                 title = h["title"].replace("*", "＊")
@@ -398,6 +478,72 @@ def build_markdown(data):
     return "\n".join(lines)
 
 
+def send_email(html_path, data):
+    """用 SMTP 发送 HTML 报告到邮箱。凭证读环境变量：
+    EMAIL_FROM / EMAIL_PASSWORD / EMAIL_TO（多个收件人逗号分隔）
+    可选 EMAIL_SMTP_SERVER / EMAIL_SMTP_PORT 覆盖自动识别。
+    返回 (ok, message)。纯标准库实现。
+    """
+    sender = os.environ.get("EMAIL_FROM", "").strip()
+    password = os.environ.get("EMAIL_PASSWORD", "").strip()
+    to_raw = os.environ.get("EMAIL_TO", "").strip()
+    if not (sender and password and to_raw):
+        return False, "未配置邮箱（需 EMAIL_FROM / EMAIL_PASSWORD / EMAIL_TO）"
+
+    # 读取 HTML 正文
+    try:
+        with open(html_path, "r", encoding="utf-8") as f:
+            html_body = f.read()
+    except Exception as e:
+        return False, f"读取报告失败: {type(e).__name__}: {str(e)[:50]}"
+
+    # 确定 SMTP 服务器/端口/加密
+    custom_server = os.environ.get("EMAIL_SMTP_SERVER", "").strip()
+    custom_port = os.environ.get("EMAIL_SMTP_PORT", "").strip()
+    domain = sender.split("@")[-1].lower()
+    if custom_server and custom_port:
+        server, port = custom_server, int(custom_port)
+        use_ssl = port == 465
+    elif domain in SMTP_CONFIGS:
+        server, port, use_ssl = SMTP_CONFIGS[domain]
+    else:
+        server, port, use_ssl = f"smtp.{domain}", 465, True
+
+    recipients = [a.strip() for a in to_raw.split(",") if a.strip()]
+    msg = MIMEMultipart("alternative")
+    msg["From"] = formataddr(("韭研题材热度", sender))
+    msg["To"] = ", ".join(recipients)
+    subject = f"韭研题材热度 · {data['generated_at']}"
+    msg["Subject"] = Header(subject, "utf-8")
+    msg["MIME-Version"] = "1.0"
+    msg["Date"] = formatdate(localtime=True)
+    msg["Message-ID"] = make_msgid()
+
+    top_line = " / ".join(f"{t['theme']}(+{t['rise']})" for t in data.get("top", [])[:3])
+    text_part = MIMEText(f"韭研题材热度上升榜\n{data['generated_at']}\n\n"
+                         f"TOP题材: {top_line or '无'}\n\n请用支持HTML的邮件客户端查看完整报告。",
+                         "plain", "utf-8")
+    msg.attach(text_part)
+    msg.attach(MIMEText(html_body, "html", "utf-8"))
+
+    try:
+        if use_ssl:
+            smtp = smtplib.SMTP_SSL(server, port, timeout=30, context=ssl.create_default_context())
+        else:
+            smtp = smtplib.SMTP(server, port, timeout=30)
+            smtp.ehlo()
+            smtp.starttls(context=ssl.create_default_context())
+            smtp.ehlo()
+        smtp.login(sender, password)
+        smtp.send_message(msg)
+        smtp.quit()
+        return True, f"ok -> {to_raw}"
+    except smtplib.SMTPAuthenticationError:
+        return False, "认证失败：检查邮箱/授权码（多数邮箱需用授权码而非登录密码）"
+    except Exception as e:
+        return False, f"{type(e).__name__}: {str(e)[:70]}"
+
+
 def post_json(url, payload):
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(url, data=body,
@@ -406,7 +552,7 @@ def post_json(url, payload):
         return r.status, r.read().decode("utf-8", "ignore")[:200]
 
 
-def push_all(data):
+def push_all(data, html_path=""):
     """按已配置的环境变量推送到各渠道，返回 {渠道: 成功/失败信息}"""
     text = build_markdown(data)
     result = {}
@@ -451,8 +597,14 @@ def push_all(data):
         except Exception as e:
             result["ntfy"] = f"FAIL {type(e).__name__}: {str(e)[:60]}"
 
+    # 邮件：发完整 HTML 报告
+    email_from = os.environ.get("EMAIL_FROM", "").strip()
+    if email_from:
+        ok, msg = send_email(html_path, data)
+        result["email"] = msg if ok else f"FAIL {msg}"
+
     if not result:
-        return {"_warn": "未配置任何推送渠道（需设置 WEWORK_WEBHOOK_URL / GENERIC_WEBHOOK_URL / NTFY_TOPIC）"}
+        return {"_warn": "未配置任何推送渠道（需设置 EMAIL_FROM+EMAIL_PASSWORD+EMAIL_TO / WEWORK_WEBHOOK_URL / GENERIC_WEBHOOK_URL / NTFY_TOPIC）"}
     return result
 
 
@@ -461,9 +613,10 @@ def main():
     ap.add_argument("--json", default="", help="结构化结果输出路径")
     ap.add_argument("--report", default="", help="HTML 报告输出路径")
     ap.add_argument("--push", action="store_true", help="推送到环境变量配置的渠道")
-    ap.add_argument("--deep-dive", action="store_true", help="发现热点后自动对 TOP 题材做全渠道深挖")
-    ap.add_argument("--deep-top", type=int, default=3, help="深挖几个 TOP 题材（默认3）")
+    ap.add_argument("--deep-dive", action="store_true", help="发现热点后自动对 TOP 题材+分析师题材做全渠道深挖")
+    ap.add_argument("--deep-top", type=int, default=3, help="深挖几个韭研 TOP 题材（默认3）")
     ap.add_argument("--deep-per", type=int, default=5, help="每个题材保留几条命中（默认5）")
+    ap.add_argument("--no-analyst", action="store_true", help="深挖时不含题材分析师清单（默认包含）")
     a = ap.parse_args()
 
     globals()["_last_snap"] = load_last_snapshot()
@@ -472,7 +625,8 @@ def main():
 
     # 发现热点 → 自动深挖
     if a.deep_dive:
-        data["deep_dive"] = deep_dive(data["top"], top_n=a.deep_top, per_theme=a.deep_per)
+        data["deep_dive"] = deep_dive(data["top"], top_n=a.deep_top, per_theme=a.deep_per,
+                                      use_analyst=not a.no_analyst)
 
     print(f"=== 韭研公社 24h 题材热度 · {data['generated_at']} ===")
     print(f"抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 / 无时间 {data['no_time']} 条")
@@ -500,7 +654,7 @@ def main():
 
     if a.push:
         print("\n[推送] 开始推送...")
-        res = push_all(data)
+        res = push_all(data, html_path=str(rp))
         for ch, status in res.items():
             print(f"  {ch}: {status}")
 

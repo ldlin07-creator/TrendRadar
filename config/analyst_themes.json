@@ -1,0 +1,13 @@
+{
+  "_说明": "题材分析师给出的题材清单。jiuyan_hot_theme.py 深挖时会把这里的题材与韭研热点 TOP N 合并去重后一起全渠道检索。",
+  "_维护": "分析师产出新题材时更新 themes 数组即可，无需改代码。enabled=false 可临时停用某题材。",
+  "_字段": "name=题材词(必填) | type=路由类型(默认a_share,见theme_routes.json) | reason=入选理由 | enabled=是否启用",
+  "updated_at": "2026-11-18",
+  "source": "A股题材热点报告-20261118：半导体材料/设备国产替代主线",
+  "themes": [
+    {"name": "靶材", "type": "a_share", "reason": "当日概念涨幅榜首+4.77%，3nm批量供货、订单到2027年产业催化", "enabled": true},
+    {"name": "光刻胶", "type": "a_share", "reason": "半导体材料国产替代主线，概念涨幅榜前列", "enabled": true},
+    {"name": "光刻机", "type": "a_share", "reason": "国产化率破90%产业催化，概念涨幅榜前列", "enabled": true},
+    {"name": "第四代半导体", "type": "a_share", "reason": "半导体材料/设备主线，概念涨幅榜前列", "enabled": true}
+  ]
+}
