@@ -1,13 +1,20 @@
 name: Check In
 
-# ✅ 签到续期：运行此 workflow 可重置 7 天计时，保持 "Get Hot News" 正常运行
-# ✅ Renewal: Run this workflow to reset the 7-day timer and keep "Get Hot News" active
+# ✅ 自动签到续期（每 5 天）：重置 7 天计时，并确保 "Get Hot News" 处于启用状态
+# ✅ Auto check-in (every 5 days): resets the 7-day timer and keeps "Get Hot News" enabled
 #
-# 📌 操作方法 / How to use:
-#   1. 点击 "Run workflow" 按钮 / Click "Run workflow" button
-#   2. 每 7 天内至少运行一次 / Run at least once every 7 days
+# 📌 机制 / How it works:
+#   1. 删除本仓库所有 workflow 运行记录 → 清空首次运行时间 → 7 天倒计时归零
+#   2. 显式启用 crawler.yml → 即使之前因过期被 disable 也能自动恢复
+#   3. 每 5 天自动运行一次，在 7 天窗口内留 2 天缓冲
+#   Delete all runs (reset timer) + re-enable crawler.yml, auto-runs every 5 days.
+#
+# 📌 仍可手动触发 / Manual trigger still available: Actions → Check In → Run workflow
 
 on:
+  schedule:
+    # UTC 03:17 ≈ 北京时间 11:17；每 5 天一次（每月 1/6/11/16/21/26 号）
+    - cron: "17 3 */5 * *"
   workflow_dispatch:
 
 jobs:
@@ -26,3 +33,9 @@ jobs:
           keep_minimum_runs: 0
           delete_workflow_by_state_pattern: "ALL"
           delete_run_by_conclusion_pattern: "ALL"
+
+      - name: Ensure crawler workflow is enabled（确保采集任务未被停用）
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow enable crawler.yml || echo "crawler.yml already enabled or nothing to do"
