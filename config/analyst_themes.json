@@ -1,13 +1,21 @@
 {
   "_说明": "题材分析师给出的题材清单。jiuyan_hot_theme.py 深挖时会把这里的题材与韭研热点 TOP N 合并去重后一起全渠道检索。",
-  "_维护": "分析师产出新题材时更新 themes 数组即可，无需改代码。enabled=false 可临时停用某题材。",
-  "_字段": "name=题材词(必填) | type=路由类型(默认a_share,见theme_routes.json) | reason=入选理由 | enabled=是否启用",
-  "updated_at": "2026-11-18",
-  "source": "A股题材热点报告-20261118：半导体材料/设备国产替代主线",
+  "_维护": "由 WorkBuddy 定时任务『题材分析师』每交易日盘后自动更新；也可手工改。enabled=false 临时停用。watchlist 里的题材不参与深挖，仅跨轮复查防漏。",
+  "_字段": "name=题材词(必填) | type=路由类型(默认a_share,见theme_routes.json) | reason=入选理由(含盘面证据) | enabled=是否启用 | source=识别来源(涨幅榜/资金流/概念拆分/独立方向)",
+  "_方法论": "盘面异动反向识别(不拿标签找票) + 多源交叉(涨幅/涨速/资金流) + 概念拆分(主线→细分) + 孤票进观察清单跨轮复查。数据源:NeoData 概念涨幅榜/涨速榜/概念主力资金。",
+  "updated_at": "2026-11-18 01:16",
+  "source": "题材分析师首轮(盘面异动三路交叉)·数据为11-17收盘",
   "themes": [
-    {"name": "靶材", "type": "a_share", "reason": "当日概念涨幅榜首+4.77%，3nm批量供货、订单到2027年产业催化", "enabled": true},
-    {"name": "光刻胶", "type": "a_share", "reason": "半导体材料国产替代主线，概念涨幅榜前列", "enabled": true},
-    {"name": "光刻机", "type": "a_share", "reason": "国产化率破90%产业催化，概念涨幅榜前列", "enabled": true},
-    {"name": "第四代半导体", "type": "a_share", "reason": "半导体材料/设备主线，概念涨幅榜前列", "enabled": true}
+    {"name": "靶材", "type": "a_share", "reason": "三路共振:概念涨幅榜首+4.77%、涨速榜首+0.44%、量比1.45;领涨有研新材+10.01%", "source": "涨幅榜+涨速榜", "enabled": true},
+    {"name": "光刻胶", "type": "a_share", "reason": "涨幅榜+2.71%,量比1.38;领涨联合化学+20.01%;半导体材料国产替代主线", "source": "涨幅榜", "enabled": true},
+    {"name": "光刻机", "type": "a_share", "reason": "涨幅榜+2.70%,量比1.35;与光刻胶同源共振", "source": "涨幅榜", "enabled": true},
+    {"name": "第四代半导体", "type": "a_share", "reason": "涨幅榜+2.36%;领涨南大光电+8.22%;半导体材料主线细分", "source": "涨幅榜+概念拆分", "enabled": true},
+    {"name": "先进封装", "type": "a_share", "reason": "概念主力净流入第2(+39.96万),涨股比88/184;半导体产业下游细分,资金先于涨幅异动", "source": "资金流+概念拆分", "enabled": true},
+    {"name": "中芯国际概念", "type": "a_share", "reason": "涨+1.54%,主力净流入第3(+36.08万),且20日主力净流入转正(+13.13万)——罕见中期资金转向信号", "source": "资金流", "enabled": true},
+    {"name": "有色(锡)", "type": "a_share", "reason": "涨幅榜+2.36%,独立于半导体主线的新方向,避免单线依赖;领涨华锡有色+6.21%", "source": "独立方向", "enabled": true}
+  ],
+  "watchlist": [
+    {"name": "汽车拆解", "reason": "涨速榜第4(+0.24%)但收盘-1.67%,盘中异动、收盘转弱;孤票信号,暂不进矩阵,下轮复查", "added_at": "2026-11-18"},
+    {"name": "地理信息", "reason": "涨速榜第5(+0.23%)但收盘-2.25%,盘中异动;华测导航+2.70%孤票,下轮复查", "added_at": "2026-11-18"}
   ]
 }
