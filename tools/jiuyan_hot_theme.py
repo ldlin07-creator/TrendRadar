@@ -354,6 +354,9 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
 def write_report(path, data):
     def esc(x):
         return html_mod.escape(str(x or ""))
+    # mirror 可能是单源URL(含斜杠)或多源描述文本，安全提取显示名
+    _mirror = str(data.get("mirror", ""))
+    _src_disp = _mirror.split("/")[2] if "/" in _mirror and len(_mirror.split("/")) > 2 else _mirror
     secs = []
     for idx, t in enumerate(data["top"], 1):
         disc = "".join(
@@ -420,7 +423,7 @@ ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{col
 .foot{{color:#aaa;font-size:11px;text-align:center;margin:16px 0}}
 </style></head><body><div class="wrap">
 <div class="card"><h1>韭研公社 · 24h 题材热度上升榜</h1>
-<sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(data['mirror'].split('/')[2])}</sub></div>
+<sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(_src_disp)}</sub></div>
 <div class="card"><h2>热度上升最快的题材 TOP{len(data['top'])}</h2>{body}</div>
 {deep_html}
 <div class="foot">题材词典匹配 + 分时段频次对比 + 全渠道深挖 · 仅供题材跟踪参考，非投资建议</div>
@@ -617,10 +620,22 @@ def main():
     ap.add_argument("--deep-top", type=int, default=3, help="深挖几个韭研 TOP 题材（默认3）")
     ap.add_argument("--deep-per", type=int, default=5, help="每个题材保留几条命中（默认5）")
     ap.add_argument("--no-analyst", action="store_true", help="深挖时不含题材分析师清单（默认包含）")
+    ap.add_argument("--multi-source", dest="multi_source", action="store_true", default=True,
+                    help="热点发现用多源探测器（韭研/华尔街见闻/渠道归纳/东财/新华财经，默认开启）")
+    ap.add_argument("--single-source", dest="multi_source", action="store_false",
+                    help="回退到原韭研单源 analyze()")
     a = ap.parse_args()
 
     globals()["_last_snap"] = load_last_snapshot()
-    data = analyze()
+    if a.multi_source:
+        try:
+            import multi_source_hot as mh
+            data = mh.analyze_multi(globals().get("_last_snap"))
+        except Exception as e:
+            print(f"[多源] 探测器异常，回退单源: {type(e).__name__}: {str(e)[:80]}")
+            data = analyze()
+    else:
+        data = analyze()
     save_snapshot(data.pop("_snapshot"))
 
     # 发现热点 → 自动深挖
