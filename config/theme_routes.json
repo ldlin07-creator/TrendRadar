@@ -1,0 +1,39 @@
+{
+  "_说明": "题材类型 → 渠道路由表。type=自定义题材类型；channels 数组列出该类型要查的渠道 id。",
+  "_渠道类型": "hot=NewsNow热榜(按id) | rss=RSS订阅(按url)",
+  "_用法": "python tools/theme_intel.py --theme 半导体 --type a_share；type 省略则查 all 全渠道",
+
+  "channel_registry": {
+    "cls-hot":       {"type": "hot", "name": "财联社热门", "id": "cls-hot"},
+    "wallstreetcn-hot": {"type": "hot", "name": "华尔街见闻", "id": "wallstreetcn-hot"},
+    "weibo":         {"type": "hot", "name": "微博热搜", "id": "weibo"},
+    "zhihu":         {"type": "hot", "name": "知乎热榜", "id": "zhihu"},
+    "toutiao":       {"type": "hot", "name": "今日头条", "id": "toutiao"},
+    "jiuyangongshe": {"type": "rss", "name": "韭研公社", "url": "https://rsshub.rssforever.com/jiuyangongshe/community"},
+    "hacker-news":   {"type": "rss", "name": "Hacker News", "url": "https://hnrss.org/frontpage"},
+    "yahoo-finance": {"type": "rss", "name": "雅虎财经", "url": "https://finance.yahoo.com/news/rssindex"}
+  },
+
+  "routes": {
+    "a_share": {
+      "name": "A股题材/概念/个股",
+      "channels": ["jiuyangongshe", "cls-hot", "wallstreetcn-hot", "weibo", "toutiao"],
+      "keywords_expand": {"半导体": ["芯片", "光刻", "国产替代", "晶圆", "存储"], "算力": ["英伟达", "国产算力", "AI芯片", "服务器"]}
+    },
+    "tech": {
+      "name": "科技/AI/互联网",
+      "channels": ["hacker-news", "zhihu", "wallstreetcn-hot", "cls-hot"],
+      "keywords_expand": {}
+    },
+    "macro": {
+      "name": "宏观/政策/国际市场",
+      "channels": ["wallstreetcn-hot", "cls-hot", "yahoo-finance"],
+      "keywords_expand": {}
+    },
+    "all": {
+      "name": "全渠道（默认）",
+      "channels": ["jiuyangongshe", "cls-hot", "wallstreetcn-hot", "weibo", "zhihu", "toutiao", "hacker-news", "yahoo-finance"],
+      "keywords_expand": {}
+    }
+  }
+}

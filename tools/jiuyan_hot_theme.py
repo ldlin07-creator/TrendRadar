@@ -1,0 +1,257 @@
+# coding=utf-8
+"""
+韭研公社 24 小时题材热度上升探测器 (jiuyan_hot_theme.py)
+
+不预设题材：抓韭研公社 RSS（多镜像容错）最近 24h 的讨论 → 按题材词典聚类 →
+用「最近时段 vs 较早时段」计算热度上升速度 → 输出上升最快的题材 + 相关讨论总结。
+同时落盘历史快照，后续运行可用真实快照差值判断趋势。
+
+纯标准库，零依赖。
+
+用法：
+  python tools/jiuyan_hot_theme.py
+  python tools/jiuyan_hot_theme.py --json out.json --report out.html
+"""
+
+import argparse
+import concurrent.futures
+import html as html_mod
+import json
+import re
+import ssl
+import urllib.request
+import xml.etree.ElementTree as ET
+from collections import Counter, defaultdict
+from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+MIRRORS = [
+    "https://rsshub.rssforever.com/jiuyangongshe/community",
+    "https://rsshub.app/jiuyangongshe/community",
+    "https://rsshub.privatered.site/jiuyangongshe/community",
+    "https://rsshub.rssforever.com/jiuyangongshe/community",
+]
+UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36"
+CST = timezone(timedelta(hours=8))
+SNAPSHOT_DIR = ROOT / "output" / "jiuyan_heat"
+
+_SSL = ssl.create_default_context()
+_SSL.check_hostname = False
+_SSL.verify_mode = ssl.CERT_NONE
+
+# 题材词典：题材名 → 命中关键词（标题包含任一词即归入该题材）
+THEME_DICT = {
+    "算力/AI芯片": ["算力", "英伟达", "GPU", "AI芯片", "昇腾", "国产算力", "服务器", "智算", "数据中心", "光模块", "CPO", "HBM", "寒武纪"],
+    "半导体/国产替代": ["半导体", "芯片", "光刻", "晶圆", "存储", "封测", "国产替代", "先进制程", "靶材", "光刻胶", "第三代半导体", "碳化硅"],
+    "机器人/具身智能": ["机器人", "人形机器人", "具身智能", "宇树", "智元", "减速器", "丝杠", "灵巧手", "特斯拉Optimus"],
+    "消费电子/端侧AI": ["消费电子", "端侧AI", "AI手机", "AI眼镜", "可穿戴", "折叠屏", "果链", "苹果", "华为", "Pb"],
+    "新能源/储能": ["光伏", "储能", "锂电", "固态电池", "钠电池", "风电", "逆变器", "特高压", "电网"],
+    "汽车/自动驾驶": ["自动驾驶", "智驾", "智能汽车", "比亚迪", "特斯拉", "FSD", "无人驾驶", "车企", "汽车"],
+    "医药/创新药": ["创新药", "医药", "CXO", "减肥药", "GLP", "生物医药", "疫苗", "中药", "医疗"],
+    "军工/航天": ["军工", "航天", "卫星", "商业航天", "火箭", "低空经济", "eVTOL", "无人机", "国防"],
+    "数据要素/信创": ["数据要素", "信创", "国产软件", "操作系统", "数据库", "国资云", "数据资产"],
+    "金融/券商": ["券商", "银行", "保险", "牛市", "A股", "指数", "IPO", "重组", "并购"],
+    "地产/基建": ["地产", "房地产", "基建", "城中村", "建材", "水泥"],
+    "资源/周期": ["黄金", "铜", "稀土", "有色", "煤炭", "石油", "化工", "磷", "氟"],
+    "政策/宏观": ["政策", "国常会", "央行", "降息", "降准", "财政", "关税", "证监会", "发改委", "BIS", "制裁"],
+}
+
+# 时段划分：最近 6h 为 hot，前 6-24h 为 baseline
+HOT_HOURS = 6
+WINDOW_HOURS = 24
+
+
+def http_get(url, timeout=15):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/rss+xml,application/xml,*/*"})
+    with urllib.request.urlopen(req, timeout=timeout, context=_SSL) as r:
+        return r.read()
+
+
+def fetch_rss():
+    """多镜像容错抓取，返回 (items, used_mirror)"""
+    last_err = ""
+    for url in MIRRORS:
+        try:
+            raw = http_get(url)
+            root = ET.fromstring(raw)
+            items = root.findall(".//item")
+            if not items:
+                raise ValueError("空 feed")
+            out = []
+            for it in items:
+                def txt(tag):
+                    el = it.find(tag)
+                    return el.text.strip() if el is not None and el.text else ""
+                title = txt("title")
+                pub_raw = txt("pubDate")
+                pub = None
+                if pub_raw:
+                    try:
+                        pub = parsedate_to_datetime(pub_raw)
+                        if pub.tzinfo is None:
+                            pub = pub.replace(tzinfo=timezone.utc)
+                        pub = pub.astimezone(CST)
+                    except Exception:
+                        pub = None
+                out.append({"title": title, "url": txt("link"),
+                            "pub": pub, "pub_str": pub.strftime("%m-%d %H:%M") if pub else ""})
+            return out, url
+        except Exception as e:
+            last_err = f"{type(e).__name__}: {str(e)[:60]}"
+            continue
+    raise RuntimeError(f"所有镜像均失败，最后错误: {last_err}")
+
+
+def classify(title):
+    """返回标题命中的题材列表"""
+    t = title.lower()
+    hit = []
+    for theme, kws in THEME_DICT.items():
+        if any(kw.lower() in t for kw in kws):
+            hit.append(theme)
+    return hit
+
+
+def load_last_snapshot():
+    if not SNAPSHOT_DIR.exists():
+        return None
+    files = sorted(SNAPSHOT_DIR.glob("snapshot_*.json"))
+    if not files:
+        return None
+    try:
+        with open(files[-1], encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def save_snapshot(snap):
+    SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+    ts = datetime.now(CST).strftime("%Y%m%d_%H%M")
+    with open(SNAPSHOT_DIR / f"snapshot_{ts}.json", "w", encoding="utf-8") as f:
+        json.dump(snap, f, ensure_ascii=False, indent=2)
+
+
+def analyze():
+    items, mirror = fetch_rss()
+    now = datetime.now(CST)
+    recent_24 = [i for i in items if i["pub"] and (now - i["pub"]).total_seconds() <= WINDOW_HOURS * 3600]
+    # 无日期的条目也纳入，但没有时间权重
+    no_time = [i for i in items if not i["pub"]]
+    pool = recent_24 + no_time
+
+    hot_counter, base_counter = Counter(), Counter()
+    theme_items = defaultdict(list)
+    for it in pool:
+        themes = classify(it["title"])
+        if not themes:
+            continue
+        age_h = (now - it["pub"]).total_seconds() / 3600 if it["pub"] else 99
+        bucket = hot_counter if age_h <= HOT_HOURS else base_counter
+        for th in themes:
+            bucket[th] += 1
+            theme_items[th].append(it)
+
+    # 热度上升分：近6h频次归一化 - 前段频次归一化；无历史时用时段差
+    scores = []
+    all_themes = set(hot_counter) | set(base_counter)
+    for th in all_themes:
+        hot = hot_counter[th]
+        base = base_counter[th]
+        base_rate = base / (WINDOW_HOURS - HOT_HOURS)  # 每小时
+        hot_rate = hot / HOT_HOURS
+        rise = hot_rate - base_rate
+        # 历史快照增量（若有）
+        hist_delta = None
+        snap = globals().get("_last_snap")
+        if snap and "counts" in snap:
+            prev = snap["counts"].get(th, 0)
+            hist_delta = (hot + base) - prev
+        scores.append({"theme": th, "hot": hot, "base": base, "rise": round(rise, 3),
+                       "total": hot + base, "hist_delta": hist_delta,
+                       "discussion": [{"title": i["title"], "url": i.get("url", ""), "time": i["pub_str"]}
+                                      for i in theme_items[th][:8]]})
+    scores.sort(key=lambda x: (x["rise"], x["total"]), reverse=True)
+
+    snap = {"ts": now.strftime("%Y-%m-%d %H:%M:%S"), "mirror": mirror,
+            "total_items": len(items), "counts": {t: hot_counter[t] + base_counter[t] for t in all_themes}}
+    return {"generated_at": now.strftime("%Y-%m-%d %H:%M:%S"), "mirror": mirror,
+            "total_fetched": len(items), "in_window": len(recent_24), "no_time": len(no_time),
+            "themes": scores, "top": scores[:5], "_snapshot": snap}
+
+
+def write_report(path, data):
+    def esc(x):
+        return html_mod.escape(str(x or ""))
+    secs = []
+    for idx, t in enumerate(data["top"], 1):
+        disc = "".join(
+            f'<li><a href="{esc(d["url"])}" target="_blank">{esc(d["title"])}</a>'
+            f'<span class="tm">{esc(d["time"])}</span></li>' for d in t["discussion"]
+        ) or "<li style='color:#999'>无</li>"
+        delta = ""
+        if t["hist_delta"] is not None:
+            sign = "+" if t["hist_delta"] >= 0 else ""
+            delta = f'<span class="delta">较上次 {sign}{t["hist_delta"]}</span>'
+        secs.append(f"""<div class="theme">
+<div class="th"><span class="num">{idx}</span>{esc(t['theme'])}{delta}</div>
+<div class="bar"><span style="width:{min(100, max(8, t['rise']*60+15))}%"></span></div>
+<div class="meta">近6h {t['hot']} 条 · 前段 {t['base']} 条 · 上升分 {t['rise']} · 合计 {t['total']} 条</div>
+<ul>{disc}</ul></div>""")
+    body = "\n".join(secs) if secs else "<div class='empty'>最近24小时未识别到明显题材聚集</div>"
+    doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>韭研题材热度 · {esc(data['generated_at'])}</title>
+<style>
+*{{box-sizing:border-box}}body{{margin:0;background:#f5f6f8;color:#1a1a1a;font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}}
+.wrap{{max-width:860px;margin:28px auto;padding:0 18px}}.card{{background:#fff;border:1px solid #e8e8ec;border-radius:12px;padding:22px;margin-bottom:16px}}
+h1{{font-size:21px;margin:0 0 4px}}h2{{font-size:14px;margin:0 0 12px;color:#444}}sub{{color:#999;font-size:12px}}
+.meta{{color:#777;font-size:12px;margin:6px 0}}.theme{{padding:14px 0;border-top:1px solid #eee}}.theme:first-child{{border-top:0}}
+.th{{font-size:15px;font-weight:500;display:flex;align-items:center;gap:9px}}.num{{background:#c0392b;color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px}}
+.delta{{color:#999;font-size:11px;font-weight:400}}
+.bar{{height:5px;background:#f0f0f0;border-radius:3px;margin:9px 0 5px}}.bar span{{display:block;height:100%;background:#c0392b;border-radius:3px}}
+ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{color:#2b5fa8;text-decoration:none}}a:hover{{text-decoration:underline}}
+.tm{{color:#aaa;font-size:11px;margin-left:8px}}.empty{{color:#999;text-align:center;padding:30px}}
+.foot{{color:#aaa;font-size:11px;text-align:center;margin:16px 0}}
+</style></head><body><div class="wrap">
+<div class="card"><h1>韭研公社 · 24h 题材热度上升榜</h1>
+<sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(data['mirror'].split('/')[2])}</sub></div>
+<div class="card"><h2>热度上升最快的题材 TOP{len(data['top'])}</h2>{body}</div>
+<div class="foot">题材词典匹配 + 分时段频次对比 · 仅供题材跟踪参考，非投资建议</div>
+</div></body></html>"""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(doc)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--json", default="", help="结构化结果输出路径")
+    ap.add_argument("--report", default="", help="HTML 报告输出路径")
+    a = ap.parse_args()
+
+    globals()["_last_snap"] = load_last_snapshot()
+    data = analyze()
+    save_snapshot(data.pop("_snapshot"))
+
+    print(f"=== 韭研公社 24h 题材热度 · {data['generated_at']} ===")
+    print(f"抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 / 无时间 {data['no_time']} 条")
+    print(f"源: {data['mirror']}\n")
+    for i, t in enumerate(data["top"], 1):
+        print(f"{i}. {t['theme']}  上升分={t['rise']}  近6h={t['hot']} 前段={t['base']} 合计={t['total']}")
+        for d in t["discussion"][:3]:
+            print(f"     - [{d['time']}] {d['title'][:58]}")
+
+    if a.json:
+        p = Path(a.json); p.parent.mkdir(parents=True, exist_ok=True)
+        with open(p, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        print(f"\n[JSON] {p}")
+    rp = Path(a.report) if a.report else ROOT / f"韭研题材热度-{datetime.now(CST).strftime('%Y%m%d_%H%M')}.html"
+    write_report(rp, data)
+    print(f"[报告] {rp}")
+
+
+if __name__ == "__main__":
+    main()
