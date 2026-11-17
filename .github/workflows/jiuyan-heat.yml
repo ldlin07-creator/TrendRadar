@@ -1,6 +1,7 @@
 name: 韭研题材热度推送
 
 # 北京时间 9:00 / 12:00 / 14:00 / 19:00 推送韭研公社 24h 热度上升最快题材
+# 发现热点后自动对 TOP3 题材做全渠道深挖（--deep-dive），详情一并推送
 # GitHub Actions cron 用 UTC：北京 = UTC+8，故 1/4/6/11 UTC 对应上述北京时间
 on:
   schedule:
@@ -41,4 +42,5 @@ jobs:
           python tools/jiuyan_hot_theme.py \
             --json output/jiuyan_heat/latest.json \
             --report output/jiuyan_heat/latest.html \
+            --deep-dive --deep-top 3 --deep-per 5 \
             --push

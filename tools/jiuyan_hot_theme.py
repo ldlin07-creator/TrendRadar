@@ -12,6 +12,15 @@
   python tools/jiuyan_hot_theme.py
   python tools/jiuyan_hot_theme.py --json out.json --report out.html
   python tools/jiuyan_hot_theme.py --push          # 推送到已配置的渠道（读环境变量）
+  python tools/jiuyan_hot_theme.py --deep-dive     # 发现热点后，自动对 TOP 热点做全渠道深挖并一起推送
+  python tools/jiuyan_hot_theme.py --deep-dive --deep-top 3 --deep-per 5
+
+「发现热点 → 自动深挖」链路（--deep-dive）：
+  1. 本脚本先算出韭研 24h 热度上升最快的题材
+  2. 取 TOP N 题材，调用 theme_intel.py 的抓取+匹配，在全渠道（路由表 a_share）
+     查每个题材的相关信息
+  3. 深挖结果写入 HTML 报告，并作为第二条消息推送
+  题材词做归一化（"算力/AI芯片" → "算力"）以命中同义词扩展表。
 
 推送渠道（环境变量，与 TrendRadar 的 GitHub Secrets 对齐）：
   WEWORK_WEBHOOK_URL   企业微信群机器人 webhook
@@ -192,6 +201,86 @@ def analyze():
             "themes": scores, "top": scores[:5], "_snapshot": snap}
 
 
+# ---- 发现热点 → 自动深挖 --------------------------------------------------
+
+def split_keywords(theme_name, expand):
+    """把复合题材名拆成关键词列表，并叠加同义词扩展。
+    '金融/券商' -> ['金融','券商', ...扩展]
+    '算力/AI芯片' -> ['算力','AI芯片','英伟达','国产算力', ...]
+    """
+    segs = [s.strip() for s in re.split(r"[/／(（·、]", theme_name) if s.strip()]
+    kws = list(segs) or [theme_name.strip()]
+    for seg in segs:
+        for k, syns in (expand or {}).items():
+            if k in seg or seg in k:
+                kws.extend(syns)
+    seen, out = set(), []
+    for k in kws:
+        if k not in seen:
+            seen.add(k)
+            out.append(k)
+    return out
+
+
+def deep_dive(top, top_n=3, per_theme=5):
+    """对 TOP N 热点题材，复用 theme_intel 的抓取+匹配做全渠道深挖。
+    返回 [{rank, theme, keyword, hits:[...], errors}]，单个题材失败不影响其他。
+    """
+    try:
+        import theme_intel
+    except Exception as e:
+        print(f"[深挖] 无法加载 theme_intel: {e}")
+        return []
+
+    cfg = theme_intel.load_routes()
+    registry = cfg["channel_registry"]
+    route = cfg["routes"].get("a_share") or cfg["routes"].get("all")
+    channels = [registry[c] for c in route["channels"] if c in registry]
+    channel_names = [c["name"] for c in channels]
+
+    results = []
+    for rank, t in enumerate(top[:top_n], 1):
+        keywords = split_keywords(t["theme"], route.get("keywords_expand", {}))
+        print(f"\n[深挖 {rank}/{top_n}] {t['theme']} → 关键词 {'/'.join(keywords[:6])}")
+        all_items, errors = [], []
+        try:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
+                futs = [ex.submit(theme_intel.fetch_channel, ch) for ch in channels]
+                for fut in concurrent.futures.as_completed(futs):
+                    name, items, err = fut.result()
+                    if err:
+                        errors.append((name, err))
+                    else:
+                        all_items.extend(items)
+            hits = []
+            for item in all_items:
+                ok, kw = theme_intel.match(item, keywords, True)
+                if ok:
+                    item["matched"] = kw
+                    hits.append(item)
+            seen, uniq = set(), []
+            for h in hits:
+                if h["title"] not in seen:
+                    seen.add(h["title"])
+                    uniq.append(h)
+            clean = [{"title": h.get("title", ""), "url": h.get("url", ""),
+                      "source": h.get("source", ""), "time": h.get("time", ""),
+                      "matched": h.get("matched", "")} for h in uniq[:per_theme]]
+            print(f"  抓取 {len(all_items)} 条 / 命中 {len(uniq)} 条，保留 {len(clean)} 条")
+            results.append({"rank": rank, "theme": t["theme"],
+                            "keyword": "/".join(keywords[:6]),
+                            "rise": t["rise"], "hot": t["hot"],
+                            "total_fetched": len(all_items), "hits_total": len(uniq),
+                            "channels": channel_names, "errors": errors, "hits": clean})
+        except Exception as e:
+            print(f"[深挖] {t['theme']} 失败: {type(e).__name__}: {str(e)[:60]}")
+            results.append({"rank": rank, "theme": t["theme"],
+                            "keyword": "/".join(keywords[:6]),
+                            "rise": t["rise"], "hot": t["hot"], "hits": [],
+                            "errors": [("深挖", f"{type(e).__name__}: {str(e)[:60]}")]})
+    return results
+
+
 def write_report(path, data):
     def esc(x):
         return html_mod.escape(str(x or ""))
@@ -211,6 +300,31 @@ def write_report(path, data):
 <div class="meta">近6h {t['hot']} 条 · 前段 {t['base']} 条 · 上升分 {t['rise']} · 合计 {t['total']} 条</div>
 <ul>{disc}</ul></div>""")
     body = "\n".join(secs) if secs else "<div class='empty'>最近24小时未识别到明显题材聚集</div>"
+
+    # 深挖板块
+    deep_html = ""
+    dd = data.get("deep_dive") or []
+    if dd:
+        dsecs = []
+        for r in dd:
+            rows = []
+            for h in r["hits"]:
+                link = (f'<a href="{esc(h["url"])}" target="_blank">{esc(h["title"])}</a>'
+                        if h.get("url") else esc(h["title"]))
+                rows.append(f'<li><span class="src">[{esc(h["source"])}]</span> {link}'
+                            f'<span class="tm">{esc(h.get("matched",""))}</span></li>')
+            hit_list = "".join(rows) or "<li style='color:#999'>未命中相关信息</li>"
+            errs = ""
+            if r.get("errors"):
+                errs = '<div class="warn">抓取异常: ' + "; ".join(f"{esc(n)}({esc(e)})" for n, e in r["errors"]) + "</div>"
+            dsecs.append(f"""<div class="theme">
+<div class="th"><span class="num dives">{r['rank']}</span>{esc(r['theme'])}</div>
+<div class="meta">关键词「{esc(r['keyword'])}」· 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条 · 上升分 {r['rise']}</div>
+{errs}<ul>{hit_list}</ul></div>""")
+        deep_html = f"""<div class="card"><h2>🔥 热点深挖 · 全渠道详情</h2>
+<sub>对热度上升最快的 TOP{len(dd)} 题材自动检索，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
+{''.join(dsecs)}</div>"""
+
     doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>韭研题材热度 · {esc(data['generated_at'])}</title>
 <style>
@@ -219,16 +333,19 @@ def write_report(path, data):
 h1{{font-size:21px;margin:0 0 4px}}h2{{font-size:14px;margin:0 0 12px;color:#444}}sub{{color:#999;font-size:12px}}
 .meta{{color:#777;font-size:12px;margin:6px 0}}.theme{{padding:14px 0;border-top:1px solid #eee}}.theme:first-child{{border-top:0}}
 .th{{font-size:15px;font-weight:500;display:flex;align-items:center;gap:9px}}.num{{background:#c0392b;color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px}}
+.num.dives{{background:#2b5fa8}}
 .delta{{color:#999;font-size:11px;font-weight:400}}
 .bar{{height:5px;background:#f0f0f0;border-radius:3px;margin:9px 0 5px}}.bar span{{display:block;height:100%;background:#c0392b;border-radius:3px}}
 ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{color:#2b5fa8;text-decoration:none}}a:hover{{text-decoration:underline}}
-.tm{{color:#aaa;font-size:11px;margin-left:8px}}.empty{{color:#999;text-align:center;padding:30px}}
+.src{{color:#888;font-size:11px}}.tm{{color:#aaa;font-size:11px;margin-left:8px}}.empty{{color:#999;text-align:center;padding:30px}}
+.warn{{background:#fff6e5;color:#8a5a00;border-radius:6px;padding:8px 10px;font-size:11px;margin:8px 0}}
 .foot{{color:#aaa;font-size:11px;text-align:center;margin:16px 0}}
 </style></head><body><div class="wrap">
 <div class="card"><h1>韭研公社 · 24h 题材热度上升榜</h1>
 <sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(data['mirror'].split('/')[2])}</sub></div>
 <div class="card"><h2>热度上升最快的题材 TOP{len(data['top'])}</h2>{body}</div>
-<div class="foot">题材词典匹配 + 分时段频次对比 · 仅供题材跟踪参考，非投资建议</div>
+{deep_html}
+<div class="foot">题材词典匹配 + 分时段频次对比 + 全渠道深挖 · 仅供题材跟踪参考，非投资建议</div>
 </div></body></html>"""
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -258,6 +375,26 @@ def build_markdown(data):
                 lines.append(f"  - {tm}{title}")
         lines.append("")
     lines.append("— 游资视角题材热度信号，非投资建议")
+
+    # 深挖部分（作为同一条推送的下半段）
+    dd = data.get("deep_dive") or []
+    if dd:
+        lines.append("")
+        lines.append("---")
+        lines.append("### 🔍 热点深挖 · 全渠道详情")
+        for r in dd:
+            lines.append("")
+            lines.append(f"**{r['rank']}. {r['theme']}** — 关键词「{r['keyword']}」，"
+                         f"全渠道命中 {r.get('hits_total', len(r['hits']))} 条")
+            for h in r["hits"][:4]:
+                title = h["title"].replace("*", "＊")
+                src = f"[{h['source']}] " if h.get("source") else ""
+                if h.get("url"):
+                    lines.append(f"  - {src}[{title}]({h['url']})")
+                else:
+                    lines.append(f"  - {src}{title}")
+        lines.append("")
+        lines.append("— 多源交叉验证，非投资建议")
     return "\n".join(lines)
 
 
@@ -324,11 +461,18 @@ def main():
     ap.add_argument("--json", default="", help="结构化结果输出路径")
     ap.add_argument("--report", default="", help="HTML 报告输出路径")
     ap.add_argument("--push", action="store_true", help="推送到环境变量配置的渠道")
+    ap.add_argument("--deep-dive", action="store_true", help="发现热点后自动对 TOP 题材做全渠道深挖")
+    ap.add_argument("--deep-top", type=int, default=3, help="深挖几个 TOP 题材（默认3）")
+    ap.add_argument("--deep-per", type=int, default=5, help="每个题材保留几条命中（默认5）")
     a = ap.parse_args()
 
     globals()["_last_snap"] = load_last_snapshot()
     data = analyze()
     save_snapshot(data.pop("_snapshot"))
+
+    # 发现热点 → 自动深挖
+    if a.deep_dive:
+        data["deep_dive"] = deep_dive(data["top"], top_n=a.deep_top, per_theme=a.deep_per)
 
     print(f"=== 韭研公社 24h 题材热度 · {data['generated_at']} ===")
     print(f"抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 / 无时间 {data['no_time']} 条")
@@ -337,6 +481,13 @@ def main():
         print(f"{i}. {t['theme']}  上升分={t['rise']}  近6h={t['hot']} 前段={t['base']} 合计={t['total']}")
         for d in t["discussion"][:3]:
             print(f"     - [{d['time']}] {d['title'][:58]}")
+
+    if data.get("deep_dive"):
+        print("\n=== 全渠道深挖结果 ===")
+        for r in data["deep_dive"]:
+            print(f"  [{r['rank']}] {r['theme']} → 「{r['keyword']}」 命中 {r.get('hits_total', len(r['hits']))} 条")
+            for h in r["hits"][:3]:
+                print(f"       · [{h['source']}] {h['title'][:56]}")
 
     if a.json:
         p = Path(a.json); p.parent.mkdir(parents=True, exist_ok=True)
