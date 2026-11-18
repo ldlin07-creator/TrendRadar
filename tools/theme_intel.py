@@ -124,9 +124,14 @@ def fetch_bridge(channel, theme=None):
             if t not in itt and itt not in t and not any(
                     seg and seg in itt for seg in re.split(r"[/／(（·、]", t) if len(seg) >= 2):
                 continue
-        out.append({"title": title, "url": it.get("url", ""), "rank": it.get("rank", i),
-                    "source": it.get("source", channel["name"]),
-                    "time": it.get("time") or it.get("pub", "")[:25] or ""})
+        row = {"title": title, "url": it.get("url", ""), "rank": it.get("rank", i),
+               "source": it.get("source", channel["name"]),
+               "time": it.get("time") or it.get("pub", "")[:25] or ""}
+        # 题材专项网站已按 theme 字段精确归类，无需再做关键词二次匹配。
+        # 打标记让深挖器直接收录，避免标题不含关键词就被误筛掉。
+        if channel.get("prefiltered"):
+            row["_prefiltered"] = True
+        out.append(row)
     return out
 
 
