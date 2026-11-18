@@ -321,6 +321,12 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
                         all_items.extend(items)
             hits = []
             for item in all_items:
+                # 题材专项网站(行业+公司)已按 theme 字段精确归类，直接收录，
+                # 不再做关键词二次匹配——否则标题不含关键词的权威资讯会被误筛掉。
+                if item.get("_prefiltered"):
+                    item["matched"] = "题材专项源"
+                    hits.append(item)
+                    continue
                 ok, kw = theme_intel.match(item, keywords, True)
                 if ok:
                     item["matched"] = kw
@@ -374,6 +380,27 @@ def write_report(path, data):
 <ul>{disc}</ul></div>""")
     body = "\n".join(secs) if secs else "<div class='empty'>最近24小时未识别到明显题材聚集</div>"
 
+    # 各来源热点分栏：用户可逐一看到淘股吧(雪球)/东财/华尔街见闻等每路抓了什么
+    src_html = ""
+    by_src = data.get("by_source") or {}
+    if by_src:
+        # 用户点名的源优先展示，其余按条数降序
+        priority = ["雪球", "东方财富人气榜", "华尔街见闻", "韭研公社", "新华财经", "通达信涨停", "通达信"]
+        ordered = [s for s in priority if s in by_src] + [s for s in sorted(by_src, key=lambda k: -len(by_src[k])) if s not in priority]
+        src_secs = []
+        for src in ordered:
+            rows = by_src[src]
+            lis = "".join(
+                f'<li><a href="{esc(x["url"])}" target="_blank">{esc(x["title"])}</a>'
+                + (f'<span class="tm">{esc(x["time"])}</span>' if x.get("time") else "") + "</li>"
+                for x in rows if x.get("title")
+            )
+            src_label = "淘股吧维度 · 雪球" if src == "雪球" else src
+            src_secs.append(f'<div class="srccol"><div class="srch">{esc(src_label)} <span class="cnt">{len(rows)}</span></div><ul>{lis}</ul></div>')
+        src_html = f"""<div class="card"><h2>📡 各来源热点 · 逐路明细</h2>
+<sub>每路独立抓取的热门条目，未进题材聚类的也在此保留</sub>
+<div class="srccols">{''.join(src_secs)}</div></div>"""
+
     # 深挖板块
     deep_html = ""
     dd = data.get("deep_dive") or []
@@ -420,11 +447,16 @@ h1{{font-size:21px;margin:0 0 4px}}h2{{font-size:14px;margin:0 0 12px;color:#444
 ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{color:#2b5fa8;text-decoration:none}}a:hover{{text-decoration:underline}}
 .src{{color:#888;font-size:11px}}.tm{{color:#aaa;font-size:11px;margin-left:8px}}.empty{{color:#999;text-align:center;padding:30px}}
 .warn{{background:#fff6e5;color:#8a5a00;border-radius:6px;padding:8px 10px;font-size:11px;margin:8px 0}}
+.srccols{{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}}
+.srccol{{border:1px solid #eee;border-radius:8px;padding:10px 12px;background:#fafbfc}}
+.srch{{font-size:12px;font-weight:600;color:#2b5fa8;margin-bottom:6px}}.cnt{{color:#999;font-weight:400}}
+.srccol ul{{margin:0;padding-left:16px}}.srccol li{{font-size:11px;line-height:1.6;margin-bottom:3px}}
 .foot{{color:#aaa;font-size:11px;text-align:center;margin:16px 0}}
 </style></head><body><div class="wrap">
 <div class="card"><h1>韭研公社 · 24h 题材热度上升榜</h1>
 <sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(_src_disp)}</sub></div>
 <div class="card"><h2>热度上升最快的题材 TOP{len(data['top'])}</h2>{body}</div>
+{src_html}
 {deep_html}
 <div class="foot">题材词典匹配 + 分时段频次对比 + 全渠道深挖 · 仅供题材跟踪参考，非投资建议</div>
 </div></body></html>"""
