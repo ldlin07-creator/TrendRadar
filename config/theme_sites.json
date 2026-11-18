@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-18 02:06",
+  "updated_at": "2026-11-18 11:58",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -52,6 +52,76 @@
       "site": "http://www.griam.cn",
       "title": "有研新材 稀土化合物材料 / 贵金属封装互联材料",
       "url": "http://www.griam.cn",
+      "time": ""
+    },
+    {
+      "theme": "算力/AI芯片",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信通院",
+      "site": "http://www.caict.ac.cn/",
+      "title": "政策解读丨深化汽车与信息通信融合发展，全面支撑汽车强国建设",
+      "url": "http://www.caict.ac.cn/",
+      "time": ""
+    },
+    {
+      "theme": "算力/AI芯片",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信通院",
+      "site": "http://www.caict.ac.cn/",
+      "title": "政策解读丨推动互联网基础资源高质量发展，筑牢网络强国、制造强国数字基石",
+      "url": "http://www.caict.ac.cn/",
+      "time": ""
+    },
+    {
+      "theme": "算力/AI芯片",
+      "company": "",
+      "kind": "industry",
+      "source": "赛迪网",
+      "site": "https://www.ccidnet.com/",
+      "title": "2026-2031年中国AI智能眼镜产业市场深度研究及发展前景投资预测分析报告",
+      "url": "https://www.ccidnet.com/",
+      "time": ""
+    },
+    {
+      "theme": "半导体材料/设备国产替代链",
+      "company": "",
+      "kind": "industry",
+      "source": "集微网",
+      "site": "https://www.ijiwei.com/",
+      "title": "集微半导体产业大脑重磅升级 / 2026存算一体产业创新发展大会",
+      "url": "https://www.ijiwei.com/",
+      "time": ""
+    },
+    {
+      "theme": "半导体材料/设备国产替代链",
+      "company": "",
+      "kind": "industry",
+      "source": "CSIA中国半导体行业协会",
+      "site": "https://web.csia.net.cn/",
+      "title": "锚定AI算力时代 加速布局先进封装赛道 / 半导体产业链上市公司密集披露投资计划",
+      "url": "https://web.csia.net.cn/",
+      "time": ""
+    },
+    {
+      "theme": "算力/AI芯片",
+      "company": "真视通 002771",
+      "kind": "company",
+      "source": "真视通官网",
+      "site": "https://www.zst.com.cn/",
+      "title": "真视通 数据中心 / 液冷 / 人工智能 业务与投资者关系",
+      "url": "https://www.zst.com.cn/",
+      "time": ""
+    },
+    {
+      "theme": "算力/AI芯片",
+      "company": "华胜天成 600410",
+      "kind": "company",
+      "source": "华胜天成官网",
+      "site": "https://www.teamsun.com.cn/",
+      "title": "华胜天成 云服务 / 人工智能 / 算力业务",
+      "url": "https://www.teamsun.com.cn/",
       "time": ""
     }
   ]
