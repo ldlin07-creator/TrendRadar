@@ -306,6 +306,25 @@ def analyze_multi(last_snap=None):
                                       for x in theme_items[th][:10]]})
     scores.sort(key=lambda x: (x["rise"], x["total"]), reverse=True)
 
+    # 按来源分组的原始热点：保留全部条目（含未命中题材词典的），供报告按来源分栏展示。
+    # 这样华尔街见闻/东方财富/雪球(淘股吧维度)等各自的热点不会被题材聚类吞掉。
+    by_source = defaultdict(list)
+    for it in all_items:
+        src = it.get("source", "其他")
+        pub = it.get("pub")
+        by_source[src].append({
+            "title": it.get("title", ""),
+            "url": it.get("url", ""),
+            "time": pub.strftime("%m-%d %H:%M") if pub else "",
+            "_ts": pub.timestamp() if pub else 0,
+        })
+    by_source_out = {}
+    for src, rows in by_source.items():
+        rows.sort(key=lambda r: r["_ts"], reverse=True)
+        for r in rows:
+            r.pop("_ts", None)
+        by_source_out[src] = rows[:8]
+
     snap = {"ts": now.strftime("%Y-%m-%d %H:%M:%S"), "sources": source_stat,
             "total_items": len(all_items),
             "counts": {t: hot_c[t] + base_c[t] for t in set(hot_c) | set(base_c)}}
@@ -314,7 +333,8 @@ def analyze_multi(last_snap=None):
             "total_fetched": len(all_items),
             "in_window": sum(1 for x in all_items if x.get("pub")),
             "no_time": 0, "source_stat": source_stat, "errors": errors,
-            "themes": scores, "top": scores[:5], "_snapshot": snap}
+            "themes": scores, "top": scores[:5], "by_source": by_source_out,
+            "_snapshot": snap}
 
 
 if __name__ == "__main__":
