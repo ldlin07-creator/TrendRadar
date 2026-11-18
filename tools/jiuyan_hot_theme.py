@@ -2,8 +2,8 @@
 """
 韭研公社 24 小时题材热度上升探测器 (jiuyan_hot_theme.py)
 
-不预设题材：抓韭研公社 RSS（多镜像容错）最近 24h 的讨论 → 按题材词典聚类 →
-用「最近时段 vs 较早时段」计算热度上升速度 → 输出上升最快的题材 + 相关讨论总结。
+不预设题材白名单：抓韭研公社 RSS（多镜像容错）最近 24h 的讨论 → 保留全部原始热点 →
+动态归纳标题里的高频/上升关键词当作题材 → 输出上升最快的关键词 + 相关讨论总结。
 同时落盘历史快照，后续运行可用真实快照差值判断趋势。
 
 纯标准库，零依赖。
@@ -20,7 +20,7 @@
   2. 取 TOP N 题材，调用 theme_intel.py 的抓取+匹配，在全渠道（路由表 a_share）
      查每个题材的相关信息
   3. 深挖结果写入 HTML 报告，并作为第二条消息推送
-  题材词做归一化（"算力/AI芯片" → "算力"）以命中同义词扩展表。
+  归纳关键词只作为深挖检索词；题材分析师清单也只进入深挖层，不反向过滤发现层。
 
 推送渠道（环境变量，与 TrendRadar 的 GitHub Secrets 对齐）：
   WEWORK_WEBHOOK_URL   企业微信群机器人 webhook
@@ -81,7 +81,7 @@ _SSL = ssl.create_default_context()
 _SSL.check_hostname = False
 _SSL.verify_mode = ssl.CERT_NONE
 
-# 题材词典：题材名 → 命中关键词（标题包含任一词即归入该题材）
+# 已知说法线索：仅用于深挖同义扩展和动态归纳候选，不再作为发现层过滤白名单
 THEME_DICT = {
     "算力/AI芯片": ["算力", "英伟达", "GPU", "AI芯片", "昇腾", "国产算力", "服务器", "智算", "数据中心", "光模块", "CPO", "HBM", "寒武纪"],
     "半导体/国产替代": ["半导体", "芯片", "光刻", "晶圆", "存储", "封测", "国产替代", "先进制程", "靶材", "光刻胶", "第三代半导体", "碳化硅"],
@@ -175,51 +175,27 @@ def save_snapshot(snap):
 
 
 def analyze():
+    """单源回退路径：同样不按题材词典过滤，只把韭研原始热点交给动态归纳器。"""
     items, mirror = fetch_rss()
     now = datetime.now(CST)
     recent_24 = [i for i in items if i["pub"] and (now - i["pub"]).total_seconds() <= WINDOW_HOURS * 3600]
-    # 无日期的条目也纳入，但没有时间权重
     no_time = [i for i in items if not i["pub"]]
     pool = recent_24 + no_time
 
-    hot_counter, base_counter = Counter(), Counter()
-    theme_items = defaultdict(list)
-    for it in pool:
-        themes = classify(it["title"])
-        if not themes:
-            continue
-        age_h = (now - it["pub"]).total_seconds() / 3600 if it["pub"] else 99
-        bucket = hot_counter if age_h <= HOT_HOURS else base_counter
-        for th in themes:
-            bucket[th] += 1
-            theme_items[th].append(it)
-
-    # 热度上升分：近6h频次归一化 - 前段频次归一化；无历史时用时段差
-    scores = []
-    all_themes = set(hot_counter) | set(base_counter)
-    for th in all_themes:
-        hot = hot_counter[th]
-        base = base_counter[th]
-        base_rate = base / (WINDOW_HOURS - HOT_HOURS)  # 每小时
-        hot_rate = hot / HOT_HOURS
-        rise = hot_rate - base_rate
-        # 历史快照增量（若有）
-        hist_delta = None
-        snap = globals().get("_last_snap")
-        if snap and "counts" in snap:
-            prev = snap["counts"].get(th, 0)
-            hist_delta = (hot + base) - prev
-        scores.append({"theme": th, "hot": hot, "base": base, "rise": round(rise, 3),
-                       "total": hot + base, "hist_delta": hist_delta,
-                       "discussion": [{"title": i["title"], "url": i.get("url", ""), "time": i["pub_str"]}
-                                      for i in theme_items[th][:8]]})
-    scores.sort(key=lambda x: (x["rise"], x["total"]), reverse=True)
+    try:
+        import multi_source_hot as mh
+        scores = mh.discover_topics(pool, last_snap=globals().get("_last_snap"), top_n=5)
+    except Exception as e:
+        print(f"[归纳] 动态关键词归纳失败: {type(e).__name__}: {str(e)[:80]}")
+        scores = []
 
     snap = {"ts": now.strftime("%Y-%m-%d %H:%M:%S"), "mirror": mirror,
-            "total_items": len(items), "counts": {t: hot_counter[t] + base_counter[t] for t in all_themes}}
+            "total_items": len(items), "counts": {t["theme"]: t["total"] for t in scores}}
     return {"generated_at": now.strftime("%Y-%m-%d %H:%M:%S"), "mirror": mirror,
             "total_fetched": len(items), "in_window": len(recent_24), "no_time": len(no_time),
-            "themes": scores, "top": scores[:5], "_snapshot": snap}
+            "themes": scores, "top": scores[:5], "_snapshot": snap,
+            "by_source": {"韭研公社": [{"title": i["title"], "url": i.get("url", ""),
+                                       "time": i["pub_str"]} for i in items]}}
 
 
 # ---- 发现热点 → 自动深挖 --------------------------------------------------
@@ -267,9 +243,9 @@ def load_analyst_themes():
 def build_dive_tasks(top, top_n=3, use_analyst=True):
     """合并两路深挖题材：韭研热度 TOP N + 题材分析师清单。按归一化关键词去重。"""
     tasks = []
-    # 第一路：韭研自动发现的热点
+    # 第一路：全源热点动态归纳出的关键词（发现层不受题材清单限制）
     for t in top[:top_n]:
-        tasks.append({"name": t["theme"], "type": "a_share", "source": "韭研热点",
+        tasks.append({"name": t["theme"], "type": "a_share", "source": "热点归纳",
                       "reason": f"近6h {t['hot']} 条 / 上升分 {t['rise']}",
                       "rise": t["rise"], "hot": t["hot"]})
     # 第二路：题材分析师给定题材
@@ -283,8 +259,8 @@ def build_dive_tasks(top, top_n=3, use_analyst=True):
             continue
         seen.add(key)
         uniq.append(t)
-    print(f"[深挖] 题材合并：韭研TOP{len(top[:top_n])} + 分析师{len(load_analyst_themes() if use_analyst else [])} "
-          f"→ 去重后 {len(uniq)} 个")
+    print(f"[深挖] 输入合并：热点归纳TOP{len(top[:top_n])} + 分析师{len(load_analyst_themes() if use_analyst else [])} "
+          f"→ 去重后 {len(uniq)} 个（发现层未被题材清单过滤）")
     return uniq
 
 
@@ -378,7 +354,7 @@ def write_report(path, data):
 <div class="bar"><span style="width:{min(100, max(8, t['rise']*60+15))}%"></span></div>
 <div class="meta">近6h {t['hot']} 条 · 前段 {t['base']} 条 · 上升分 {t['rise']} · 合计 {t['total']} 条</div>
 <ul>{disc}</ul></div>""")
-    body = "\n".join(secs) if secs else "<div class='empty'>最近24小时未识别到明显题材聚集</div>"
+    body = "\n".join(secs) if secs else "<div class='empty'>最近24小时未识别到明显上升关键词</div>"
 
     # 各来源热点分栏：用户可逐一看到淘股吧(雪球)/东财/华尔街见闻等每路抓了什么
     src_html = ""
@@ -397,8 +373,8 @@ def write_report(path, data):
             )
             src_label = "淘股吧维度 · 雪球" if src == "雪球" else src
             src_secs.append(f'<div class="srccol"><div class="srch">{esc(src_label)} <span class="cnt">{len(rows)}</span></div><ul>{lis}</ul></div>')
-        src_html = f"""<div class="card"><h2>📡 各来源热点 · 逐路明细</h2>
-<sub>每路独立抓取的热门条目，未进题材聚类的也在此保留</sub>
+        src_html = f"""<div class="card"><h2>📡 全源热点流 · 逐路明细</h2>
+<sub>每路独立抓取的原始热点；未进入关键词榜的条目也原样保留，不受题材限制</sub>
 <div class="srccols">{''.join(src_secs)}</div></div>"""
 
     # 深挖板块
@@ -427,7 +403,7 @@ def write_report(path, data):
 {reason}<div class="meta">关键词「{esc(r['keyword'])}」· 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条{rise_txt}</div>
 {errs}<ul>{hit_list}</ul></div>""")
         deep_html = f"""<div class="card"><h2>🔥 热点深挖 · 全渠道详情</h2>
-<sub>韭研热点 + 题材分析师清单，共 {len(dd)} 个题材自动检索，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
+<sub>归纳关键词 + 题材分析师清单，共 {len(dd)} 个检索词进入深挖；深挖条件不参与热点发现，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
 {''.join(dsecs)}</div>"""
 
     doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -453,12 +429,13 @@ ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{col
 .srccol ul{{margin:0;padding-left:16px}}.srccol li{{font-size:11px;line-height:1.6;margin-bottom:3px}}
 .foot{{color:#aaa;font-size:11px;text-align:center;margin:16px 0}}
 </style></head><body><div class="wrap">
-<div class="card"><h1>韭研公社 · 24h 题材热度上升榜</h1>
+<div class="card"><h1>24h 全源热点 · 关键词归纳榜</h1>
 <sub>{esc(data['generated_at'])} · 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 · 源 {esc(_src_disp)}</sub></div>
-<div class="card"><h2>热度上升最快的题材 TOP{len(data['top'])}</h2>{body}</div>
+<div class="card"><h2>📈 上升最快的关键词 TOP{len(data['top'])}</h2>
+<sub>不对热点做预设题材过滤；关键词由原始标题和桥接字段动态归纳</sub>{body}</div>
 {src_html}
 {deep_html}
-<div class="foot">题材词典匹配 + 分时段频次对比 + 全渠道深挖 · 仅供题材跟踪参考，非投资建议</div>
+<div class="foot">全量热点保留 + 动态关键词归纳 + 分时段频次对比 + 全渠道深挖 · 仅供题材跟踪参考，非投资建议</div>
 </div></body></html>"""
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -467,11 +444,12 @@ ul{{margin:8px 0 0;padding-left:18px}}li{{font-size:13px;line-height:1.7}}a{{col
 
 def build_markdown(data):
     """把分析结果转成推送用的 Markdown 文本"""
-    lines = [f"## 韭研公社 · 24h 题材热度上升榜", ""]
+    lines = [f"## 24h 全源热点 · 关键词归纳榜", ""]
     lines.append(f"> {data['generated_at']} ｜ 抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条")
+    lines.append("> 全量热点保留；关键词由原始热点动态归纳，未被题材清单过滤")
     lines.append("")
     if not data["top"]:
-        lines.append("最近24小时未识别到明显题材聚集。")
+        lines.append("最近24小时未识别到明显上升关键词。")
         return "\n".join(lines)
     for i, t in enumerate(data["top"], 1):
         delta = ""
@@ -487,18 +465,18 @@ def build_markdown(data):
             else:
                 lines.append(f"  - {tm}{title}")
         lines.append("")
-    lines.append("— 游资视角题材热度信号，非投资建议")
+    lines.append("— 全源热点动态归纳信号，非投资建议")
 
     # 深挖部分（作为同一条推送的下半段）
     dd = data.get("deep_dive") or []
     if dd:
         lines.append("")
         lines.append("---")
-        lines.append("### 🔍 热点深挖 · 全渠道详情")
+        lines.append("### 🔍 热点深挖 · 全渠道详情（关键词 + 分析师清单，不参与发现）")
         for r in dd:
             lines.append("")
             src = r.get("source", "")
-            tag = "【分析师】" if src == "题材分析师" else "【韭研热点】"
+            tag = "【分析师】" if src == "题材分析师" else "【热点归纳】"
             lines.append(f"**{r['rank']}. {tag}{r['theme']}** — 关键词「{r['keyword']}」，"
                          f"全渠道命中 {r.get('hits_total', len(r['hits']))} 条")
             for h in r["hits"][:4]:
@@ -546,17 +524,17 @@ def send_email(html_path, data):
 
     recipients = [a.strip() for a in to_raw.split(",") if a.strip()]
     msg = MIMEMultipart("alternative")
-    msg["From"] = formataddr(("韭研题材热度", sender))
+    msg["From"] = formataddr(("全源热点关键词榜", sender))
     msg["To"] = ", ".join(recipients)
-    subject = f"韭研题材热度 · {data['generated_at']}"
+    subject = f"全源热点关键词榜 · {data['generated_at']}"
     msg["Subject"] = Header(subject, "utf-8")
     msg["MIME-Version"] = "1.0"
     msg["Date"] = formatdate(localtime=True)
     msg["Message-ID"] = make_msgid()
 
     top_line = " / ".join(f"{t['theme']}(+{t['rise']})" for t in data.get("top", [])[:3])
-    text_part = MIMEText(f"韭研题材热度上升榜\n{data['generated_at']}\n\n"
-                         f"TOP题材: {top_line or '无'}\n\n请用支持HTML的邮件客户端查看完整报告。",
+    text_part = MIMEText(f"24h 全源热点 · 关键词归纳榜\n{data['generated_at']}\n\n"
+                         f"TOP关键词: {top_line or '无'}\n\n请用支持HTML的邮件客户端查看完整报告。",
                          "plain", "utf-8")
     msg.attach(text_part)
     msg.attach(MIMEText(html_body, "html", "utf-8"))
@@ -675,7 +653,7 @@ def main():
         data["deep_dive"] = deep_dive(data["top"], top_n=a.deep_top, per_theme=a.deep_per,
                                       use_analyst=not a.no_analyst)
 
-    print(f"=== 韭研公社 24h 题材热度 · {data['generated_at']} ===")
+    print(f"=== 24h 全源热点关键词 · {data['generated_at']} ===")
     print(f"抓取 {data['total_fetched']} 条 / 窗口内 {data['in_window']} 条 / 无时间 {data['no_time']} 条")
     print(f"源: {data['mirror']}\n")
     for i, t in enumerate(data["top"], 1):
@@ -695,7 +673,7 @@ def main():
         with open(p, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"\n[JSON] {p}")
-    rp = Path(a.report) if a.report else ROOT / f"韭研题材热度-{datetime.now(CST).strftime('%Y%m%d_%H%M')}.html"
+    rp = Path(a.report) if a.report else ROOT / f"全源热点关键词-{datetime.now(CST).strftime('%Y%m%d_%H%M')}.html"
     write_report(rp, data)
     print(f"[报告] {rp}")
 

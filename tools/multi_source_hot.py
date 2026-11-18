@@ -2,8 +2,9 @@
 """
 多源题材热点探测器 (multi_source_hot.py)
 
-把「热点发现」从韭研单源扩展为六路并行，统一用题材词典聚类 + 近6h vs 前段
-频次对比算上升分，输出与 jiuyan_hot_theme.analyze() 完全兼容的结构。
+把「热点发现」从韭研单源扩展为六路并行。发现层不预设题材白名单：先保留全部
+原始热点，再从标题/桥接字段动态归纳上升关键词；题材词典只做同义扩展线索，
+不参与过滤。近6h vs 前段频次用于排序，输出与 jiuyan_hot_theme.analyze() 兼容。
 
 六路来源（每路独立容错，单路失败不影响其他）：
   1. 韭研公社        RSSHub RSS（多镜像）
@@ -92,12 +93,167 @@ def http_get(url, timeout=20, headers=None, data=None):
 
 
 def classify(title):
+    """仅用于诊断：看标题命中了哪些既有题材词典标签，不再作为发现层过滤条件。"""
     t = str(title).lower()
     return [th for th, kws in THEME_DICT.items()
             if any(str(k).lower() in t for k in kws)]
 
 
-# ---- 四路抓取，统一返回 [{title, url, pub, source, rank}] -----------------
+def _split_terms(text):
+    return [s.strip() for s in re.split(r"[/／(（·、,，\s]+", str(text or "")) if s.strip()]
+
+
+# 题材词典里的词只作为「已知说法/同义线索」，不是白名单。
+KNOWN_KEYWORDS = set()
+for _theme_name, _keywords in THEME_DICT.items():
+    KNOWN_KEYWORDS.update(_split_terms(_theme_name))
+    KNOWN_KEYWORDS.update(str(k) for k in _keywords)
+KNOWN_KEYWORDS = {k for k in KNOWN_KEYWORDS if len(k) >= 2}
+
+# 动态归纳时的噪声词。注意：AI/GPU/CPO/HBM/GLP/FSD/IPO/BIS/eVTOL 等业务词不在此列。
+DISCOVERY_STOPWORDS = {
+    "今日", "最新", "新闻", "快讯", "热榜", "热搜", "榜单", "排行", "排名", "人气榜",
+    "股吧", "涨停", "涨停板", "涨跌", "上涨", "下跌", "涨幅", "跌幅", "成交", "成交额",
+    "个股", "股票", "公司", "市场", "题材", "概念", "分析", "解读", "关注", "讨论",
+    "社区", "公社", "财经", "华尔街见闻", "财联社", "微博", "知乎", "雪球", "新华财经",
+    "通达信", "东方财富", "韭研公社", "推送", "报告", "汇总", "观察", "复盘", "投资",
+    "建议", "风险", "提示", "来源", "时间", "标题", "链接", "第", "名", "条", "较上次",
+    "气榜", "人榜", "科技", "股份", "集团", "控股", "实业", "有限",
+    "如何", "怎么", "怎样", "为何", "为什么", "哪些", "是否", "看待", "评价",
+}
+DISCOVERY_SUBSTOPS = (
+    "人气", "榜第", "股吧", "涨停", "涨幅", "跌幅", "成交", "最新", "今日", "新闻",
+    "快讯", "热榜", "热搜", "排行", "排名", "财经", "公社", "社区", "微博", "知乎",
+    "雪球", "东方", "财富", "华尔街", "见闻", "财联社", "新华", "通达", "复盘",
+    "报告", "推送", "关注", "解读", "建议", "风险", "市场", "公司", "非投资",
+    "如何", "什么", "怎么", "怎样", "为何", "哪些", "是否", "看待", "评价",
+)
+LATIN_RE = re.compile(r"[A-Za-z][A-Za-z0-9+.-]{1,}")
+CN_RE = re.compile(r"[\u4e00-\u9fff]{2,}")
+
+
+def extract_candidates(title, theme_hint=""):
+    """从单条热点动态归纳候选关键词：已知说法 + 英文词 + 中文 2-6 gram。"""
+    text = str(title or "")
+    low = text.lower()
+    cands = set()
+
+    # 1) 已知说法命中：只增加候选，不决定是否收录该热点
+    for kw in KNOWN_KEYWORDS:
+        if kw.lower() in low:
+            cands.add(kw)
+
+    # 2) 英文/缩写词
+    for tok in LATIN_RE.findall(text):
+        tok = tok.strip("+-.")
+        if len(tok) < 2 or tok.lower() in DISCOVERY_STOPWORDS:
+            continue
+        if tok.isalpha() and len(tok) <= 5:
+            tok = tok.upper()
+        cands.add(tok)
+
+    # 3) 中文片段：生成 2-6 字候选，再由频次/跨源数决定去留
+    for run in CN_RE.findall(text):
+        for size in (2, 3, 4, 5, 6):
+            for i in range(len(run) - size + 1):
+                gram = run[i:i + size]
+                if gram in DISCOVERY_STOPWORDS:
+                    continue
+                if any(bad in gram for bad in DISCOVERY_SUBSTOPS):
+                    continue
+                cands.add(gram)
+
+    # 4) MCP 桥接文件自带的题材标签，直接作为高置信候选
+    for hint in _split_terms(theme_hint):
+        if hint not in DISCOVERY_STOPWORDS:
+            cands.add(hint)
+
+    # 5) 若同一条里命中了更完整的已知说法，去掉它的碎片。
+    # 例：命中「英伟达」时不再保留「伟达/英伟」；命中「机器人」时不再保留「机器/器人」。
+    strong = {kw for kw in KNOWN_KEYWORDS if kw.lower() in low}
+    if strong:
+        strong_low = {kw.lower() for kw in strong}
+        cands = {c for c in cands
+                 if c in strong or not any(c.lower() != s and c.lower() in s for s in strong_low)}
+    return cands
+
+
+def _dedupe_topic_scores(scores):
+    """去掉被更长、更强关键词覆盖的短词，避免「机器人/人形机器人」重复占位。"""
+    kept = []
+    for s in scores:
+        name = s["theme"].lower()
+        drop = False
+        for k in list(kept):
+            kname = k["theme"].lower()
+            if name and name in kname and k["total"] >= s["total"] * 0.75 and k["hot"] >= s["hot"] * 0.6:
+                drop = True
+                break
+            if kname and kname in name and s["total"] >= k["total"] * 0.85 and s["hot"] >= k["hot"] * 0.6:
+                kept.remove(k)
+                break
+        if not drop:
+            kept.append(s)
+        if len(kept) >= 20:
+            break
+    return kept
+
+
+def discover_topics(items, last_snap=None, top_n=5):
+    """不预设题材：从全量热点里归纳近6h上升最快的关键词。"""
+    now = datetime.now(CST)
+    hot_c, base_c = Counter(), Counter()
+    source_c = defaultdict(Counter)
+    term_items = defaultdict(list)
+
+    for it in items:
+        pub = it.get("pub")
+        age_h = (now - pub).total_seconds() / 3600 if pub else None
+        bucket = base_c if (pub and age_h > HOT_HOURS) else hot_c
+        src = it.get("source", "其他")
+        cands = extract_candidates(it.get("title", ""), it.get("theme", ""))
+        if not cands:
+            continue
+        for kw in cands:
+            bucket[kw] += 1
+            source_c[kw][src] += 1
+            if len(term_items[kw]) < 12:
+                term_items[kw].append(it)
+
+    all_kws = set(hot_c) | set(base_c)
+    all_scores = []
+    for kw in all_kws:
+        hot, base = hot_c[kw], base_c[kw]
+        total = hot + base
+        rise = hot / HOT_HOURS - base / (WINDOW_HOURS - HOT_HOURS)
+        hist = None
+        if last_snap and "counts" in last_snap:
+            hist = total - last_snap["counts"].get(kw, 0)
+        sources = dict(source_c[kw])
+        all_scores.append({
+            "theme": kw, "hot": hot, "base": base, "rise": round(rise, 3),
+            "total": total, "hist_delta": hist, "sources": sources,
+            "source_count": len(sources),
+            "rank_key": round(rise + 0.08 * total + 0.15 * len(sources), 3),
+            "discussion": [{
+                "title": x.get("title", ""), "url": x.get("url", ""),
+                "time": x.get("pub").strftime("%m-%d %H:%M") if x.get("pub") else "",
+                "source": x.get("source", ""),
+            } for x in term_items[kw][:10]],
+        })
+
+    # 常规阈值：至少出现 2 次；若热点太分散则放宽到 1 次，但必须是近6h词。
+    pool = [s for s in all_scores if s["total"] >= 2]
+    if len(pool) < top_n * 2:
+        pool = [s for s in all_scores if s["hot"] >= 2] or all_scores
+    pool.sort(key=lambda x: (x["rank_key"], x["rise"], x["total"]), reverse=True)
+    scores = _dedupe_topic_scores(pool)[:top_n]
+    for s in scores:
+        s.pop("rank_key", None)
+    return scores
+
+
+# ---- 六路抓取，统一返回 [{title, url, pub, source, rank}] -----------------
 
 def fetch_jiuyan():
     """路1：韭研公社 RSS 多镜像"""
@@ -269,45 +425,11 @@ def analyze_multi(last_snap=None):
             if err:
                 errors.append(err)
 
-    hot_c, base_c = Counter(), Counter()
-    theme_items = defaultdict(list)
-    for it in all_items:
-        # 东财个股名单独聚类（"贵州茅台 人气榜第X名" 里含股票名）
-        title = it["title"]
-        themes = classify(title)
-        if it.get("stock"):
-            for th in classify(it["stock"]):
-                if th not in themes:
-                    themes.append(th)
-        if not themes:
-            continue
-        pub = it.get("pub")
-        age_h = (now - pub).total_seconds() / 3600 if pub else 99
-        # 无时间/热榜类按"当前热"计入 hot 桶
-        bucket = base_c if (pub and age_h > HOT_HOURS) else hot_c
-        for th in themes:
-            bucket[th] += 1
-            theme_items[th].append(it)
+    # 发现层：先保留全部原始热点，再动态归纳关键词；不按题材词典过滤。
+    scores = discover_topics(all_items, last_snap=last_snap, top_n=5)
 
-    scores = []
-    for th in set(hot_c) | set(base_c):
-        hot, base = hot_c[th], base_c[th]
-        rise = hot / HOT_HOURS - base / (WINDOW_HOURS - HOT_HOURS)
-        hist = None
-        if last_snap and "counts" in last_snap:
-            hist = (hot + base) - last_snap["counts"].get(th, 0)
-        src_counter = Counter(x.get("source", "?") for x in theme_items[th])
-        scores.append({"theme": th, "hot": hot, "base": base, "rise": round(rise, 3),
-                       "total": hot + base, "hist_delta": hist,
-                       "sources": dict(src_counter),
-                       "discussion": [{"title": x["title"], "url": x.get("url", ""),
-                                       "time": x.get("pub").strftime("%m-%d %H:%M") if x.get("pub") else "",
-                                       "source": x.get("source", "")}
-                                      for x in theme_items[th][:10]]})
-    scores.sort(key=lambda x: (x["rise"], x["total"]), reverse=True)
-
-    # 按来源分组的原始热点：保留全部条目（含未命中题材词典的），供报告按来源分栏展示。
-    # 这样华尔街见闻/东方财富/雪球(淘股吧维度)等各自的热点不会被题材聚类吞掉。
+    # 按来源分组的原始热点：保留全部条目（含未进入关键词榜的），供报告按来源分栏展示。
+    # 华尔街见闻/东方财富/雪球(淘股吧维度)等各路热点不会被关键词归纳吞掉。
     by_source = defaultdict(list)
     for it in all_items:
         src = it.get("source", "其他")
@@ -327,7 +449,7 @@ def analyze_multi(last_snap=None):
 
     snap = {"ts": now.strftime("%Y-%m-%d %H:%M:%S"), "sources": source_stat,
             "total_items": len(all_items),
-            "counts": {t: hot_c[t] + base_c[t] for t in set(hot_c) | set(base_c)}}
+            "counts": {t["theme"]: t["total"] for t in scores}}
     return {"generated_at": now.strftime("%Y-%m-%d %H:%M:%S"),
             "mirror": "多源: " + "+".join(f"{k}{v}" for k, v in source_stat.items()),
             "total_fetched": len(all_items),
@@ -346,7 +468,7 @@ if __name__ == "__main__":
     except Exception:
         pass
     d = analyze_multi(snap)
-    print(f"=== 多源热点 · {d['generated_at']} ===")
+    print(f"=== 多源热点关键词归纳 · {d['generated_at']} ===")
     print("各源条数:", d["source_stat"])
     if d["errors"]:
         print("异常:", "; ".join(d["errors"]))
