@@ -239,7 +239,9 @@ def discover_topics(items, last_snap=None, top_n=5):
                 "title": x.get("title", ""), "url": x.get("url", ""),
                 "time": x.get("pub").strftime("%m-%d %H:%M") if x.get("pub") else "",
                 "source": x.get("source", ""),
-            } for x in term_items[kw][:10]],
+            } for x in sorted(term_items[kw],
+                              key=lambda x: x.get("pub").timestamp() if x.get("pub") else 0,
+                              reverse=True)[:10]],
         })
 
     # 常规阈值：至少出现 2 次；若热点太分散则放宽到 1 次，但必须是近6h词。
@@ -429,7 +431,13 @@ def analyze_multi(last_snap=None):
     scores = discover_topics(all_items, last_snap=last_snap, top_n=5)
 
     # 按来源分组的原始热点：保留全部条目（含未进入关键词榜的），供报告按来源分栏展示。
-    # 华尔街见闻/东方财富/雪球(淘股吧维度)等各路热点不会被关键词归纳吞掉。
+    # 排序键不是抓取顺序：榜单类按平台热度名次，资讯类按命中关键词的上升分。
+    kw_rise = {s["theme"]: s["rise"] for s in scores}
+
+    def heat_of(it):
+        t = str(it.get("title", "")).lower()
+        return max((r for kw, r in kw_rise.items() if kw.lower() in t), default=0.0)
+
     by_source = defaultdict(list)
     for it in all_items:
         src = it.get("source", "其他")
@@ -438,13 +446,21 @@ def analyze_multi(last_snap=None):
             "title": it.get("title", ""),
             "url": it.get("url", ""),
             "time": pub.strftime("%m-%d %H:%M") if pub else "",
+            "rank": it.get("rank") or 0,
+            "_heat": heat_of(it),
             "_ts": pub.timestamp() if pub else 0,
         })
     by_source_out = {}
     for src, rows in by_source.items():
-        rows.sort(key=lambda r: r["_ts"], reverse=True)
+        if any(r["rank"] > 0 for r in rows):
+            # 榜单类：rank 越小越热；无名次沉底；同名次再按命中词上升分、时间。
+            rows.sort(key=lambda r: (r["rank"] or 10**9, -r["_heat"], -r["_ts"]))
+        else:
+            # 资讯类：按命中关键词上升分降序，同分按发布时间倒序。
+            rows.sort(key=lambda r: (-r["_heat"], -r["_ts"]))
         for r in rows:
             r.pop("_ts", None)
+            r.pop("_heat", None)
         by_source_out[src] = rows[:8]
 
     snap = {"ts": now.strftime("%Y-%m-%d %H:%M:%S"), "sources": source_stat,

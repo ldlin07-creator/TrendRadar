@@ -404,7 +404,7 @@ def write_report(path, data):
             src_label = "淘股吧维度 · 雪球" if src == "雪球" else src
             src_secs.append(f'<div class="srccol"><div class="srch">{esc(src_label)} <span class="cnt">{len(rows)}</span></div><ul>{lis}</ul></div>')
         src_html = f"""<div class="card"><h2>📡 全源热点流 · 逐路明细</h2>
-<sub>每路独立抓取的原始热点；未进入关键词榜的条目也原样保留，不受题材限制</sub>
+<sub>按热度排序：榜单类按平台名次（越小越热），资讯类按命中关键词上升分；未进入关键词榜的条目也原样保留，不受题材限制</sub>
 <div class="srccols">{''.join(src_secs)}</div></div>"""
 
     # 深挖板块
