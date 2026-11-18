@@ -219,6 +219,36 @@ def split_keywords(theme_name, expand):
     return out
 
 
+def expand_keywords_with_themes(name, expand):
+    """题材即关键词：归纳词命中某题材时，把题材名和该题材词表一并作为搜索词。
+
+    返回 (keywords, theme_hint)，theme_hint 供桥接渠道按题材过滤使用。
+    """
+    name = str(name or "").strip()
+    kws = split_keywords(name, expand)
+    name_low = name.lower()
+    segs = [s.strip().lower() for s in re.split(r"[/／(（·、\s]", name) if s.strip()]
+    theme_names = []
+
+    for theme, members in THEME_DICT.items():
+        member_low = [str(m).lower() for m in members]
+        hit = (name_low in member_low
+               or any(n in m or m in n for n in segs for m in member_low))
+        if not hit:
+            continue
+        theme_names.append(theme)
+        kws.append(theme)
+        kws.extend(str(m) for m in members)
+
+    seen, out = set(), []
+    for k in kws:
+        key = str(k).strip().lower()
+        if key and key not in seen:
+            seen.add(key)
+            out.append(str(k).strip())
+    return out, " / ".join([name] + theme_names)
+
+
 def load_analyst_themes():
     """读题材分析师清单 config/analyst_themes.json，返回启用中的题材任务列表。"""
     cfg_path = ROOT / "config" / "analyst_themes.json"
@@ -283,12 +313,12 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
         route = cfg["routes"].get(t["type"]) or cfg["routes"].get("a_share") or cfg["routes"].get("all")
         channels = [registry[c] for c in route["channels"] if c in registry]
         channel_names = [c["name"] for c in channels]
-        keywords = split_keywords(t["name"], route.get("keywords_expand", {}))
-        print(f"\n[深挖 {rank}/{len(tasks)}] [{t['source']}] {t['name']} → 关键词 {'/'.join(keywords[:6])}")
+        keywords, theme_hint = expand_keywords_with_themes(t["name"], route.get("keywords_expand", {}))
+        print(f"\n[深挖 {rank}/{len(tasks)}] [{t['source']}] {t['name']} → 检索词 {'/'.join(keywords[:6])}")
         all_items, errors = [], []
         try:
             with concurrent.futures.ThreadPoolExecutor(max_workers=6) as ex:
-                futs = [ex.submit(theme_intel.fetch_channel, ch, t["name"]) for ch in channels]
+                futs = [ex.submit(theme_intel.fetch_channel, ch, theme_hint) for ch in channels]
                 for fut in concurrent.futures.as_completed(futs):
                     name, items, err = fut.result()
                     if err:
@@ -317,7 +347,7 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
                       "matched": h.get("matched", "")} for h in uniq[:per_theme]]
             print(f"  抓取 {len(all_items)} 条 / 命中 {len(uniq)} 条，保留 {len(clean)} 条")
             results.append({"rank": rank, "theme": t["name"],
-                            "keyword": "/".join(keywords[:6]),
+                            "keyword": "/".join(keywords[:8]), "theme_hint": theme_hint,
                             "source": t["source"], "reason": t.get("reason", ""),
                             "rise": t.get("rise"), "hot": t.get("hot"),
                             "type": t["type"],
@@ -326,7 +356,7 @@ def deep_dive(top, top_n=3, per_theme=5, use_analyst=True):
         except Exception as e:
             print(f"[深挖] {t['name']} 失败: {type(e).__name__}: {str(e)[:60]}")
             results.append({"rank": rank, "theme": t["name"],
-                            "keyword": "/".join(keywords[:6]),
+                            "keyword": "/".join(keywords[:8]), "theme_hint": theme_hint,
                             "source": t["source"], "reason": t.get("reason", ""),
                             "rise": t.get("rise"), "hot": t.get("hot"), "type": t["type"],
                             "hits": [], "errors": [("深挖", f"{type(e).__name__}: {str(e)[:60]}")]})
@@ -398,12 +428,14 @@ def write_report(path, data):
             src_badge = f'<span class="badge {badge_cls}">{src}</span>'
             reason = f'<div class="reason">{esc(r.get("reason", ""))}</div>' if r.get("reason") else ""
             rise_txt = f' · 上升分 {r["rise"]}' if r.get("rise") is not None else ""
+            _hint = str(r.get("theme_hint") or "")
+            hint_txt = f' · 题材归类「{esc(_hint)}」' if _hint and _hint != r.get("theme") else ""
             dsecs.append(f"""<div class="theme">
 <div class="th"><span class="num dives">{r['rank']}</span>{esc(r['theme'])}{src_badge}</div>
-{reason}<div class="meta">关键词「{esc(r['keyword'])}」· 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条{rise_txt}</div>
+{reason}<div class="meta">检索词「{esc(r['keyword'])}」{hint_txt} · 全渠道抓取 {r.get('total_fetched','?')} 条 · 命中 {r.get('hits_total','?')} 条{rise_txt}</div>
 {errs}<ul>{hit_list}</ul></div>""")
         deep_html = f"""<div class="card"><h2>🔥 热点深挖 · 全渠道详情</h2>
-<sub>归纳关键词 + 题材分析师清单，共 {len(dd)} 个检索词进入深挖；深挖条件不参与热点发现，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
+<sub>热点归纳词 + 题材词（题材即关键词）+ 分析师清单，共 {len(dd)} 个检索词进入深挖；深挖条件不参与热点发现，渠道：{esc(', '.join(dd[0].get('channels', [])))}</sub>
 {''.join(dsecs)}</div>"""
 
     doc = f"""<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
@@ -477,7 +509,8 @@ def build_markdown(data):
             lines.append("")
             src = r.get("source", "")
             tag = "【分析师】" if src == "题材分析师" else "【热点归纳】"
-            lines.append(f"**{r['rank']}. {tag}{r['theme']}** — 关键词「{r['keyword']}」，"
+            hint_txt = f"（题材归类：{r['theme_hint']}）" if r.get("theme_hint") and r.get("theme_hint") != r.get("theme") else ""
+            lines.append(f"**{r['rank']}. {tag}{r['theme']}** — 检索词「{r['keyword']}」{hint_txt}，"
                          f"全渠道命中 {r.get('hits_total', len(r['hits']))} 条")
             for h in r["hits"][:4]:
                 title = h["title"].replace("*", "＊")
