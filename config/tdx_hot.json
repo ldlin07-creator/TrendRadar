@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18 01:52",
-  "source": "通达信MCP(tdx_screener 今日涨停) | 桥接写入",
+  "updated_at": "2026-11-19 12:52",
+  "source": "通达信MCP(tdx_screener 今日涨停) | 桥接写入 | 缺口：连接器不可用，保留旧数据",
   "items": [
     {
       "title": "摩恩电气 涨停（微小盘股 / 储能 / 机器人概念）",

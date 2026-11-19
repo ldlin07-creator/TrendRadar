@@ -2,65 +2,179 @@
   "_说明": "题材分析师给出的题材清单。jiuyan_hot_theme.py 深挖时与韭研热点 TOP N 合并去重后全渠道检索。",
   "_维护": "由 bridge_workbench_themes.py 从 ResearchConsole 工作台题材矩阵自动生成，勿手工大改。watchlist 里的题材不参与深挖，仅跨轮复查防漏。",
   "_方法论": "源=工作台七字段题材矩阵；括号内细分拆独立词防嵌套遗漏；退潮/低动量题材进观察清单不丢弃。",
-  "_来源文件": "D:\\ResearchConsole\\work\\analysis-20261117.json",
-  "updated_at": "2026-11-18 01:22",
-  "source": "工作台题材分析师 | target=2026-11-17 | generated=2026-11-17T21:15:00+08:00",
+  "_来源文件": "D:\\ResearchConsole\\work\\analysis-20261119.json",
+  "updated_at": "2026-11-19 12:52",
+  "source": "本地题材分析师 | target=2026-11-19 12:52:39",
   "themes": [
     {
-      "name": "靶材",
+      "name": "半导体材料",
       "type": "a_share",
-      "reason": "工作台细分 | 超跌切换启动期 | 动量78 | 美制裁倒逼国产替代 + AI 算力材料需求 + 低位资金高低切",
-      "source": "工作台分析师(rank1)"
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
+    },
+    {
+      "name": "国产替代",
+      "type": "a_share",
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
+    },
+    {
+      "name": "大硅片",
+      "type": "a_share",
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
     },
     {
       "name": "光刻胶",
       "type": "a_share",
-      "reason": "工作台细分 | 超跌切换启动期 | 动量78 | 美制裁倒逼国产替代 + AI 算力材料需求 + 低位资金高低切",
-      "source": "工作台分析师(rank1)"
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
     },
     {
-      "name": "光刻机",
+      "name": "大基金",
       "type": "a_share",
-      "reason": "工作台细分 | 超跌切换启动期 | 动量78 | 美制裁倒逼国产替代 + AI 算力材料需求 + 低位资金高低切",
-      "source": "工作台分析师(rank1)"
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
     },
     {
-      "name": "第四代半导体",
+      "name": "电子化学品",
       "type": "a_share",
-      "reason": "工作台细分 | 超跌切换启动期 | 动量78 | 美制裁倒逼国产替代 + AI 算力材料需求 + 低位资金高低切",
-      "source": "工作台分析师(rank1)"
+      "reason": "发酵期 | 动量75 | 大基金二期加仓+制裁倒逼国产替代+AI算力材料需求",
+      "source": "本地分析师(rank1)"
     },
     {
-      "name": "半导体材料/设备国产替代链",
+      "name": "半导体设备",
       "type": "a_share",
-      "reason": "工作台主线#1 | 超跌切换启动期 | 动量78 | 美制裁倒逼国产替代 + AI 算力材料需求 + 低位资金高低切",
-      "source": "工作台分析师(rank1)"
+      "reason": "整固期 | 动量55 | 第三代半导体国产化+政策支持",
+      "source": "本地分析师(rank2)"
     },
     {
-      "name": "贵金属/有色资源",
+      "name": "第三代半导体",
       "type": "a_share",
-      "reason": "工作台主线#2 | 防御强化期 | 动量65 | 美元贴年内高位下的避险配置 + 有色锡供给扰动",
-      "source": "工作台分析师(rank2)"
+      "reason": "整固期 | 动量55 | 第三代半导体国产化+政策支持",
+      "source": "本地分析师(rank2)"
     },
     {
-      "name": "光学光电子/先进封装",
+      "name": "AI算力",
       "type": "a_share",
-      "reason": "工作台主线#3 | 发酵期 | 动量62 | AI 算力硬件需求延续 + 封装环节国产化",
-      "source": "工作台分析师(rank3)"
+      "reason": "回调整固期 | 动量50 | AI算力硬件需求+HBM国产化",
+      "source": "本地分析师(rank3)"
     },
     {
-      "name": "科创50 权重龙头",
+      "name": "HBM",
       "type": "a_share",
-      "reason": "工作台主线#4 | 强化期 | 动量58 | 宽基唯一红盘，被动资金与护盘资金集中配置",
-      "source": "工作台分析师(rank4)"
+      "reason": "回调整固期 | 动量50 | AI算力硬件需求+HBM国产化",
+      "source": "本地分析师(rank3)"
+    },
+    {
+      "name": "存储",
+      "type": "a_share",
+      "reason": "回调整固期 | 动量50 | AI算力硬件需求+HBM国产化",
+      "source": "本地分析师(rank3)"
+    },
+    {
+      "name": "消费",
+      "type": "a_share",
+      "reason": "防御强化期 | 动量60 | 防御配置需求+基本面稳健",
+      "source": "本地分析师(rank4)"
+    },
+    {
+      "name": "食品饮料",
+      "type": "a_share",
+      "reason": "防御强化期 | 动量60 | 防御配置需求+基本面稳健",
+      "source": "本地分析师(rank4)"
+    },
+    {
+      "name": "饮料乳品",
+      "type": "a_share",
+      "reason": "防御强化期 | 动量60 | 防御配置需求+基本面稳健",
+      "source": "本地分析师(rank4)"
+    },
+    {
+      "name": "调味发酵",
+      "type": "a_share",
+      "reason": "防御强化期 | 动量60 | 防御配置需求+基本面稳健",
+      "source": "本地分析师(rank4)"
+    },
+    {
+      "name": "航空",
+      "type": "a_share",
+      "reason": "发酵早期 | 动量55 | 低空经济政策预期+航空复苏",
+      "source": "本地分析师(rank5)"
+    },
+    {
+      "name": "低空经济",
+      "type": "a_share",
+      "reason": "发酵早期 | 动量55 | 低空经济政策预期+航空复苏",
+      "source": "本地分析师(rank5)"
+    },
+    {
+      "name": "家电",
+      "type": "a_share",
+      "reason": "震荡整固期 | 动量50 | 以旧换新政策+消费复苏",
+      "source": "本地分析师(rank6)"
+    },
+    {
+      "name": "消费电子",
+      "type": "a_share",
+      "reason": "震荡整固期 | 动量50 | 以旧换新政策+消费复苏",
+      "source": "本地分析师(rank6)"
+    },
+    {
+      "name": "黑色家电",
+      "type": "a_share",
+      "reason": "震荡整固期 | 动量50 | 以旧换新政策+消费复苏",
+      "source": "本地分析师(rank6)"
+    },
+    {
+      "name": "小家电",
+      "type": "a_share",
+      "reason": "震荡整固期 | 动量50 | 以旧换新政策+消费复苏",
+      "source": "本地分析师(rank6)"
+    },
+    {
+      "name": "白色家电",
+      "type": "a_share",
+      "reason": "震荡整固期 | 动量50 | 以旧换新政策+消费复苏",
+      "source": "本地分析师(rank6)"
     }
   ],
   "watchlist": [
     {
-      "name": "小微盘题材连板",
+      "name": "光模块",
+      "type": "a_share",
+      "reason": "退潮确认期/动量35，暂不进深挖，跨轮复查",
+      "source": "本地分析师(rank7)"
+    },
+    {
+      "name": "CPO",
+      "type": "a_share",
+      "reason": "退潮确认期/动量35，暂不进深挖，跨轮复查",
+      "source": "本地分析师(rank7)"
+    },
+    {
+      "name": "服务器",
+      "type": "a_share",
+      "reason": "退潮确认期/动量30，暂不进深挖，跨轮复查",
+      "source": "本地分析师(rank8)"
+    },
+    {
+      "name": "连板",
       "type": "a_share",
       "reason": "退潮确认期/动量25，暂不进深挖，跨轮复查",
-      "source": "工作台分析师(rank5)"
+      "source": "本地分析师(rank9)"
+    },
+    {
+      "name": "首板",
+      "type": "a_share",
+      "reason": "退潮确认期/动量25，暂不进深挖，跨轮复查",
+      "source": "本地分析师(rank9)"
+    },
+    {
+      "name": "工程机械",
+      "type": "a_share",
+      "reason": "下行趋势期/动量40，暂不进深挖，跨轮复查",
+      "source": "本地分析师(rank10)"
     }
   ]
 }

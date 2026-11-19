@@ -1,146 +1,97 @@
 {
-  "updated_at": "2026-11-18 01:48",
+  "updated_at": "2026-11-19 12:52",
   "source": "新华财经资讯MCP(get_xhcj_hotNews) | 桥接写入",
   "items": [
     {
-      "title": "【中经社信号】政策发力推进生态优化 动力电池回收格局或加速重构",
-      "pub": "2026-11-17 22:24:04",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547614609839054848/1",
+      "title": "【中经社信号】“线上原生”家居品牌为何竞相线下开店",
+      "pub": "2026-11-19 11:59:22",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548183571115106304/1",
       "source": "新华财经",
       "rank": 1
     },
     {
-      "title": "货币市场日报：11月17日",
-      "pub": "2026-11-17 20:24:24",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547573153250107392/1",
+      "title": "午评：三大指数延续调整 光刻胶、先进封装概念股逆势活跃",
+      "pub": "2026-11-19 11:53:50",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548179606960824320/1",
       "source": "新华财经",
       "rank": 2
     },
     {
-      "title": "【新华解读】超6000亿规模“提质向新” 银行间债市精准支持民企融资",
-      "pub": "2026-11-17 20:08:11",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547574202384408576/1",
+      "title": "有色金属、贵金属18日全线杀跌 伦锡一度跌超8%",
+      "pub": "2026-11-19 09:13:04",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548137122642157568/1",
       "source": "新华财经",
       "rank": 3
     },
     {
-      "title": "【财经分析】创新、出海与并购——广东上市公司以三重突破筑牢增长韧性",
-      "pub": "2026-11-17 18:13:15",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547472572233900032/1",
+      "title": "国际金价再度重挫 COMEX黄金逼近3700美元",
+      "pub": "2026-11-19 08:56:53",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548057677042114560/1",
       "source": "新华财经",
       "rank": 4
     },
     {
-      "title": "商品日报（11月17日）：碳酸锂减仓拉升涨超5% 原油系大跌",
-      "pub": "2026-11-17 17:30:39",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547524466541043712/1",
+      "title": "【五大信披媒体精华摘要】11月19日",
+      "pub": "2026-11-19 08:41:34",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548130989952704512/1",
       "source": "新华财经",
       "rank": 5
     },
     {
-      "title": "债市日报：11月17日",
-      "pub": "2026-11-17 15:43:19",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547514197551063040/1",
+      "title": "新一轮国资国企改革全面实施",
+      "pub": "2026-11-19 07:49:35",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548120613609496576/1",
       "source": "新华财经",
       "rank": 6
     },
     {
-      "title": "收评：沪指跌0.50%失守3600点 影视院线板块大幅调整",
-      "pub": "2026-11-17 15:28:31",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547508194642649088/1",
+      "title": "聚焦“六张网”等重点领域 稳投资节奏加快",
+      "pub": "2026-11-19 07:48:55",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548119948250406912/1",
       "source": "新华财经",
       "rank": 7
     },
     {
-      "title": "【新华500】新华500指数（989001）17日跌0.11%",
-      "pub": "2026-11-17 15:25:52",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547507654172565504/1",
+      "title": "各地各央企均已完成工作台账编制 新一轮国资国企改革进入全面实施阶段",
+      "pub": "2026-11-19 07:48:19",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548114240633004032/1",
       "source": "新华财经",
       "rank": 8
     },
     {
-      "title": "工信部同意北京市等8个省（市）开展6G创新发展部省协同试点工作",
-      "pub": "2026-11-17 15:22:51",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547510143060434944/1",
+      "title": "“冲量”冲不动了 银行重算票据经营账",
+      "pub": "2026-11-19 07:41:42",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548118908201312256/1",
       "source": "新华财经",
       "rank": 9
     },
     {
-      "title": "我国将逐步实现疫苗处方全覆盖",
-      "pub": "2026-11-17 14:44:47",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547500517643952128/1",
+      "title": "美联储紧缩预期强化 全球利率与汇率定价再承压",
+      "pub": "2026-11-19 07:26:06",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548114846936883200/1",
       "source": "新华财经",
       "rank": 10
     },
     {
-      "title": "商务部等9部门深入推进再生资源回收体系建设",
-      "pub": "2026-11-17 13:19:58",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547472099493781504/1",
+      "title": "【财经分析】土耳其黄金出口额显著增长 黄金首饰制造业复苏仍面临挑战",
+      "pub": "2026-11-19 06:46:34",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547980670564392960/1",
       "source": "新华财经",
       "rank": 11
     },
     {
-      "title": "午评：创业板指涨0.72% 半导体产业链集体反弹",
-      "pub": "2026-11-17 11:49:39",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547454282639843328/1",
+      "title": "【看新股】宜科股份创业板IPO：去年营收增逾三成 拟募资11.98亿元扩产",
+      "pub": "2026-11-19 06:31:00",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547881581440901120/1",
       "source": "新华财经",
       "rank": 12
     },
     {
-      "title": "10月末境外机构持有银行间市场债券3.23万亿元",
-      "pub": "2026-11-17 10:22:10",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547434448644562944/1",
+      "title": "商务部：中韩自贸协定第二阶段谈判实质性完成",
+      "pub": "2026-11-19 06:23:57",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548015403344158720/1",
       "source": "新华财经",
       "rank": 13
-    },
-    {
-      "title": "我国北斗终端设备应用数量近4200万",
-      "pub": "2026-11-17 09:45:50",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547425237176918016/1",
-      "source": "新华财经",
-      "rank": 14
-    },
-    {
-      "title": "加息预期持续升温 美债收益率小幅下行",
-      "pub": "2026-11-17 09:30:06",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547420026673094656/1",
-      "source": "新华财经",
-      "rank": 15
-    },
-    {
-      "title": "第三批互换便利操作加速推进 多家券商完成首批买入",
-      "pub": "2026-11-17 09:05:46",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547414850771705856/1",
-      "source": "新华财经",
-      "rank": 16
-    },
-    {
-      "title": "【环球财经】纽约贵金属16日延续跌势 白银跌超3%",
-      "pub": "2026-11-17 09:00:27",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547330636374171648/1",
-      "source": "新华财经",
-      "rank": 17
-    },
-    {
-      "title": "【五大信披媒体精华摘要】11月17日",
-      "pub": "2026-11-17 08:50:12",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547406513003094016/1",
-      "source": "新华财经",
-      "rank": 18
-    },
-    {
-      "title": "泽连斯基：欧洲谈判团队首次“全阵容”与乌美磋商",
-      "pub": "2026-11-17 08:41:50",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547382739238821888/1",
-      "source": "新华财经",
-      "rank": 19
-    },
-    {
-      "title": "“把‘明年一季度’打在‘今年11月’” 银行旺季营销哨声提前吹响",
-      "pub": "2026-11-17 07:59:30",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547398863099879424/1",
-      "source": "新华财经",
-      "rank": 20
     }
   ]
 }
