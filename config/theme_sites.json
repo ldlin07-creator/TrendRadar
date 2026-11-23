@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-23 12:59",
+  "updated_at": "2026-11-23 14:15",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -1803,6 +1803,456 @@
       "title": "拼多多管理层电话会纪要：农产品上行/多多国际/生态建设三大看点",
       "url": "https://investor.pinduoduo.com/events/",
       "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
+      "url": "https://www.imrobotic.com/news/detail/37852",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
+      "url": "https://www.imrobotic.com/news/detail/37855",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
+      "url": "https://www.imrobotic.com/news/detail/37853",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
+      "url": "https://www.imrobotic.com/news/detail/37852",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
+      "url": "https://www.imrobotic.com/news/detail/37855",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
+      "url": "https://www.imrobotic.com/news/detail/37853",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
+      "url": "https://www.imrobotic.com/news/detail/37852",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
+      "url": "https://www.imrobotic.com/news/detail/37855",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
+      "url": "https://www.imrobotic.com/news/detail/37853",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
+      "url": "https://www.imrobotic.com/news/detail/37852",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
+      "url": "https://www.imrobotic.com/news/detail/37855",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
+      "url": "https://www.imrobotic.com/news/detail/37853",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "人形机器人首次登顶6200米以上高峰，超8成相关专利申请于近五年",
+      "url": "https://www.robot-china.com/news/202606/26/95974.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "波士顿动力人形机器人首次进入半导体制造领域，Atlas明年在格罗方德工厂测试",
+      "url": "https://www.robot-china.com/news/202611/23/97525.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
+      "url": "https://www.robot-china.com/news/202608/03/96250.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "人形机器人首次登顶6200米以上高峰，超8成相关专利申请于近五年",
+      "url": "https://www.robot-china.com/news/202606/26/95974.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "波士顿动力人形机器人首次进入半导体制造领域，Atlas明年在格罗方德工厂测试",
+      "url": "https://www.robot-china.com/news/202611/23/97525.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
+      "url": "https://www.robot-china.com/news/202608/03/96250.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "人形机器人首次登顶6200米以上高峰，超8成相关专利申请于近五年",
+      "url": "https://www.robot-china.com/news/202606/26/95974.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "波士顿动力人形机器人首次进入半导体制造领域，Atlas明年在格罗方德工厂测试",
+      "url": "https://www.robot-china.com/news/202611/23/97525.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
+      "url": "https://www.robot-china.com/news/202608/03/96250.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "人形机器人首次登顶6200米以上高峰，超8成相关专利申请于近五年",
+      "url": "https://www.robot-china.com/news/202606/26/95974.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "波士顿动力人形机器人首次进入半导体制造领域，Atlas明年在格罗方德工厂测试",
+      "url": "https://www.robot-china.com/news/202611/23/97525.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机器人网",
+      "site": "https://www.robot-china.com",
+      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
+      "url": "https://www.robot-china.com/news/202608/03/96250.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
+      "url": "https://www.aibangbots.com/a/14744",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "国科感元破解电子皮肤中离子复合材料难题",
+      "url": "https://www.aibangbots.com/a/14729",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·轮边电机",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
+      "url": "https://www.aibangbots.com/a/14720",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
+      "url": "https://www.aibangbots.com/a/14744",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "国科感元破解电子皮肤中离子复合材料难题",
+      "url": "https://www.aibangbots.com/a/14729",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
+      "url": "https://www.aibangbots.com/a/14720",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
+      "url": "https://www.aibangbots.com/a/14744",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "国科感元破解电子皮肤中离子复合材料难题",
+      "url": "https://www.aibangbots.com/a/14729",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·执行器",
+      "company": "",
+      "kind": "industry",
+      "source": "艾邦机器人",
+      "site": "https://www.aibangbots.com",
+      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
+      "url": "https://www.aibangbots.com/a/14720",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "田中精机 300461",
+      "kind": "company",
+      "source": "田中精机官网",
+      "site": "https://www.tanac.com.cn",
+      "title": "展会收官｜盛会落幕，匠心不止",
+      "url": "https://mp.weixin.qq.com/s/-Q7TqWBC_6_KyN46rcC_7A",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "田中精机 300461",
+      "kind": "company",
+      "source": "田中精机官网",
+      "site": "https://www.tanac.com.cn",
+      "title": "端午节｜粽香迎端午，清风叙安康",
+      "url": "https://mp.weixin.qq.com/s/eLN8r4DnnvGyLpcyl2cJ7A",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·空心杯电机",
+      "company": "田中精机 300461",
+      "kind": "company",
+      "source": "田中精机官网",
+      "site": "https://www.tanac.com.cn",
+      "title": "邀请函｜CWIEME SHANGHAI 2026",
+      "url": "https://mp.weixin.qq.com/s/80oDFrvtj0Tcm7PeJ4IS4w",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "埃夫特 688165",
+      "kind": "company",
+      "source": "埃夫特官网",
+      "site": "https://www.efort.com.cn",
+      "title": "游玮博士出席WAIC论坛｜筑好通用技术底座，埃夫特&启智交出工业具身落地答卷",
+      "url": "https://www.efort.com.cn/index.php/news/newsdetail/554.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "埃夫特 688165",
+      "kind": "company",
+      "source": "埃夫特官网",
+      "site": "https://www.efort.com.cn",
+      "title": "埃夫特 · 启智亮相WAIC | 首发HumanGPT，以通用技术底座破解行业共创难",
+      "url": "https://www.efort.com.cn/index.php/news/newsdetail/553.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "埃夫特 688165",
+      "kind": "company",
+      "source": "埃夫特官网",
+      "site": "https://www.efort.com.cn",
+      "title": "埃夫特亮相全省推进会：以通用技术底座承载机器人产业进阶",
+      "url": "https://www.efort.com.cn/index.php/news/newsdetail/552.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "传感器·电子鼻",
+      "company": "汉威科技 600206",
+      "kind": "company",
+      "source": "汉威科技官网",
+      "site": "https://www.hanwei.cn",
+      "title": "助力具身智能与物理AI发展，汉威科技多模态传感器成上海MEMS会议焦点",
+      "url": "https://hanwei.cn/news_detail/237.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "传感器·电子鼻",
+      "company": "汉威科技 600206",
+      "kind": "company",
+      "source": "汉威科技官网",
+      "site": "https://www.hanwei.cn",
+      "title": "盛会蓉城启幕，汉威科技高端光学矩阵亮相第十九届在线分析展",
+      "url": "https://hanwei.cn/news_detail/236.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "传感器·电子鼻",
+      "company": "汉威科技 600206",
+      "kind": "company",
+      "source": "汉威科技官网",
+      "site": "https://www.hanwei.cn",
+      "title": "汉威科技以多模态感知+AI智能体智慧化方案，破解工业场景消防安全管理难题",
+      "url": "https://hanwei.cn/news_detail/235.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "中京电子 002579",
+      "kind": "company",
+      "source": "中京电子官网",
+      "site": "https://www.ceepcb.com",
+      "title": "CEE Technology Showcases at IZB 2026 in Germany, Exploring New Opportunities for International Cooperation",
+      "url": "https://www.ceepcb.com/blog_detail/107.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "中京电子 002579",
+      "kind": "company",
+      "source": "中京电子官网",
+      "site": "https://www.ceepcb.com",
+      "title": "Six CEE Products Selected for 2026 Second Batch of Guangdong Premium High-Technology Products",
+      "url": "https://www.ceepcb.com/blog_detail/106.html",
+      "time": "2026-11-23"
+    },
+    {
+      "theme": "机器人·华为机器人",
+      "company": "中京电子 002579",
+      "kind": "company",
+      "source": "中京电子官网",
+      "site": "https://www.ceepcb.com",
+      "title": "CEE Named Among the Top 50 Outstanding Enterprises in the Sixth China Electronic Circuit Industry Awards",
+      "url": "https://www.ceepcb.com/blog_detail/105.html",
+      "time": "2026-11-23"
     }
   ]
 }

@@ -1,253 +1,221 @@
 {
-  "updated_at": "2026-11-23 12:52",
+  "updated_at": "2026-11-23 14:05",
   "source": "通达信MCP(wenda_news_query) | 7题材合并去重 | 上限5/题材 总计≤40",
   "items": [
+    {
+      "title": "维宏股份(300508)：微型伺服，我们现在最小直径可以做到8mm",
+      "time": "2026-11-20 18:55:15",
+      "url": "https://www.gelonghui.com/news/5359116",
+      "source": "格隆汇",
+      "theme": "机器人·空心杯电机",
+      "rank": 1
+    },
+    {
+      "title": "金杯电工：已完成110kV、220kV电压等级铝变压器绕组技术储备 已研发新能源驱动电机用200级漆包铝扁线等产品",
+      "time": "2026-11-20 11:57:02",
+      "url": "https://www.gelonghui.com/live/2771625",
+      "source": "格隆汇",
+      "theme": "机器人·空心杯电机",
+      "rank": 2
+    },
+    {
+      "title": "金杯电工：“六张网”建设将为电力基础设施等相关产业带来新发展机遇",
+      "time": "2026-11-20 11:56:48",
+      "url": "https://m.21jingji.com/timeline/7f7f6c10d30455f62832f87b48b2a5d8.html",
+      "source": "21世纪经济报道",
+      "theme": "机器人·空心杯电机",
+      "rank": 3
+    },
+    {
+      "title": "维宏股份(300508)：空心杯没有铁芯，可以做小做轻，惯量小，但是扭矩输出比较小",
+      "time": "2026-11-18 14:52:46",
+      "url": "https://www.gelonghui.com/news/5355966",
+      "source": "格隆汇",
+      "theme": "机器人·空心杯电机",
+      "rank": 4
+    },
+    {
+      "title": "大地熊：高性能稀土永磁产品可应用于人形机器人核心部件 目前处于批量供货阶段",
+      "time": "2026-11-17 19:36:55",
+      "url": "https://www.gelonghui.com/live/2765756",
+      "source": "格隆汇",
+      "theme": "机器人·空心杯电机",
+      "rank": 5
+    },
     {
       "title": "电科芯片：电机驱动芯片尚未完成机器人客户适配选型",
       "time": "2026-11-16 14:07:33",
       "url": "https://www.cls.cn/detail/2535242",
       "source": "财联社",
-      "theme": "机器人·自动化设备",
+      "theme": "机器人·华为机器人",
       "rank": 1
     },
     {
-      "title": "A股午评：创业板指上涨1.22%，数字媒体板块涨幅居前",
-      "time": "2026-11-23 11:43:54",
-      "url": "https://m.21jingji.com/article/20261123/herald/32483cb785c03d812d9f318a439dd69c.html",
-      "source": "21世纪经济报道",
-      "theme": "数字媒体·AI应用",
-      "rank": 1
-    },
-    {
-      "title": "11月20日华媒控股（000607）股票异动解析",
-      "time": "2026-11-20 11:47:25",
-      "url": "https://www.jiuyangongshe.com/action/detail/2gw777w7nwe",
+      "title": "11月23日凡拓数创（301313）股票异动解析",
+      "time": "2026-11-23 12:01:20",
+      "url": "https://www.jiuyangongshe.com/action/detail/2gwc5k2ajjy",
       "source": "韭研公社APP",
-      "theme": "数字媒体·AI应用",
-      "rank": 2
-    },
-    {
-      "title": "协同通信（01613.HK）董事会会议通告 将审议中期业绩及中期股息",
-      "time": "2026-11-19 17:10:50",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "数字媒体·AI应用",
-      "rank": 3
-    },
-    {
-      "title": "新质数字科技有限公司（02322.HK）11月30日举行董事会会议 审批中期业绩及考虑派息",
-      "time": "2026-11-18 19:52:24",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "数字媒体·AI应用",
-      "rank": 4
-    },
-    {
-      "title": "华夏文化科技集团（01566.HK）董事会会议通告 将审议中期业绩及中期股息",
-      "time": "2026-11-18 19:35:28",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "数字媒体·AI应用",
-      "rank": 5
-    },
-    {
-      "title": "招商银行发布贵金属业务市场风险提示",
-      "time": "2026-11-20 17:01:58",
-      "url": "https://www.gelonghui.com/live/2772109",
-      "source": "格隆汇",
-      "theme": "贵金属·黄金",
+      "theme": "AI·物理AI",
       "rank": 1
     },
     {
-      "title": "宁波银行发布贵金属业务市场风险提示",
-      "time": "2026-11-20 16:07:17",
-      "url": "https://www.gelonghui.com/live/2772010",
-      "source": "格隆汇",
-      "theme": "贵金属·黄金",
+      "title": "物理AI概念持续走强 凡拓数创20cm2连板",
+      "time": "2026-11-23 11:06:52",
+      "url": "https://m.21jingji.com/timeline/91d574d447ef68cc9a96d092e75fd205.html",
+      "source": "21世纪经济报道",
+      "theme": "AI·物理AI",
       "rank": 2
     },
     {
-      "title": "贵金属板块走低 山金国际跌超6%",
-      "time": "2026-11-20 09:40:22",
-      "url": "https://m.21jingji.com/timeline/6c61e6c6b541daefb7cbf1148e1b9310.html",
-      "source": "21世纪经济报道",
-      "theme": "贵金属·黄金",
-      "rank": 3
-    },
-    {
-      "title": "贵金属板块震荡走低 中金黄金跌超8%",
-      "time": "2026-11-18 13:10:15",
-      "url": "https://m.21jingji.com/timeline/139d92ff517e45aaa42bfd18fcbee8e1.html",
-      "source": "21世纪经济报道",
-      "theme": "贵金属·黄金",
-      "rank": 4
-    },
-    {
-      "title": "贵金属板块走高 赤峰黄金涨超3%",
-      "time": "2026-11-17 09:56:55",
-      "url": "https://m.21jingji.com/timeline/aac4da6ca742482348155d8bf2eff279.html",
-      "source": "21世纪经济报道",
-      "theme": "贵金属·黄金",
-      "rank": 5
-    },
-    {
-      "title": "天孚通信拟投建高速光器件项目，通信ETF银华（159994）等逆市上涨",
-      "time": "2026-11-23 09:49:12",
-      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1047758",
-      "source": "21世纪经济报道",
-      "theme": "通信设备·光模块",
-      "rank": 1
-    },
-    {
-      "title": "光弘科技(300735)：将积极配合客户在6G生态领域从基础通讯设备到最终智慧应用终端的发展",
-      "time": "2026-11-20 09:11:16",
-      "url": "https://www.gelonghui.com/news/5358204",
-      "source": "格隆汇",
-      "theme": "通信设备·光模块",
-      "rank": 2
-    },
-    {
-      "title": "光通信行业订单能见度指向2027年，通信ETF银华（159994）等通信ETF涨近1%",
-      "time": "2026-11-18 09:44:11",
-      "url": "https://m.21jingji.com/article/20261118/herald/71732e9c03210dc6d24ba08e0c269bdf.html",
-      "source": "21世纪经济报道",
-      "theme": "通信设备·光模块",
-      "rank": 3
-    },
-    {
-      "title": "工信部发文，事关6G",
-      "time": "2026-11-17 16:35:51",
-      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=138483&infoType=1&funcCode=004,004001,006,006005",
+      "title": "中信建投证券：物理AI是人工智能下一波浪潮",
+      "time": "2026-11-17 08:50:28",
+      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=138441&infoType=1&funcCode=004,004001,004039,004039003,004040,004040001,006,006005",
       "source": "中证金牛座",
-      "theme": "通信设备·光模块",
-      "rank": 4
-    },
-    {
-      "title": "烽火通信（600498）：中标中国联合网络通信有限公司上海市分公司采购项目，中标金额为705.49万元",
-      "time": "2026-11-17 14:02:35",
-      "url": "https://tongbicapital.com/article/detail?id=1463293",
-      "source": "同壁财经",
-      "theme": "通信设备·光模块",
-      "rank": 5
-    },
-    {
-      "title": "消费电子ETF富国（561100）下跌3.64%，立讯精密控股子公司莱尼电气系统获颁亚洲区地区总部证书",
-      "time": "2026-11-20 16:23:18",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2037559",
-      "source": "动态宝",
-      "theme": "电子元件·PCB",
-      "rank": 1
-    },
-    {
-      "title": "11月20日中京电子（002579）股票异动解析",
-      "time": "2026-11-20 11:47:25",
-      "url": "https://www.jiuyangongshe.com/action/detail/k0alp5ug3g",
-      "source": "韭研公社APP",
-      "theme": "电子元件·PCB",
-      "rank": 2
-    },
-    {
-      "title": "中信建投：电子板块持续高增长 半导体国产化有望加速",
-      "time": "2026-11-18 11:43:38",
-      "url": "http://www.zhitongcaijing.com/content/detail/1524856.html",
-      "source": "智通财经",
-      "theme": "电子元件·PCB",
+      "theme": "AI·物理AI",
       "rank": 3
     },
     {
-      "title": "民德电子(300656)：功率半导体业务已具备坚实的基础，目前订单饱满",
-      "time": "2026-11-17 20:16:11",
-      "url": "https://www.gelonghui.com/news/5355549",
-      "source": "格隆汇",
-      "theme": "电子元件·PCB",
+      "title": "华为将发布首款昇腾原生具身世界模型 物理AI或再迎重磅催化",
+      "time": "2026-11-16 07:56:44",
+      "url": "https://www.cls.cn/detail/2534830",
+      "source": "财联社",
+      "theme": "AI·物理AI",
       "rank": 4
     },
     {
-      "title": "223.19亿元资金今日流出电子股",
-      "time": "2026-11-16 17:15:44",
-      "url": "https://www.stcn.com/article/detail/4338569.html",
+      "title": "物理AI产业与行情共振公募抢抓第二波投资红利",
+      "time": "2026-11-16 07:01:03",
+      "url": "https://www.stcn.com/article/detail/4337299.html",
       "source": "证券时报",
-      "theme": "电子元件·PCB",
+      "theme": "AI·物理AI",
       "rank": 5
     },
     {
-      "title": "影视院线板块回升 幸福蓝海涨超8%",
-      "time": "2026-11-23 10:05:14",
-      "url": "https://m.21jingji.com/timeline/77528c70d2deddb23bc9ef22fa6a82f0.html",
-      "source": "21世纪经济报道",
-      "theme": "影视院线·内容复苏",
+      "title": "电科芯片：电机驱动芯片尚未完成机器人客户适配选型",
+      "time": "2026-11-16 14:07:33",
+      "url": "https://www.cls.cn/detail/2535242",
+      "source": "财联社",
+      "theme": "机器人·执行器",
       "rank": 1
     },
     {
-      "title": "影视院线板块低开 文投控股、金逸影视跌停",
-      "time": "2026-11-20 09:35:54",
-      "url": "https://m.21jingji.com/timeline/05bc7d69f0e7626d153137f341dadeee.html",
-      "source": "21世纪经济报道",
-      "theme": "影视院线·内容复苏",
+      "title": "商米科技-W（06810）涨超20% 锚定商业物理AI领导者新愿景",
+      "time": "2026-11-23 13:57:03",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "传感器·电子鼻",
+      "rank": 1
+    },
+    {
+      "title": "异动快报：超颖电子（603175）11月23日13点49分触及涨停板",
+      "time": "2026-11-23 13:56:30",
+      "url": "https://stock.stockstar.com/RB2026112300018420.shtml",
+      "source": "证券之星",
+      "theme": "传感器·电子鼻",
       "rank": 2
-    },
-    {
-      "title": "影视院线板块大幅低开 慈文传媒、横店影视跌停",
-      "time": "2026-11-19 09:35:15",
-      "url": "https://m.21jingji.com/timeline/6a3b15dd1883edc7c01bd8c83fe0576c.html",
-      "source": "21世纪经济报道",
-      "theme": "影视院线·内容复苏",
-      "rank": 3
-    },
-    {
-      "title": "影视院线板块持续拉升 文投控股、横店影视涨停",
-      "time": "2026-11-16 10:38:47",
-      "url": "https://m.21jingji.com/timeline/8f1f85bd1d1e31257ed31f539bf3b36f.html",
-      "source": "21世纪经济报道",
-      "theme": "影视院线·内容复苏",
-      "rank": 4
-    },
-    {
-      "title": "影视院线板块高开 金逸影视2连板",
-      "time": "2026-11-16 09:35:10",
-      "url": "https://m.21jingji.com/timeline/9d18d80879ca7f204caefd94ce53bb57.html",
-      "source": "21世纪经济报道",
-      "theme": "影视院线·内容复苏",
-      "rank": 5
     },
     {
       "title": "上谕集团控股有限公司（01633.HK）董事会会议通告 将审议中期业绩及中期股息",
       "time": "2026-11-20 16:43:11",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "三季报预增·基本面",
-      "rank": 1
-    },
-    {
-      "title": "三一重工（06031.HK）拟召开2026年第三季度业绩说明会",
-      "time": "2026-11-18 22:10:57",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "三季报预增·基本面",
-      "rank": 2
-    },
-    {
-      "title": "新质数字科技有限公司（02322.HK）11月30日举行董事会会议 审批中期业绩及考虑派息",
-      "time": "2026-11-18 19:52:24",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "三季报预增·基本面",
+      "theme": "传感器·电子鼻",
       "rank": 3
     },
     {
-      "title": "国际永胜集团控股有限公司（06663.HK）发正面盈利预告 预计截至2026年9月30日止六个月溢利不少于1,500.00万港元",
-      "time": "2026-11-18 01:20:58",
+      "title": "SenesTech（SNES.US）董事JoAnna Abrams获授95,129份期权",
+      "time": "2026-11-19 17:56:53",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "三季报预增·基本面",
+      "theme": "传感器·电子鼻",
       "rank": 4
     },
     {
-      "title": "七元投资控股有限公司（01660.HK）将于11月27日审议中期业绩及股息",
-      "time": "2026-11-17 17:20:15",
+      "title": "维珍妮（02199.HK）拟于11月26日举行董事会会议审议中期业绩及派息",
+      "time": "2026-11-17 01:26:28",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "三季报预增·基本面",
+      "theme": "传感器·电子鼻",
+      "rank": 5
+    },
+    {
+      "title": "电机板块异动拉升 华阳智能涨超10%",
+      "time": "2026-11-23 11:25:11",
+      "url": "https://m.21jingji.com/timeline/16703043c2f239579747fb9047f2d90e.html",
+      "source": "21世纪经济报道",
+      "theme": "机器人·轮边电机",
+      "rank": 1
+    },
+    {
+      "title": "奕帆传动(301023)：目前公司主要做减速电机、驱动控制类产品",
+      "time": "2026-11-23 09:20:48",
+      "url": "https://www.gelonghui.com/news/5359623",
+      "source": "格隆汇",
+      "theme": "机器人·轮边电机",
+      "rank": 2
+    },
+    {
+      "title": "伯特利首个电机项目正式投产，底盘核心能力再进一步",
+      "time": "2026-11-18 18:24:58",
+      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2030338",
+      "source": "动态宝",
+      "theme": "机器人·轮边电机",
+      "rank": 3
+    },
+    {
+      "title": "恒帅股份(300969)：依托谐波磁场电机，人形机器人多类电机送样推进",
+      "time": "2026-11-17 09:16:22",
+      "url": "https://www.gelonghui.com/news/5354691",
+      "source": "格隆汇",
+      "theme": "机器人·轮边电机",
+      "rank": 4
+    },
+    {
+      "title": "恒帅股份：在人形机器人领域已针对直线关节电机等品种开展定制化开发",
+      "time": "2026-11-17 08:25:12",
+      "url": "https://m.21jingji.com/timeline/58db96bc96568b2fc2f1cf63848711a1.html",
+      "source": "21世纪经济报道",
+      "theme": "机器人·轮边电机",
+      "rank": 5
+    },
+    {
+      "title": "今日午盘全市场共20股涨停，连板股5只",
+      "time": "2026-11-19 11:55:11",
+      "url": "https://m.21jingji.com/timeline/e55d99ae6749561e150b49566f1d5e3a.html",
+      "source": "21世纪经济报道",
+      "theme": "接力·昨日连板",
+      "rank": 1
+    },
+    {
+      "title": "11月18日连板股分析：连板股晋级率不足二成 国产算力板块持续发酵",
+      "time": "2026-11-18 15:35:33",
+      "url": "https://www.cls.cn/detail/2537835",
+      "source": "财联社",
+      "theme": "接力·昨日连板",
+      "rank": 2
+    },
+    {
+      "title": "今日午盘全市场共32股涨停，连板股8只",
+      "time": "2026-11-18 11:58:55",
+      "url": "https://m.21jingji.com/timeline/a76b34ea19d6add2604b07e36fe42fdb.html",
+      "source": "21世纪经济报道",
+      "theme": "接力·昨日连板",
+      "rank": 3
+    },
+    {
+      "title": "11月17日连板股分析：连板股晋级率仅9% 九阳股份盘中上演“天地板”",
+      "time": "2026-11-17 15:37:54",
+      "url": "https://www.cls.cn/detail/2536572",
+      "source": "财联社",
+      "theme": "接力·昨日连板",
+      "rank": 4
+    },
+    {
+      "title": "11月16日连板股分析：连板股晋级率超四成 文投控股走出19天11板",
+      "time": "2026-11-16 15:47:35",
+      "url": "https://www.cls.cn/detail/2535430",
+      "source": "财联社",
+      "theme": "接力·昨日连板",
       "rank": 5
     }
   ]

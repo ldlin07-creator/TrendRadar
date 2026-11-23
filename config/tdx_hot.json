@@ -1,214 +1,214 @@
 {
-  "updated_at": "2026-11-23 12:52",
-  "source": "通达信MCP(tdx_screener 今日涨停) | 桥接写入",
+  "updated_at": "2026-11-23 14:05",
+  "source": "通达信涨停MCP(tdx_screener) | 桥接写入",
   "items": [
     {
-      "title": "瑞芯微 涨停（非周期股 / 芯片 / 人工智能 / 机器人概念）",
+      "title": "宇树科技-W 涨停（非周期股.人形机器人.人工智能.自动化设备）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603893.html",
+      "url": "https://guba.eastmoney.com/list,688836.html",
       "source": "通达信涨停",
       "rank": 1
     },
     {
-      "title": "青山纸业 涨停（CPO概念 / 国企改革 / 造纸）",
+      "title": "拓普集团 涨停（无人驾驶.非周期股）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,600103.html",
+      "url": "https://guba.eastmoney.com/list,601689.html",
       "source": "通达信涨停",
       "rank": 2
     },
     {
-      "title": "怡达股份 涨停（芯片 / 光刻机 / 股权转让 / 摩根中国A股基金持股 / 电解液 / 化学原料）",
+      "title": "瑞芯微 涨停（非周期股.芯片.人工智能.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,300721.html",
+      "url": "https://guba.eastmoney.com/list,603893.html",
       "source": "通达信涨停",
       "rank": 3
     },
     {
-      "title": "华东重机 涨停（芯片 / 光刻机 / 通用设备 / 专精特新 / DeepSeek概念）",
+      "title": "华东重机 涨停（芯片.光刻机.通用设备.专精特新.DeepSeek概念）",
       "pub": "2026-11-23",
       "url": "https://guba.eastmoney.com/list,002685.html",
       "source": "通达信涨停",
       "rank": 4
     },
     {
-      "title": "世运电路 涨停（无人驾驶 / PCB概念）",
+      "title": "上纬新材 涨停（人形机器人.塑料.机器人概念.一带一路.燃料电池）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603920.html",
+      "url": "https://guba.eastmoney.com/list,688585.html",
       "source": "通达信涨停",
       "rank": 5
     },
     {
-      "title": "高德红外 涨停（无人驾驶 / 非周期股）",
+      "title": "宁波东力 涨停（人形机器人.通用设备.拟增持.机器人概念.电机）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002414.html",
+      "url": "https://guba.eastmoney.com/list,002164.html",
       "source": "通达信涨停",
       "rank": 6
     },
     {
-      "title": "宁波东力 涨停（人形机器人 / 通用设备 / 拟增持 / 机器人概念 / 电机）",
+      "title": "兆威机电 涨停（人形机器人.电机.机器人概念.华为概念.混合现实）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002164.html",
+      "url": "https://guba.eastmoney.com/list,003021.html",
       "source": "通达信涨停",
       "rank": 7
     },
     {
-      "title": "崇达技术 涨停（PCB概念 / 无人驾驶）",
+      "title": "青山纸业 涨停（CPO概念.国企改革.造纸）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002815.html",
+      "url": "https://guba.eastmoney.com/list,600103.html",
       "source": "通达信涨停",
       "rank": 8
     },
     {
-      "title": "九阳股份 涨停（小家电 / 电商概念 / 机器人概念 / 绿色电力 / 股东减持）",
+      "title": "世运电路 涨停（无人驾驶.PCB概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002242.html",
+      "url": "https://guba.eastmoney.com/list,603920.html",
       "source": "通达信涨停",
       "rank": 9
     },
     {
-      "title": "福莱新材 涨停（人形机器人 / 物理AI / 塑料 / 机器人概念 / 华为概念 / 股东减持）",
+      "title": "九阳股份 涨停（小家电.电商概念.机器人概念.绿色电力.股东减持）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,605488.html",
+      "url": "https://guba.eastmoney.com/list,002242.html",
       "source": "通达信涨停",
       "rank": 10
     },
     {
-      "title": "光洋股份 涨停（PCB概念 / 无人驾驶）",
+      "title": "埃斯顿 涨停（人形机器人.自动化设备.机器人概念.专精特新.农机）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002708.html",
+      "url": "https://guba.eastmoney.com/list,002747.html",
       "source": "通达信涨停",
       "rank": 11
     },
     {
-      "title": "克来机电 涨停（CPO概念 / 无人驾驶）",
+      "title": "五洲新春 涨停（人形机器人.通用设备.机器人概念.行星滚柱丝杠）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603960.html",
+      "url": "https://guba.eastmoney.com/list,603667.html",
       "source": "通达信涨停",
       "rank": 12
     },
     {
-      "title": "新泉股份 涨停（非周期股 / 机器人概念 / 新能源车）",
+      "title": "光洋股份 涨停（PCB概念.无人驾驶）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603179.html",
+      "url": "https://guba.eastmoney.com/list,002708.html",
       "source": "通达信涨停",
       "rank": 13
     },
     {
-      "title": "西陇科学 涨停（PCB概念 / 芯片 / 电商概念）",
+      "title": "克来机电 涨停（CPO概念.无人驾驶）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002584.html",
+      "url": "https://guba.eastmoney.com/list,603960.html",
       "source": "通达信涨停",
       "rank": 14
     },
     {
-      "title": "奥士康 涨停（PCB概念 / 元器件 / 华为概念）",
+      "title": "模塑科技 涨停（人形机器人.机器人概念.小米概念.新能源车.华为汽车）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002913.html",
+      "url": "https://guba.eastmoney.com/list,000700.html",
       "source": "通达信涨停",
       "rank": 15
     },
     {
-      "title": "浙江荣泰 涨停（人形机器人 / 储能 / 机器人概念）",
+      "title": "福莱新材 涨停（人形机器人.物理AI.塑料.机器人概念.华为概念.股东减持）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603119.html",
+      "url": "https://guba.eastmoney.com/list,605488.html",
       "source": "通达信涨停",
       "rank": 16
     },
     {
-      "title": "京蓝科技 涨停（昨日断板 / 雄安新区 / 一带一路 / 环境治理）",
+      "title": "怡达股份 涨停（芯片.光刻机.股权转让.摩根中国A股基金持股.电解液.化学原料）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,000711.html",
+      "url": "https://guba.eastmoney.com/list,300721.html",
       "source": "通达信涨停",
       "rank": 17
     },
     {
-      "title": "安培龙 涨停（无人驾驶 / 储能 / 人形机器人 / 机器人概念）",
+      "title": "高德红外 涨停（无人驾驶.非周期股）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,301413.html",
+      "url": "https://guba.eastmoney.com/list,002414.html",
       "source": "通达信涨停",
       "rank": 18
     },
     {
-      "title": "凡拓数创 涨停（物理AI / 机器人概念）",
+      "title": "移远通信 涨停（无人驾驶.非周期股）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,301313.html",
+      "url": "https://guba.eastmoney.com/list,603236.html",
       "source": "通达信涨停",
       "rank": 19
     },
     {
-      "title": "维宏股份 涨停（活跃小盘非融 / 人形机器人 / 机器人概念）",
+      "title": "安培龙 涨停（无人驾驶.储能.人形机器人.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,300508.html",
+      "url": "https://guba.eastmoney.com/list,301413.html",
       "source": "通达信涨停",
       "rank": 20
     },
     {
-      "title": "荣联科技 涨停（华为算力 / 人工智能 / AI智能体 / 国企改革）",
+      "title": "新泉股份 涨停（非周期股.机器人概念.新能源车）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002642.html",
+      "url": "https://guba.eastmoney.com/list,603179.html",
       "source": "通达信涨停",
       "rank": 21
     },
     {
-      "title": "科森科技 涨停（储能 / 机器人概念 / 华为概念 / 消费电子概念 / 元宇宙概念）",
+      "title": "浙江荣泰 涨停（人形机器人.储能.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,603626.html",
+      "url": "https://guba.eastmoney.com/list,603119.html",
       "source": "通达信涨停",
       "rank": 22
     },
     {
-      "title": "联创电子 涨停（无人驾驶 / 芯片 / 机器人概念）",
+      "title": "锋龙股份 涨停（通用设备.机器人概念.新能源车.控制权变更）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002036.html",
+      "url": "https://guba.eastmoney.com/list,002931.html",
       "source": "通达信涨停",
       "rank": 23
     },
     {
-      "title": "艾芬达 涨停（人形机器人 / 跨境电商 / 机器人概念 / 家居用品）",
+      "title": "荣联科技 涨停（华为算力.人工智能.AI智能体.国企改革）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,301575.html",
+      "url": "https://guba.eastmoney.com/list,002642.html",
       "source": "通达信涨停",
       "rank": 24
     },
     {
-      "title": "中京电子 涨停（PCB概念 / 芯片 / 机器人概念）",
+      "title": "大洋电机 涨停（芯片.人形机器人.机器人概念.回购计划.分拆上市预期）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002579.html",
+      "url": "https://guba.eastmoney.com/list,002249.html",
       "source": "通达信涨停",
       "rank": 25
     },
     {
-      "title": "锋龙股份 涨停（通用设备 / 机器人概念 / 新能源车 / 控制权变更）",
+      "title": "掌阅科技 涨停（AI智能体.人工智能.知识产权.数字媒体）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002931.html",
+      "url": "https://guba.eastmoney.com/list,603533.html",
       "source": "通达信涨停",
       "rank": 26
     },
     {
-      "title": "澳洋健康 涨停（国企改革 / 医疗服务 / 养老概念 / 冷链物流 / 基因概念）",
+      "title": "中京电子 涨停（PCB概念.芯片.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002172.html",
+      "url": "https://guba.eastmoney.com/list,002579.html",
       "source": "通达信涨停",
       "rank": 27
     },
     {
-      "title": "恒工精密 涨停（人形机器人 / 通用设备 / 机器人概念 / 股东减持）",
+      "title": "凡拓数创 涨停（物理AI.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,301261.html",
+      "url": "https://guba.eastmoney.com/list,301313.html",
       "source": "通达信涨停",
       "rank": 28
     },
     {
-      "title": "东方海洋 涨停（渔业 / 民营医院 / 预制菜 / 冷链物流 / 基因概念）",
+      "title": "中大力德 涨停（人形机器人.通用设备.机器人概念.减速器）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,002086.html",
+      "url": "https://guba.eastmoney.com/list,002896.html",
       "source": "通达信涨停",
       "rank": 29
     },
     {
-      "title": "浙文影业 涨停（人工智能 / 国企改革 / 纺织制造 / DeepSeek概念）",
+      "title": "联创电子 涨停（无人驾驶.芯片.机器人概念）",
       "pub": "2026-11-23",
-      "url": "https://guba.eastmoney.com/list,601599.html",
+      "url": "https://guba.eastmoney.com/list,002036.html",
       "source": "通达信涨停",
       "rank": 30
     }
