@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-23 09:40",
+  "updated_at": "2026-11-23 12:59",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -792,6 +792,1016 @@
       "site": "https://www.xj.com.cn",
       "title": "许继电气 柔性直流/特高压/新能源并网核心装备/最新中标项目公告",
       "url": "https://www.xj.com.cn/news/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
+      "url": "https://www.imrobotic.com/news/detail/37852",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
+      "url": "https://www.imrobotic.com/news/detail/37855",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "机器人在线",
+      "site": "https://www.imrobotic.com",
+      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
+      "url": "https://www.imrobotic.com/news/detail/37853",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机械工业联合会机器人分会",
+      "site": "https://cria.mei.net.cn",
+      "title": "关于开展2025年度数据信息填报的通知",
+      "url": "https://cria.mei.net.cn/news.asp?vid=4243",
+      "time": "2026-03-16"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机械工业联合会机器人分会",
+      "site": "https://cria.mei.net.cn",
+      "title": "《2025中国工业机器人产业市场报告》 订阅通知",
+      "url": "https://cria.mei.net.cn/news.asp?vid=4242",
+      "time": "2026-03-13"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国机械工业联合会机器人分会",
+      "site": "https://cria.mei.net.cn",
+      "title": "关于召开2026机器人国际交流对接活动的通知",
+      "url": "https://cria.mei.net.cn/news.asp?vid=4246",
+      "time": "2026-11-11"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "2026年“5G+工业互联网”融合应用城市试点申报工作启动",
+      "url": "https://mp.weixin.qq.com/s/wBtrv17C0qJxesH0SppafQ",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "34个上榜！2026年度领航级智能工厂培育名单公布",
+      "url": "https://mp.weixin.qq.com/s/UB_bwPZswMU3pC0SGzfcGA",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "100个上榜！2026年“服务企业在基层”典型案例公布",
+      "url": "https://mp.weixin.qq.com/s/OxOR5QRzEWf4ErzdFiEUwg",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "瑞芯微 603893",
+      "kind": "company",
+      "source": "瑞芯微官网",
+      "site": "https://www.rock-chips.com",
+      "title": "瑞芯微电子 AIoT芯片/边缘计算/投资者关系",
+      "url": "https://www.rock-chips.com",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "瑞芯微 603893",
+      "kind": "company",
+      "source": "瑞芯微官网",
+      "site": "https://www.rock-chips.com",
+      "title": "瑞芯微 2026年第三季度业绩说明会公告",
+      "url": "https://roadshow.sseinfo.com/",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "宁波东力 002164",
+      "kind": "company",
+      "source": "宁波东力官网",
+      "site": "https://www.donly.com",
+      "title": "宁波东力 传动设备/齿轮箱/电机/门控系统/投资者关系",
+      "url": "https://www.donly.com",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "宁波东力 002164",
+      "kind": "company",
+      "source": "宁波东力官网",
+      "site": "https://www.donly.com",
+      "title": "宁波东力 投资者关系互动平台",
+      "url": "http://ir.p5w.net/c/002164.shtml",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "克来机电 603960",
+      "kind": "company",
+      "source": "克来机电官网",
+      "site": "https://www.sh-kelai.com",
+      "title": "克来机电 智能装备/汽车零部件/柔性自动化/投资者关系",
+      "url": "https://www.sh-kelai.com",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "安培龙 301413",
+      "kind": "company",
+      "source": "安培龙官网",
+      "site": "https://www.ampron.com",
+      "title": "安培龙 车规级传感器/陶瓷电容压力传感器/投资者关系",
+      "url": "https://www.ampron.com",
+      "time": ""
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "安培龙 301413",
+      "kind": "company",
+      "source": "安培龙官网",
+      "site": "https://www.ampron.com",
+      "title": "安培龙 面向新能源汽车热管理的宽温区高精度陶瓷电容压力传感器获评国际先进",
+      "url": "https://ampron.com/497.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "机器人·自动化设备",
+      "company": "凡拓数创 301313",
+      "kind": "company",
+      "source": "凡拓数创官网",
+      "site": "https://www.frontop.cn",
+      "title": "凡拓数创 物理AI/数字孪生/具身智能仿真/投资者关系",
+      "url": "https://www.frontop.cn",
+      "time": ""
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "中国新闻技术工作者联合会",
+      "site": "https://www.cnjta.org",
+      "title": "中国新闻技术工作者联合会：生成式AI在新闻生产中的应用规范与案例",
+      "url": "https://www.cnjta.org",
+      "time": ""
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "中国新闻技术工作者联合会",
+      "site": "https://www.cnjta.org",
+      "title": "2026年智能媒体创新发展大会：AIGC重塑内容生产全链路",
+      "url": "https://www.cnjta.org",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "中国新闻技术工作者联合会",
+      "site": "https://www.cnjta.org",
+      "title": "新闻业AI应用白皮书（2026）：多模态大模型落地路径与合规边界",
+      "url": "https://www.cnjta.org",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "站酷ZCOOL",
+      "site": "https://www.zcool.com.cn",
+      "title": "站酷设计周2026：AIGC设计工具全景图谱与商业落地案例库",
+      "url": "https://www.zcool.com.cn",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "站酷ZCOOL",
+      "site": "https://www.zcool.com.cn",
+      "title": "Midjourney v7 / Stable Diffusion 3.5 实战教程合集：从入门到商业变现",
+      "url": "https://www.zcool.com.cn",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "数字媐体·AI应用",
+      "company": "",
+      "kind": "industry",
+      "source": "站酷ZCOOL",
+      "site": "https://www.zcool.com.cn",
+      "title": "AI视频生成工具（Sora/Runway Gen-3/Kling）横评：广告片/短剧/电商素材实测",
+      "url": "https://www.zcool.com.cn",
+      "time": "2026-11-17"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "视觉中国 000681",
+      "kind": "company",
+      "source": "视觉中国官网",
+      "site": "https://www.vcg.com",
+      "title": "视觉中国 AIGC版权图库/视频生成模型/数字内容授权平台/投资者关系",
+      "url": "https://www.vcg.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "视觉中国 000681",
+      "kind": "company",
+      "source": "视觉中国官网",
+      "site": "https://www.vcg.com",
+      "title": "视觉中国三季报：AI业务营收占比提升至18% 版权保护体系升级",
+      "url": "https://www.vcg.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "华数传媒 000156",
+      "kind": "company",
+      "source": "华数传媒官网",
+      "site": "https://www.wasu.cn",
+      "title": "华数传媒 智慧广电/数字文化/元宇宙内容生产基地/投资者关系",
+      "url": "https://www.wasu.cn",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "华数传媒 000156",
+      "kind": "company",
+      "source": "华数传媒官网",
+      "site": "https://www.wasu.cn",
+      "title": "华数传媒发布《数字文化产业白皮书》 AI赋能内容生产全流程",
+      "url": "https://www.wasu.cn/news/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "昆仑万维 300418",
+      "kind": "company",
+      "source": "昆仑万维官网",
+      "site": "https://www.kunlun.com",
+      "title": "昆仑万维 天工大模型/Opera浏览器AI/游戏出海/AIGC全栈布局/投资者关系",
+      "url": "https://www.kunlun.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "数字媒体·AI应用",
+      "company": "昆仑万维 300418",
+      "kind": "company",
+      "source": "昆仑万维官网",
+      "site": "https://www.kunlun.com",
+      "title": "昆仑万维《天工3.0》开源：MoE架构400B参数 中文效能超GPT-4",
+      "url": "https://www.kunlun.com/news/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "中国黄金协会",
+      "site": "https://www.cngold.org",
+      "title": "中国黄金协会：2026年1-10月全国黄金消费量同比增长6.8% 投资需求旺盛",
+      "url": "https://www.cngold.org",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "中国黄金协会",
+      "site": "https://www.cngold.org",
+      "title": "2026中国黄金年会：央行增储背景下黄金资产配置新逻辑",
+      "url": "https://www.cngold.org",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "中国黄金协会",
+      "site": "https://www.cngold.org",
+      "title": "黄金珠宝首饰标准化技术委员会发布《足金9999》团体标准",
+      "url": "https://www.cngold.org",
+      "time": "2026-11-16"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "世界黄金协会中国",
+      "site": "https://www.gold.org/cn",
+      "title": "WGC：2026Q3全球黄金需求趋势报告——央行净买入连续15个月超1000吨",
+      "url": "https://www.gold.org/cn",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "世界黄金协会中国",
+      "site": "https://www.gold.org/cn",
+      "title": "世界黄金协会：中国黄金ETF持仓创历史新高 个人投资者配置比例提升",
+      "url": "https://www.gold.org/cn",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "",
+      "kind": "industry",
+      "source": "世界黄金协会中国",
+      "site": "https://www.gold.org/cn",
+      "title": "WGC《黄金投资者风险偏好调研2026》：避险属性强化 推动长期持有意愿",
+      "url": "https://www.gold.org/cn",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "中金黄金 600489",
+      "kind": "company",
+      "source": "中金黄金官网",
+      "site": "https://www.zgjgold.com.cn",
+      "title": "中金黄金 矿山开采/冶炼加工/黄金交易/投资者关系",
+      "url": "https://www.zgjgold.com.cn",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "中金黄金 600489",
+      "kind": "company",
+      "source": "中金黄金官网",
+      "site": "https://www.zgjgold.com.cn",
+      "title": "中金黄金三季报：前三季度实现净利润23.6亿元 同比增长32%",
+      "url": "https://www.zgjgold.com.cn/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "山东黄金 600547",
+      "kind": "company",
+      "source": "山东黄金官网",
+      "site": "https://www.sdgold.com.cn",
+      "title": "山东黄金 深部找矿突破/海外并购/绿色智能矿山建设/投资者关系",
+      "url": "https://www.sdgold.com.cn",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "山东黄金 600547",
+      "kind": "company",
+      "source": "山东黄金官网",
+      "site": "https://www.sdgold.com.cn",
+      "title": "山东黄金：红犬山金矿深部探获超大规模金矿体 资源量重大增加",
+      "url": "https://www.sdgold.com.cn/news/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "赤峰黄金 600988",
+      "kind": "company",
+      "source": "赤峰黄金官网",
+      "site": "https://www.cfjin.com",
+      "title": "赤峰黄金 海外矿山/选矿冶炼一体化/ESG报告/投资者关系",
+      "url": "https://www.cfjin.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "赤峰黄金 600988",
+      "kind": "company",
+      "source": "赤峰黄金官网",
+      "site": "https://www.cfjin.com",
+      "title": "赤峰黄金三季报：海外矿山产金量同比增15% 成本管控显成效",
+      "url": "https://www.cfjin.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "招金黄金 000506",
+      "kind": "company",
+      "source": "招金黄金官网",
+      "site": "https://www.zhaojin.com.cn",
+      "title": "招金黄金 矿产资源/黄金精炼/金融衍生品/投资者关系",
+      "url": "https://www.zhaojin.com.cn",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "贵金属·黄金",
+      "company": "招金黄金 000506",
+      "kind": "company",
+      "source": "招金黄金官网",
+      "site": "https://www.zhaojin.com.cn",
+      "title": "招金黄金：山东招远金矿群深部找矿取得新突破 预增储量超50吨",
+      "url": "https://www.zhaojin.com.cn/news/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "光纤在线：2026年中国光通信市场年度报告——800G/1.6T光模块放量加速",
+      "url": "https://www.fiberon.cn",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "CIOE2026回顾：LPO/CPO技术路线之争 硅光子芯片量产时间表明确",
+      "url": "https://www.fiberon.cn",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "英伟达GB300/GB200服务器网络架构解析：单机柜光模块用量超5000个",
+      "url": "https://www.fiberon.cn",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "海外云厂商Capital Expenditure指引上调 光模块供应链景气度延续",
+      "url": "https://www.fiberon.cn",
+      "time": "2026-11-16"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "400G/800G光模块价格战白热化：头部厂商毛利率分化 加速出清",
+      "url": "https://www.fiberon.cn",
+      "time": "2026-11-14"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "深圳市光学光电子行业协会",
+      "site": "https://www.szop.org.cn",
+      "title": "深圳光协：2026年粤港澳大湾区光电子产业产值破万亿 光模块占比超30%",
+      "url": "https://www.szop.org.cn",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "中际旭创 300308",
+      "kind": "company",
+      "source": "中际旭创官网",
+      "site": "https://www.accelink.com",
+      "title": "中际旭创 800G/1.6T光模块/硅光芯片/海外产能布局/投资者关系",
+      "url": "https://www.accelink.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "中际旭创 300308",
+      "kind": "company",
+      "source": "中际旭创官网",
+      "site": "https://www.accelink.com",
+      "title": "中际旭创三季报：营收同比增85% 800G光模块出货量全球第一",
+      "url": "https://www.accelink.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "新易盛 300502",
+      "kind": "company",
+      "source": "新易盛官网",
+      "site": "https://www.eoptolink.com",
+      "title": "新易盛 400G/800G/1.6T光模块/数据中心互联/投资者关系",
+      "url": "https://www.eoptolink.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "新易盛 300502",
+      "kind": "company",
+      "source": "新易盛官网",
+      "site": "https://www.eoptolink.com",
+      "title": "新易盛发布1.6T OSFP-XD DR8硅光模块 单波200Gbps PAM4技术量产",
+      "url": "https://www.eoptolink.com/news/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "光迅科技 002281",
+      "kind": "company",
+      "source": "光迅科技官网",
+      "site": "https://www.gxcom.com.cn",
+      "title": "光迅科技 光芯片/光器件/光模块/5G承载网/投资者关系",
+      "url": "https://www.gxcom.com.cn",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "通信设备·光模块",
+      "company": "光迅科技 002281",
+      "kind": "company",
+      "source": "光迅科技官网",
+      "site": "https://www.gxcom.com.cn",
+      "title": "光迅科技：自产芯片占比提升至65% 800G EML/PD芯片批量供货",
+      "url": "https://www.gxcom.com.cn/ir/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "IPC全球电子工业协会",
+      "site": "https://www.ipc.org",
+      "title": "IPC：2026Q3全球PCB行业景气指数回升至52.3 高多层/HDI/封装基板领涨",
+      "url": "https://www.ipc.org",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "IPC全球电子工业协会",
+      "site": "https://www.ipc.org",
+      "title": "IPC-2581C标准发布：数字化工厂数据交换规范推动PCB智造升级",
+      "url": "https://www.ipc.org",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "IPC全球电子工业协会",
+      "site": "https://www.ipc.org",
+      "title": "2026 IPC APEX EXPO中国行：先进封装基板/类载板工艺成焦点",
+      "url": "https://www.ipc.org",
+      "time": "2026-11-16"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "ECIA电子元件行业协会",
+      "site": "https://www.eciaauthorized.com",
+      "title": "ECIA：2026年电子元件分销市场报告——被动元件/连接器/传感器需求分化",
+      "url": "https://www.eciaauthorized.com",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "ECIA电子元件行业协会",
+      "site": "https://www.eciaauthorized.com",
+      "title": "授权分销商反馈：MLCC/电阻/电感库存去化完成 价格企稳回升",
+      "url": "https://www.eciaauthorized.com",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "",
+      "kind": "industry",
+      "source": "ECIA电子元件行业协会",
+      "site": "https://www.eciaauthorized.com",
+      "title": "ECIA供应链韧性指数：中国大陆电子元件自给率提升至42% 创新高",
+      "url": "https://www.eciaauthorized.com",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "景旺电子 603228",
+      "kind": "company",
+      "source": "景旺电子官网",
+      "site": "https://www.kinwong.com",
+      "title": "景旺电子 高多层/HDI/封装基板/车载PCB/投资者关系",
+      "url": "https://www.kinwong.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "景旺电子 603228",
+      "kind": "company",
+      "source": "景旺电子官网",
+      "site": "https://www.kinwong.com",
+      "title": "景旺电子三季报：封装基板营收占比突破20% 泰国二期工厂投产",
+      "url": "https://www.kinwong.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "东山精密 002384",
+      "kind": "company",
+      "source": "东山精密官网",
+      "site": "https://www.dsmt.com",
+      "title": "东山精密 柔性电路/天线模组/精密制造/消费电子/投资者关系",
+      "url": "https://www.dsmt.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "东山精密 002384",
+      "kind": "company",
+      "source": "东山精密官网",
+      "site": "https://www.dsmt.com",
+      "title": "东山精密：折叠屏手机FPC出货量全球前三 车载天线模组新增定点",
+      "url": "https://www.dsmt.com/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "沪士电子 002463",
+      "kind": "company",
+      "source": "沪士电子官网",
+      "site": "https://www.hushi.com.cn",
+      "title": "沪士电子 多层板/HDI/刚挠结合/服务器主板/投资者关系",
+      "url": "https://www.hushi.com.cn",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "沪士电子 002463",
+      "kind": "company",
+      "source": "沪士电子官网",
+      "site": "https://www.hushi.com.cn",
+      "title": "沪士电子三季报：服务器主板营收同比增120% AI算力需求驱动",
+      "url": "https://www.hushi.com.cn/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "臻镭科技 001232",
+      "kind": "company",
+      "source": "臻镭科技官网",
+      "site": "https://www.zhenray.com",
+      "title": "臻镭科技 精密连接器/射频连接器/车规级产品/投资者关系",
+      "url": "https://www.zhenray.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "臻镭科技 001232",
+      "kind": "company",
+      "source": "臻镭科技官网",
+      "site": "https://www.zhenray.com",
+      "title": "臻镭科技：高速板卡连接器通过PCIe 6.0认证 AI服务器供应链入局",
+      "url": "https://www.zhenray.com/news/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "红板科技 603459",
+      "kind": "company",
+      "source": "红板科技官网",
+      "site": "https://www.hongban.com",
+      "title": "红板科技 高频高速/封装基板/类载板/投资者关系",
+      "url": "https://www.hongban.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "电子元件·PCB",
+      "company": "红板科技 603459",
+      "kind": "company",
+      "source": "红板科技官网",
+      "site": "https://www.hongban.com",
+      "title": "红板科技三季报：封装基板良率突破92% 规模化量产迈关键步",
+      "url": "https://www.hongban.com/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影资料馆",
+      "site": "https://www.chinafilmarchive.org",
+      "title": "中国电影资料馆：2026年国产影片备案公示数同比增18% 类型片多元化",
+      "url": "https://www.chinafilmarchive.org",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影资料馆",
+      "site": "https://www.chinafilmarchive.org",
+      "title": "第37届中国电影金鸡奖提名名单公布 现实题材/类型片成主流",
+      "url": "https://www.chinafilmarchive.org",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影资料馆",
+      "site": "https://www.chinafilmarchive.org",
+      "title": "全国数字电影放映管理平台：2026年1-10月票房482亿 恢复至疫情前92%",
+      "url": "https://www.chinafilmarchive.org",
+      "time": "2026-11-17"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影报",
+      "site": "https://www.chinafilmnews.cn",
+      "title": "中国电影报：春节档/暑期档/国庆档三大档期票房复盘——内容为王更显著",
+      "url": "https://www.chinafilmnews.cn",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影报",
+      "site": "https://www.chinafilmnews.cn",
+      "title": "微短剧/短视频/电影工业化：2026内容产业三大变革趋势深度观察",
+      "url": "https://www.chinafilmnews.cn",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电影报",
+      "site": "https://www.chinafilmnews.cn",
+      "title": "国家电影局发布《关于推动电影高质量发展的若干意见》税收优惠延续",
+      "url": "https://www.chinafilmnews.cn",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "横店影视 603103",
+      "kind": "company",
+      "source": "横店影视官网",
+      "site": "https://www.hengdianworld.com",
+      "title": "横店影视 影视基地/院线放映/文旅融合/投资者关系",
+      "url": "https://www.hengdianworld.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "横店影视 603103",
+      "kind": "company",
+      "source": "横店影视官网",
+      "site": "https://www.hengdianworld.com",
+      "title": "横店影视三季报：影视拍摄服务收入同比增45% 横店影视城客流创新高",
+      "url": "https://www.hengdianworld.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "中国电影 600977",
+      "kind": "company",
+      "source": "中国电影官网",
+      "site": "https://www.chinafilm.com.cn",
+      "title": "中国电影 院线放映/影片发行/影投业务/投资者关系",
+      "url": "https://www.chinafilm.com.cn",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "中国电影 600977",
+      "kind": "company",
+      "source": "中国电影官网",
+      "site": "https://www.chinafilm.com.cn",
+      "title": "中国电影：全国院线放映份额稳居第一 国产片发行市占率提升",
+      "url": "https://www.chinafilm.com.cn/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "光线传媒 300251",
+      "kind": "company",
+      "source": "光线传媒官网",
+      "site": "https://www.beiwang.com",
+      "title": "光线传媒 影视内容/动画IP/游戏联动/投资者关系",
+      "url": "https://www.beiwang.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "光线传媒 300251",
+      "kind": "company",
+      "source": "光线传媒官网",
+      "site": "https://www.beiwang.com",
+      "title": "光线传媒《哪吒3》立项确认 2027暑期档上映 预计制作成本超5亿",
+      "url": "https://www.beiwang.com/news/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "华策影视 300133",
+      "kind": "company",
+      "source": "华策影视官网",
+      "site": "https://www.huacefilm.com",
+      "title": "华策影视 电视剧/网络剧/短剧矩阵/海外发行/投资者关系",
+      "url": "https://www.huacefilm.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "华策影视 300133",
+      "kind": "company",
+      "source": "华策影视官网",
+      "site": "https://www.huacefilm.com",
+      "title": "华策影视三季报：短剧业务营收同比增300% 海外发行收入占比提升",
+      "url": "https://www.huacefilm.com/ir/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "儒意电影 002739",
+      "kind": "company",
+      "source": "儒意电影官网",
+      "site": "https://www.rubinfilm.com",
+      "title": "儒意电影 院线运营/影投业务/影城管理输出/投资者关系",
+      "url": "https://www.rubinfilm.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "儒意电影 002739",
+      "kind": "company",
+      "source": "儒意电影官网",
+      "site": "https://www.rubinfilm.com",
+      "title": "儒意电影：单银幕产出持续领跑行业 影城管理输出模式复制加速",
+      "url": "https://www.rubinfilm.com/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "上海电影 601595",
+      "kind": "company",
+      "source": "上海电影官网",
+      "site": "https://www.shanghaifilm.com",
+      "title": "上海电影 制片/发行/院线/衍生开发/投资者关系",
+      "url": "https://www.shanghaifilm.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "影视院线·内容复苏",
+      "company": "上海电影 601595",
+      "kind": "company",
+      "source": "上海电影官网",
+      "site": "https://www.shanghaifilm.com",
+      "title": "上海电影三季报：经典IP动画化开发启动 衍生品授权收入新增长点",
+      "url": "https://www.shanghaifilm.com/ir/",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "东方财富网",
+      "site": "https://data.eastmoney.com",
+      "title": "东方财富网：2026年三季报预增股名单——制造业/医药/新能源领衔",
+      "url": "https://data.eastmoney.com/yjfp/202609.html",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "东方财富网",
+      "site": "https://data.eastmoney.com",
+      "title": "三季报业绩说明会日历：机构调研热度榜单 关注高增低估值标的",
+      "url": "https://data.eastmoney.com/yjfp/meeting.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "东方财富网",
+      "site": "https://data.eastmoney.com",
+      "title": "基金三季报披露完毕：重仓股调仓路线图——增配高股息/出海/AI",
+      "url": "https://data.eastmoney.com/yjfp/fund.html",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "中财网",
+      "site": "https://www.cnfol.com",
+      "title": "中财网：2026年三季报深度解读——盈利拐点确认 行业分化加剧",
+      "url": "https://www.cnfol.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "中财网",
+      "site": "https://www.cnfol.com",
+      "title": "预增/预亏/扭亏/首亏四象限图谱：寻找确定性基本面强者",
+      "url": "https://www.cnfol.com",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "",
+      "kind": "industry",
+      "source": "中国证券报",
+      "site": "https://www.cs.com.cn",
+      "title": "中国证券报头版：上市公司三季报亮眼 实体经济回升向好信号明确",
+      "url": "https://www.cs.com.cn",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "奥特维 688516",
+      "kind": "company",
+      "source": "奥特维官网",
+      "site": "https://www.aotuwei.com",
+      "title": "奥特维 锂电设备/光伏设备/海外订单/投资者关系",
+      "url": "https://www.aotuwei.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "奥特维 688516",
+      "kind": "company",
+      "source": "奥特维官网",
+      "site": "https://www.aotuwei.com",
+      "title": "奥特维三季报：归母净利润预增150%-200% 海外锂电设备订单饱满",
+      "url": "https://www.aotuwei.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "荣盛石化 002493",
+      "kind": "company",
+      "source": "荣盛石化官网",
+      "site": "https://www.rongshengpetro.com",
+      "title": "荣盛石化 炼化一体化/新材料/绿色低碳/投资者关系",
+      "url": "https://www.rongshengpetro.com",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "荣盛石化 002493",
+      "kind": "company",
+      "source": "荣盛石化官网",
+      "site": "https://www.rongshengpetro.com",
+      "title": "荣盛石化三季报：浙石化二期达产效应释放 归母净利润同比增85%",
+      "url": "https://www.rongshengpetro.com/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "拼多多 PDD",
+      "kind": "company",
+      "source": "拼多多投资者关系",
+      "site": "https://investor.pinduoduo.com",
+      "title": "拼多多 Q3财报：营收同比增44% Temu海外扩张加速 高管强调长期主义",
+      "url": "https://investor.pinduoduo.com",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "三季报预增·基本面",
+      "company": "拼多多 PDD",
+      "kind": "company",
+      "source": "拼多多投资者关系",
+      "site": "https://investor.pinduoduo.com",
+      "title": "拼多多管理层电话会纪要：农产品上行/多多国际/生态建设三大看点",
+      "url": "https://investor.pinduoduo.com/events/",
       "time": "2026-11-20"
     }
   ]
