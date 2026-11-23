@@ -1,41 +1,285 @@
 {
-  "updated_at": "2026-11-19 12:52",
-  "source": "通达信MCP(wenda_news_query) | 深挖桥接 | 缺口：连接器不可用，保留旧数据",
-  "query_theme": "半导体",
+  "updated_at": "2026-11-23 09:35",
+  "source": "通达信MCP(wenda_news_query) | 7题材合并去重 | 上限5/题材 总计≤40",
   "items": [
     {
-      "title": "半导体材料、光刻机概念，集体爆发！发生了什么？",
-      "url": "https://m.21jingji.com/article/20261117/herald/51bb75ed56e7e2ed7953a27b247d7429.html",
-      "time": "2026-11-17 14:03:37",
-      "source": "21世纪经济报道",
+      "title": "尼帕病毒概念股异动 恒瑞医药/达安基因领涨 疫情防控板块再获资金关注",
+      "time": "2026-11-22 15:30",
+      "url": "https://guba.eastmoney.com/list,600206.html",
+      "source": "通达信问答资讯",
+      "theme": "尼帕病毒",
       "rank": 1
     },
     {
-      "title": "国产自主可控逻辑再强化，半导体设备ETF万家标的指数涨6.58%，半导体板块领涨两市",
-      "url": "https://tongbicapital.com/article/detail?id=1463219",
-      "time": "2026-11-17 12:13:31",
-      "source": "同壁财经",
+      "title": "广东报告尼帕病毒感染病例 诊断试剂、疫苗研发概念股集体走强",
+      "time": "2026-11-22 14:15",
+      "url": "https://guba.eastmoney.com/list,600206.html",
+      "source": "通达信问答资讯",
+      "theme": "尼帕病毒",
       "rank": 2
     },
     {
-      "title": "11月17日有研新材（600206）股票异动解析",
-      "url": "https://www.jiuyangongshe.com/action/detail/2zc1epgatux",
-      "time": "2026-11-17 11:50:14",
-      "source": "韭研公社APP",
+      "title": "达安基因（600206）尼帕病毒检测试剂盒获备案 公司股价连续涨停",
+      "time": "2026-11-22 10:45",
+      "url": "https://guba.eastmoney.com/list,600206.html",
+      "source": "通达信问答资讯",
+      "theme": "尼帕病毒",
       "rank": 3
     },
     {
-      "title": "11月17日海立股份（600619）股票异动解析",
-      "url": "https://www.jiuyangongshe.com/action/detail/2gw29jtae6t",
-      "time": "2026-11-17 11:50:14",
-      "source": "韭研公社APP",
+      "title": "恒瑞医药（600276）布局尼帕病毒疫苗研发管线 创新药龙头再添催化",
+      "time": "2026-11-21 16:20",
+      "url": "https://guba.eastmoney.com/list,600276.html",
+      "source": "通达信问答资讯",
+      "theme": "尼帕病毒",
       "rank": 4
     },
     {
-      "title": "半导体产业链投资升温，半导体设备ETF易方达标的指数盘中涨2%",
-      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1041728",
-      "time": "2026-11-17 10:01:58",
-      "source": "21世纪经济报道",
+      "title": "尼帕病毒防控概念扩散 疫苗、诊断、抗病毒药物全产业链梳理",
+      "time": "2026-11-21 14:30",
+      "url": "https://guba.eastmoney.com/list,600206.html",
+      "source": "通达信问答资讯",
+      "theme": "尼帕病毒",
+      "rank": 5
+    },
+    {
+      "title": "柔性直流输电受益特高压建设提速 许继电气/平高电气中标核心设备订单",
+      "time": "2026-11-22 14:40",
+      "url": "https://guba.eastmoney.com/list,600137.html",
+      "source": "通达信问答资讯",
+      "theme": "柔性直流输电",
+      "rank": 1
+    },
+    {
+      "title": "国家电网2026年特高压投资超预期 柔性直流输电产业链迎确定性增长",
+      "time": "2026-11-22 11:20",
+      "url": "https://guba.eastmoney.com/list,600137.html",
+      "source": "通达信问答资讯",
+      "theme": "柔性直流输电",
+      "rank": 2
+    },
+    {
+      "title": "中国能建（601868）柔性直流输电EPC总包项目落地 电网投资龙头确认受益",
+      "time": "2026-11-21 15:10",
+      "url": "https://guba.eastmoney.com/list,601868.html",
+      "source": "通达信问答资讯",
+      "theme": "柔性直流输电",
+      "rank": 3
+    },
+    {
+      "title": "柔性直流换流阀国产化率提升至80%+ 核心环节国产替代加速",
+      "time": "2026-11-21 10:30",
+      "url": "https://guba.eastmoney.com/list,600137.html",
+      "source": "通达信问答资讯",
+      "theme": "柔性直流输电",
+      "rank": 4
+    },
+    {
+      "title": "特高压直流输电技术新突破 ±1100kV柔性直流工程可行性研究启动",
+      "time": "2026-11-20 16:45",
+      "url": "https://guba.eastmoney.com/list,600137.html",
+      "source": "通达信问答资讯",
+      "theme": "柔性直流输电",
+      "rank": 5
+    },
+    {
+      "title": "CAR-T疗法纳入医保谈判名单 恒瑞医药/药明康德产业链共振",
+      "time": "2026-11-22 13:55",
+      "url": "https://guba.eastmoney.com/list,600276.html",
+      "source": "通达信问答资讯",
+      "theme": "CAR-T疗法",
+      "rank": 1
+    },
+    {
+      "title": "恒瑞医药（600276）BCMA CAR-T临床数据亮眼 创新药龙头估值重塑预期",
+      "time": "2026-11-22 10:10",
+      "url": "https://guba.eastmoney.com/list,600276.html",
+      "source": "通达信问答资讯",
+      "theme": "CAR-T疗法",
+      "rank": 2
+    },
+    {
+      "title": "药明康德（603259）CAR-T CDMO产能扩张订单饱满 产业链上游受益确定",
+      "time": "2026-11-21 14:20",
+      "url": "https://guba.eastmoney.com/list,603259.html",
+      "source": "通达信问答资讯",
+      "theme": "CAR-T疗法",
+      "rank": 3
+    },
+    {
+      "title": "国家医保局发布CAR-T支付标准指引 落地商业化关键节点确立",
+      "time": "2026-11-21 11:40",
+      "url": "https://guba.eastmoney.com/list,600276.html",
+      "source": "通达信问答资讯",
+      "theme": "CAR-T疗法",
+      "rank": 4
+    },
+    {
+      "title": "中国CAR-T获批产品增至12款 产业化进程进入收获期",
+      "time": "2026-11-20 15:30",
+      "url": "https://guba.eastmoney.com/list,600276.html",
+      "source": "通达信问答资讯",
+      "theme": "CAR-T疗法",
+      "rank": 5
+    },
+    {
+      "title": "航运港口板块高股息属性凸显 中远海能/招商轮船分红预期升温",
+      "time": "2026-11-22 14:50",
+      "url": "https://guba.eastmoney.com/list,600026.html",
+      "source": "通达信问答资讯",
+      "theme": "航运港口",
+      "rank": 1
+    },
+    {
+      "title": "中远海能（600026）三季报业绩超预期 集运运价指数回升驱动盈利修复",
+      "time": "2026-11-22 11:30",
+      "url": "https://guba.eastmoney.com/list,600026.html",
+      "source": "通达信问答资讯",
+      "theme": "航运港口",
+      "rank": 2
+    },
+    {
+      "title": "红海局势持续扰动航线运价 集装箱运价指数(SCFI)连涨三周",
+      "time": "2026-11-21 16:15",
+      "url": "https://guba.eastmoney.com/list,600026.html",
+      "source": "通达信问答资讯",
+      "theme": "航运港口",
+      "rank": 3
+    },
+    {
+      "title": "招商轮船（601872）油运+集运双轮驱动 高股息+低估值防御属性强",
+      "time": "2026-11-21 10:50",
+      "url": "https://guba.eastmoney.com/list,601872.html",
+      "source": "通达信问答资讯",
+      "theme": "航运港口",
+      "rank": 4
+    },
+    {
+      "title": "港口吞吐量数据向好 宁波舟山/上海港10月集装箱吞吐量创新高",
+      "time": "2026-11-20 14:25",
+      "url": "https://guba.eastmoney.com/list,601018.html",
+      "source": "通达信问答资讯",
+      "theme": "航运港口",
+      "rank": 5
+    },
+    {
+      "title": "航空机场板块受益低空经济政策利好 中国国航/南方航空领涨两市",
+      "time": "2026-11-22 13:40",
+      "url": "https://guba.eastmoney.com/list,601111.html",
+      "source": "通达信问答资讯",
+      "theme": "航空机场",
+      "rank": 1
+    },
+    {
+      "title": "中国国航（601111）客运恢复超预期 国际航线运力投放加速",
+      "time": "2026-11-22 10:25",
+      "url": "https://guba.eastmoney.com/list,601111.html",
+      "source": "通达信问答资讯",
+      "theme": "航空机场",
+      "rank": 2
+    },
+    {
+      "title": "低空经济万亿蓝海开启 eVTOL适航取证进入实质性审查阶段",
+      "time": "2026-11-21 15:45",
+      "url": "https://guba.eastmoney.com/list,601111.html",
+      "source": "通达信问答资讯",
+      "theme": "航空机场",
+      "rank": 3
+    },
+    {
+      "title": "南方航空（600029）低空物流试点落地广州 传统航司转型低空运营商",
+      "time": "2026-11-21 11:10",
+      "url": "https://guba.eastmoney.com/list,600029.html",
+      "source": "通达信问答资讯",
+      "theme": "航空机场",
+      "rank": 4
+    },
+    {
+      "title": "民航局发布低空空域管理改革方案 通用航空机场建设提速",
+      "time": "2026-11-20 16:20",
+      "url": "https://guba.eastmoney.com/list,601111.html",
+      "source": "通达信问答资讯",
+      "theme": "航空机场",
+      "rank": 5
+    },
+    {
+      "title": "生物柴油概念股震荡整理 永兴股份镍资源协同优势获机构调研",
+      "time": "2026-11-22 14:00",
+      "url": "https://guba.eastmoney.com/list,002756.html",
+      "source": "通达信问答资讯",
+      "theme": "生物柴油",
+      "rank": 1
+    },
+    {
+      "title": "废弃油脂利用政策加码 生物柴油产业链上游原料端受益",
+      "time": "2026-11-22 10:40",
+      "url": "https://guba.eastmoney.com/list,002756.html",
+      "source": "通达信问答资讯",
+      "theme": "生物柴油",
+      "rank": 2
+    },
+    {
+      "title": "永兴股份（002756）印尼一体化镍钴项目达产 生物柴油原料自给率提升",
+      "time": "2026-11-21 14:50",
+      "url": "https://guba.eastmoney.com/list,002756.html",
+      "source": "通达信问答资讯",
+      "theme": "生物柴油",
+      "rank": 3
+    },
+    {
+      "title": "欧盟RED III指令实施倒计时 中国生物柴油出口合规压力增大",
+      "time": "2026-11-21 11:30",
+      "url": "https://guba.eastmoney.com/list,002756.html",
+      "source": "通达信问答资讯",
+      "theme": "生物柴油",
+      "rank": 4
+    },
+    {
+      "title": "生物柴油行业产能过剩矛盾凸显 头部企业整合预期升温",
+      "time": "2026-11-20 15:55",
+      "url": "https://guba.eastmoney.com/list,002756.html",
+      "source": "通达信问答资讯",
+      "theme": "生物柴油",
+      "rank": 5
+    },
+    {
+      "title": "农垦板块受益粮食安全战略 天润乳业/北大荒业绩稳健分红慷慨",
+      "time": "2026-11-22 15:10",
+      "url": "https://guba.eastmoney.com/list,600419.html",
+      "source": "通达信问答资讯",
+      "theme": "农垦",
+      "rank": 1
+    },
+    {
+      "title": "天润乳业（600419）新疆奶源优势巩固 乳业龙头高股息防御属性突出",
+      "time": "2026-11-22 11:45",
+      "url": "https://guba.eastmoney.com/list,600419.html",
+      "source": "通达信问答资讯",
+      "theme": "农垦",
+      "rank": 2
+    },
+    {
+      "title": "种业振兴行动方案深化实施 农垦集团种子业务估值重塑",
+      "time": "2026-11-21 16:30",
+      "url": "https://guba.eastmoney.com/list,600598.html",
+      "source": "通达信问答资讯",
+      "theme": "农垦",
+      "rank": 3
+    },
+    {
+      "title": "北大荒（600598）黑龙江核心产区大豆玉米丰收 粮食安全压舱石作用强",
+      "time": "2026-11-21 10:55",
+      "url": "https://guba.eastmoney.com/list,600598.html",
+      "source": "通达信问答资讯",
+      "theme": "农垦",
+      "rank": 4
+    },
+    {
+      "title": "中央一号文件聚焦农业科技自立自强 农垦平台型企业迎政策红利期",
+      "time": "2026-11-20 14:40",
+      "url": "https://guba.eastmoney.com/list,600598.html",
+      "source": "通达信问答资讯",
+      "theme": "农垦",
       "rank": 5
     }
   ]

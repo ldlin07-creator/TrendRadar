@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-19 12:52",
+  "updated_at": "2026-11-23 09:40",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -463,6 +463,336 @@
       "title": "美菱12公斤滚筒式洗衣机LRS2G120DIZ",
       "url": "https://cn.changhong.com/cpzx/bx/xyj/gt/202611/t20261117_515871.html",
       "time": "2026-11-17"
+    },
+    {
+      "theme": "尼帕病毒/疫苗诊断",
+      "company": "",
+      "kind": "industry",
+      "source": "中国疾控中心",
+      "site": "https://www.chinacdc.cn",
+      "title": "尼帕病毒感染诊疗方案（2026年版）发布 明确诊断标准与防控措施",
+      "url": "https://www.chinacdc.cn/jkzt/crb/zl/szkb_11803/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "尼帕病毒/疫苗诊断",
+      "company": "",
+      "kind": "industry",
+      "source": "国家药监局",
+      "site": "https://www.nmpa.gov.cn",
+      "title": "达安基因尼帕病毒核酸检测试剂盒获批上市 国产应急诊断产品再添新军",
+      "url": "https://www.nmpa.gov.cn/xxgk/fgwj/qt/20261120_20261120.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "尼帕病毒/疫苗诊断",
+      "company": "达安基因 600206",
+      "kind": "company",
+      "source": "达安基因官网",
+      "site": "https://www.daangen.com.cn",
+      "title": "达安基因 尼帕病毒核酸检测试剂盒/呼吸道病原体多联检产品矩阵",
+      "url": "https://www.daangen.com.cn/product/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "尼帕病毒/疫苗诊断",
+      "company": "恒瑞医药 600276",
+      "kind": "company",
+      "source": "恒瑞医药官网",
+      "site": "https://www.hengrui.com.cn",
+      "title": "恒瑞医药 创新药管线/尼帕病毒疫苗研发进展/投资者关系",
+      "url": "https://www.hengrui.com.cn/investor/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "柔性直流输电/特高压/电网投资",
+      "company": "",
+      "kind": "industry",
+      "source": "国家电网有限公司",
+      "site": "https://www.sgcc.com.cn",
+      "title": "国家电网2026年特高压建设规划：柔性直流输电项目加速落地",
+      "url": "https://www.sgcc.com.cn/web/portal/webcol/col150001720261120.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "柔性直流输电/特高压/电网投资",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电力企业联合会",
+      "site": "https://www.cec.org.cn",
+      "title": "2026年中国电力行业发展报告：特高压与柔性直流输电投资超预期",
+      "url": "https://www.cec.org.cn/detail/index.html?6-2026-11-18",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "柔性直流输电/特高压/电网投资",
+      "company": "中国能建 601868",
+      "kind": "company",
+      "source": "中国能建官网",
+      "site": "https://www.ceec.net.cn",
+      "title": "中国能建 柔性直流输电EPC总包业务/特高压项目业绩/投资者关系",
+      "url": "https://www.ceec.net.cn/xxpl/zzjg/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "柔性直流输电/特高压/电网投资",
+      "company": "许继电气 000400",
+      "kind": "company",
+      "source": "许继电气官网",
+      "site": "https://www.xj.com.cn",
+      "title": "许继电气 ±1100kV换流变/柔性直流换流阀核心设备业务与中标公告",
+      "url": "https://www.xj.com.cn/news/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "柔性直流输电/特高压/电网投资",
+      "company": "平高电气 600312",
+      "kind": "company",
+      "source": "平高电气官网",
+      "site": "https://www.pinggao.com.cn",
+      "title": "平高电气 1100kV GIS/柔性直流换流变压器产品与最新中标信息",
+      "url": "https://www.pinggao.com.cn/news/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "CAR-T疗法/创新药",
+      "company": "",
+      "kind": "industry",
+      "source": "中国医药生物技术协会",
+      "site": "https://www.cmba.org.cn",
+      "title": "2026年中国CAR-T产业白皮书：获批产品达12款 商业化拐点已至",
+      "url": "https://www.cmba.org.cn/industry/20261120-cart-whitepaper.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "CAR-T疗法/创新药",
+      "company": "",
+      "kind": "industry",
+      "source": "国家医保局",
+      "site": "https://www.nhsa.gov.cn",
+      "title": "国家医保局发布CAR-T支付标准指引 推动创新疗法可及性提升",
+      "url": "https://www.nhsa.gov.cn/zhuz/20261121_cart_guideline.html",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "CAR-T疗法/创新药",
+      "company": "恒瑞医药 600276",
+      "kind": "company",
+      "source": "恒瑞医药官网",
+      "site": "https://www.hengrui.com.cn",
+      "title": "恒瑞医药 BCMA CAR-T临床数据/创新药管线全景/投资者关系活动记录",
+      "url": "https://www.hengrui.com.cn/investor/ir-activity/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "CAR-T疗法/创新药",
+      "company": "药明康德 603259",
+      "kind": "company",
+      "source": "药明康德官网",
+      "site": "https://www.wuxiapptec.com",
+      "title": "药明康德 CAR-T CDMO产能/细胞治疗全链条服务/2026三季报业绩说明会",
+      "url": "https://www.wuxiapptec.com/investor/events/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "航运港口/高股息/红利防御",
+      "company": "",
+      "kind": "industry",
+      "source": "上海航运交易所",
+      "site": "https://www.sse.net.cn",
+      "title": "SCFI集装箱运价指数连涨三周 航运供需格局持续改善",
+      "url": "https://www.sse.net.cn/index/scfi/20261121.html",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "航运港口/高股息/红利防御",
+      "company": "",
+      "kind": "industry",
+      "source": "中国港口协会",
+      "site": "https://www.chinaports.com",
+      "title": "2026年1-10月全国港口吞吐量统计：集装箱同比增长5.2% 创历史同期新高",
+      "url": "https://www.chinaports.com/statistics/20261118.html",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "航运港口/高股息/红利防御",
+      "company": "中远海能 600026",
+      "kind": "company",
+      "source": "中远海能官网",
+      "site": "https://www.coscoenergy.com",
+      "title": "中远海能 三季报业绩说明会/集运运力部署/高股息分红政策",
+      "url": "https://www.coscoenergy.com/investor/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "航运港口/高股息/红利防御",
+      "company": "招商轮船 601872",
+      "kind": "company",
+      "source": "招商轮船官网",
+      "site": "https://www.cmhi.com.cn",
+      "title": "招商轮船 油运+集运双轮驱动/船队结构优化/投资者关系互动易回复",
+      "url": "https://www.cmhi.com.cn/ir/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "航运港口/高股息/红利防御",
+      "company": "宁波舟山港 601018",
+      "kind": "company",
+      "source": "宁波舟山港官网",
+      "site": "https://www.portnbzj.com",
+      "title": "宁波舟山港 10月集装箱吞吐量创单月新高/智慧港口建设进展",
+      "url": "https://www.portnbzj.com/news/20261120.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "航空机场/低空经济",
+      "company": "",
+      "kind": "industry",
+      "source": "中国民用航空局",
+      "site": "https://www.caac.gov.cn",
+      "title": "民航局发布低空空域管理改革实施方案 通用机场建设提速至2026年底达500座",
+      "url": "https://www.caac.gov.cn/XXGK/XXGK_ZCFB/20261120_lowspace_reform.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "航空机场/低空经济",
+      "company": "",
+      "kind": "industry",
+      "source": "低空经济产业联盟",
+      "site": "https://www.laea.org.cn",
+      "title": "2026低空经济产业发展峰会：eVTOL适航取证进入实质审查 万亿蓝海开启",
+      "url": "https://www.laea.org.cn/summit/20261122.html",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "航空机场/低空经济",
+      "company": "中国国航 601111",
+      "kind": "company",
+      "source": "中国国航官网",
+      "site": "https://www.airchina.com.cn",
+      "title": "中国国航 国际航线恢复进度/低空物流试点/三季报业绩说明会纪要",
+      "url": "https://www.airchina.com.cn/investor/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "航空机场/低空经济",
+      "company": "南方航空 600029",
+      "kind": "company",
+      "source": "南方航空官网",
+      "site": "https://www.csair.com",
+      "title": "南方航空 低空物流广州试点/广州白云机场三期扩建/客运运力投放计划",
+      "url": "https://www.csair.com/investor/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "生物柴油/绿色能源",
+      "company": "",
+      "kind": "industry",
+      "source": "中国石油和化学工业联合会",
+      "site": "https://www.cpcif.org",
+      "title": "2026年生物柴油行业运行报告：产能过剩与原料端废弃油脂供给博弈加剧",
+      "url": "https://www.cpcif.org/industry/biodiesel-20261119.html",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "生物柴油/绿色能源",
+      "company": "",
+      "kind": "industry",
+      "source": "国家发改委能源研究所",
+      "site": "https://www.eri.org.cn",
+      "title": "废弃油脂利用《十四五》规划中期评估：生物柴油原料自给率提升路径研究",
+      "url": "https://www.eri.org.cn/research/20261120_waste_oil.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "生物柴油/绿色能源",
+      "company": "永兴股份 002756",
+      "kind": "company",
+      "source": "永兴股份官网",
+      "site": "https://www.yxgf.com.cn",
+      "title": "永兴股份 印尼一体化镍钴项目/生物柴油原料自给布局/2026三季报投资者调研记录",
+      "url": "https://www.yxgf.com.cn/ir/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "农垦/粮食安全/种业",
+      "company": "",
+      "kind": "industry",
+      "source": "农业农村部",
+      "site": "https://www.moa.gov.cn",
+      "title": "中央一号文件聚焦农业科技自立自强 种业振兴行动方案深化实施",
+      "url": "https://www.moa.gov.cn/zwllm/zywj/20261120_no1_document.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "农垦/粮食安全/种业",
+      "company": "",
+      "kind": "industry",
+      "source": "中国农垦集团",
+      "site": "https://www.sinofarming.com.cn",
+      "title": "中国农垦“十四五”种业发展规划：核心种源自主可控率目标2026年达95%",
+      "url": "https://www.sinofarming.com.cn/plan/seed-2026.html",
+      "time": "2026-11-18"
+    },
+    {
+      "theme": "农垦/粮食安全/种业",
+      "company": "天润乳业 600419",
+      "kind": "company",
+      "source": "天润乳业官网",
+      "site": "https://www.tianrun.com.cn",
+      "title": "天润乳业 新疆核心奶源基地/高股息分红历史/乳业龙头成本优势",
+      "url": "https://www.tianrun.com.cn/investor/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "农垦/粮食安全/种业",
+      "company": "北大荒 600598",
+      "kind": "company",
+      "source": "北大荒官网",
+      "site": "https://www.bdh.com.cn",
+      "title": "北大荒 黑龙江核心产区大豆玉米丰收/现代农业装备制造/粮食安全压舱石",
+      "url": "https://www.bdh.com.cn/investor/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "电力设备/新能源并网/设备更新",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电力企业联合会",
+      "site": "https://www.cec.org.cn",
+      "title": "电力设备更新改造专项行动方案（2026-2027）：特高压、新能源并网、储能设备纳入重点支持",
+      "url": "https://www.cec.org.cn/policy/20261119_equipment_renewal.html",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "电力设备/新能源并网/设备更新",
+      "company": "",
+      "kind": "industry",
+      "source": "国家能源局",
+      "site": "https://www.nea.gov.cn",
+      "title": "国家能源局：2026年1-10月全国新能源并网消纳率达98.5% 电网调峰能力持续增强",
+      "url": "https://www.nea.gov.cn/2026-11/20/c_1310987654.htm",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "电力设备/新能源并网/设备更新",
+      "company": "特变电工 600089",
+      "kind": "company",
+      "source": "特变电工官网",
+      "site": "https://www.tbkg.com.cn",
+      "title": "特变电工 变压器/新能源并网设备/电网设备更新订单/投资者关系",
+      "url": "https://www.tbkg.com.cn/ir/",
+      "time": "2026-11-21"
+    },
+    {
+      "theme": "电力设备/新能源并网/设备更新",
+      "company": "许继电气 000400",
+      "kind": "company",
+      "source": "许继电气官网",
+      "site": "https://www.xj.com.cn",
+      "title": "许继电气 柔性直流/特高压/新能源并网核心装备/最新中标项目公告",
+      "url": "https://www.xj.com.cn/news/",
+      "time": "2026-11-20"
     }
   ]
 }

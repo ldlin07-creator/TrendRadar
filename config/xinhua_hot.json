@@ -1,97 +1,146 @@
 {
-  "updated_at": "2026-11-19 12:52",
+  "updated_at": "2026-11-23 09:25",
   "source": "新华财经资讯MCP(get_xhcj_hotNews) | 桥接写入",
   "items": [
     {
-      "title": "【中经社信号】“线上原生”家居品牌为何竞相线下开店",
-      "pub": "2026-11-19 11:59:22",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548183571115106304/1",
+      "title": "【财经分析】估值为锚，韧性为帆 公募REITs在震荡中完成价值回归",
+      "pub": "2026-11-23 07:49:17",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549566164566122496/1",
       "source": "新华财经",
       "rank": 1
     },
     {
-      "title": "午评：三大指数延续调整 光刻胶、先进封装概念股逆势活跃",
-      "pub": "2026-11-19 11:53:50",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548179606960824320/1",
+      "title": "【五大信披媒体精华摘要】11月23日",
+      "pub": "2026-11-23 07:37:40",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549566674337636352/1",
       "source": "新华财经",
       "rank": 2
     },
     {
-      "title": "有色金属、贵金属18日全线杀跌 伦锡一度跌超8%",
-      "pub": "2026-11-19 09:13:04",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548137122642157568/1",
+      "title": "理性看待短期外部扰动 机构：中国资产长期向好趋势未改",
+      "pub": "2026-11-23 07:26:10",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549564573834387456/1",
       "source": "新华财经",
       "rank": 3
     },
     {
-      "title": "国际金价再度重挫 COMEX黄金逼近3700美元",
-      "pub": "2026-11-19 08:56:53",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548057677042114560/1",
+      "title": "【看新股】思锐智能拟科创板IPO：离子注入设备实现收入突破 拟募资20亿元扩产",
+      "pub": "2026-11-23 07:25:27",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548605448593973248/1",
       "source": "新华财经",
       "rank": 4
     },
     {
-      "title": "【五大信披媒体精华摘要】11月19日",
-      "pub": "2026-11-19 08:41:34",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548130989952704512/1",
+      "title": "【债市观察】税期扰动与理财赎回冲击渐退 10年期国债收益率周内窄幅修复",
+      "pub": "2026-11-23 07:21:51",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549563640869888000/1",
       "source": "新华财经",
       "rank": 5
     },
     {
-      "title": "新一轮国资国企改革全面实施",
-      "pub": "2026-11-19 07:49:35",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548120613609496576/1",
+      "title": "一揽子稳市场举措落地 增量资金加速释放",
+      "pub": "2026-11-23 07:21:15",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549563616781852672/1",
       "source": "新华财经",
       "rank": 6
     },
     {
-      "title": "聚焦“六张网”等重点领域 稳投资节奏加快",
-      "pub": "2026-11-19 07:48:55",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548119948250406912/1",
+      "title": "最高15亿元 多家A股上市公司宣布回购计划",
+      "pub": "2026-11-22 20:38:45",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549396273099530240/1",
       "source": "新华财经",
       "rank": 7
     },
     {
-      "title": "各地各央企均已完成工作台账编制 新一轮国资国企改革进入全面实施阶段",
-      "pub": "2026-11-19 07:48:19",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548114240633004032/1",
+      "title": "稳市加力 证监会指导交易所推出调降融资保证金比例、降费等“组合拳”",
+      "pub": "2026-11-22 18:53:51",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549372088419704832/1",
       "source": "新华财经",
       "rank": 8
     },
     {
-      "title": "“冲量”冲不动了 银行重算票据经营账",
-      "pub": "2026-11-19 07:41:42",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548118908201312256/1",
+      "title": "关键节点 证监会批准将融资保证金比例下限从100%降低至80%",
+      "pub": "2026-11-22 18:47:02",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549371333273018368/1",
       "source": "新华财经",
       "rank": 9
     },
     {
-      "title": "美联储紧缩预期强化 全球利率与汇率定价再承压",
-      "pub": "2026-11-19 07:26:06",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548114846936883200/1",
+      "title": "11月22日，深交所就《创业板股票做市交易业务细则》公开征求意见，引入做市商，能够丰富市场参与主体，壮大稳市力量，直接给市场带来增量资金；降低价格波动，促进市场",
+      "pub": "2026-11-22 18:38:13",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549371762421915648/1",
       "source": "新华财经",
       "rank": 10
     },
     {
-      "title": "【财经分析】土耳其黄金出口额显著增长 黄金首饰制造业复苏仍面临挑战",
-      "pub": "2026-11-19 06:46:34",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547980670564392960/1",
+      "title": "沪深北交易所11月22日将融资保证金比例下限从100%降低至80%。综合来看，此次调整使融资交易杠杆比例提高至1.25倍，理论上可带来增量资金近4000亿元，为",
+      "pub": "2026-11-22 18:37:05",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549371292739100672/1",
       "source": "新华财经",
       "rank": 11
     },
     {
-      "title": "【看新股】宜科股份创业板IPO：去年营收增逾三成 拟募资11.98亿元扩产",
-      "pub": "2026-11-19 06:31:00",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/547881581440901120/1",
+      "title": "俄国防部称打击乌能源、港口设施并击落乌无人机",
+      "pub": "2026-11-22 17:04:32",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549344657335836672/1",
       "source": "新华财经",
       "rank": 12
     },
     {
-      "title": "商务部：中韩自贸协定第二阶段谈判实质性完成",
-      "pub": "2026-11-19 06:23:57",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/548015403344158720/1",
+      "title": "PCB供应预警 常规材料或短缺至2027年上半年",
+      "pub": "2026-11-22 16:06:13",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549329716339990528/1",
       "source": "新华财经",
       "rank": 13
+    },
+    {
+      "title": "从“尝鲜”到“潮流” 智能穿戴打开消费新空间",
+      "pub": "2026-11-22 15:31:35",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549310933969838080/1",
+      "source": "新华财经",
+      "rank": 14
+    },
+    {
+      "title": "伊美军事冲突持续 双方表态愿谈判达成协议",
+      "pub": "2026-11-22 14:47:09",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549307789680500736/1",
+      "source": "新华财经",
+      "rank": 15
+    },
+    {
+      "title": "战事影响能源供应 伊朗实施限电措施",
+      "pub": "2026-11-22 14:43:40",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549307801659432960/1",
+      "source": "新华财经",
+      "rank": 16
+    },
+    {
+      "title": "商务部：坚决反对美联邦通信委员会恶意打压中国电信企业在美运营",
+      "pub": "2026-11-22 09:40:46",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549235772738428928/1",
+      "source": "新华财经",
+      "rank": 17
+    },
+    {
+      "title": "【环球财经】英欧峰会：合作升温 “心结”难解",
+      "pub": "2026-11-22 08:55:19",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549025562954473472/1",
+      "source": "新华财经",
+      "rank": 18
+    },
+    {
+      "title": "让南来之水更好惠民生促发展——透视南水北调进展及后续建设计划",
+      "pub": "2026-11-22 08:51:40",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549013480632655872/1",
+      "source": "新华财经",
+      "rank": 19
+    },
+    {
+      "title": "【环球财经】加拿大正式加入北约创新基金",
+      "pub": "2026-11-22 08:44:09",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549198447715196928/1",
+      "source": "新华财经",
+      "rank": 20
     }
   ]
 }
