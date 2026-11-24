@@ -1,222 +1,222 @@
 {
-  "updated_at": "2026-11-23 14:05",
-  "source": "通达信MCP(wenda_news_query) | 7题材合并去重 | 上限5/题材 总计≤40",
+  "updated_at": "2026-11-24 09:31",
+  "source": "通达信MCP(wenda_news_query) | 6题材合并去重 | 上限5/题材 总计≤40",
   "items": [
     {
-      "title": "维宏股份(300508)：微型伺服，我们现在最小直径可以做到8mm",
-      "time": "2026-11-20 18:55:15",
-      "url": "https://www.gelonghui.com/news/5359116",
-      "source": "格隆汇",
-      "theme": "机器人·空心杯电机",
+      "title": "光大同创：拟5亿元投建高速硅光模块智能制造基地项目 生产400G/800G硅光模块",
+      "time": "2026-11-23 19:06:18",
+      "url": "https://www.cls.cn/detail/2542020",
+      "source": "财联社",
+      "theme": "AI算力·光模块",
       "rank": 1
     },
     {
-      "title": "金杯电工：已完成110kV、220kV电压等级铝变压器绕组技术储备 已研发新能源驱动电机用200级漆包铝扁线等产品",
-      "time": "2026-11-20 11:57:02",
-      "url": "https://www.gelonghui.com/live/2771625",
-      "source": "格隆汇",
-      "theme": "机器人·空心杯电机",
+      "title": "光模块，逆市爆拉超2%！新易盛飙升7.26%领涨光模三杰，什么信号？",
+      "time": "2026-11-23 10:38:24",
+      "url": "https://m.21jingji.com/article/20261123/herald/ffdb6182510c2e0e0220bcb36691e112.html",
+      "source": "21世纪经济报道",
+      "theme": "AI算力·光模块",
       "rank": 2
     },
     {
-      "title": "金杯电工：“六张网”建设将为电力基础设施等相关产业带来新发展机遇",
-      "time": "2026-11-20 11:56:48",
-      "url": "https://m.21jingji.com/timeline/7f7f6c10d30455f62832f87b48b2a5d8.html",
-      "source": "21世纪经济报道",
-      "theme": "机器人·空心杯电机",
+      "title": "新易盛(300502)：当前客户对光模块的需求指引明确，目前不存在需求预期下修或砍单情形",
+      "time": "2026-11-18 18:28:45",
+      "url": "https://www.gelonghui.com/news/5356576",
+      "source": "格隆汇",
+      "theme": "AI算力·光模块",
       "rank": 3
     },
     {
-      "title": "维宏股份(300508)：空心杯没有铁芯，可以做小做轻，惯量小，但是扭矩输出比较小",
-      "time": "2026-11-18 14:52:46",
-      "url": "https://www.gelonghui.com/news/5355966",
-      "source": "格隆汇",
-      "theme": "机器人·空心杯电机",
+      "title": "中际旭创：NPO、XPO等产品需求有望于2027年下半年逐步释放",
+      "time": "2026-11-18 14:35:38",
+      "url": "https://m.21jingji.com/timeline/adcce659eb9eee0efb25c4e854cd2c19.html",
+      "source": "21世纪经济报道",
+      "theme": "AI算力·光模块",
       "rank": 4
     },
     {
-      "title": "大地熊：高性能稀土永磁产品可应用于人形机器人核心部件 目前处于批量供货阶段",
-      "time": "2026-11-17 19:36:55",
-      "url": "https://www.gelonghui.com/live/2765756",
+      "title": "南亚新材(688519)：目前公司产品已覆盖800G/1.6T光模块 NPO/CPO等板材也在积极准备中",
+      "time": "2026-11-17 23:25:12",
+      "url": "https://www.gelonghui.com/news/5355716",
       "source": "格隆汇",
-      "theme": "机器人·空心杯电机",
+      "theme": "AI算力·光模块",
       "rank": 5
     },
     {
-      "title": "电科芯片：电机驱动芯片尚未完成机器人客户适配选型",
-      "time": "2026-11-16 14:07:33",
-      "url": "https://www.cls.cn/detail/2535242",
-      "source": "财联社",
-      "theme": "机器人·华为机器人",
+      "title": "PCB概念板块走强 景旺电子（03228）涨近9% 机构指AI算力拉动高端PCB需求",
+      "time": "2026-11-23 14:48:49",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "AI服务器·PCB覆铜板",
       "rank": 1
     },
     {
-      "title": "11月23日凡拓数创（301313）股票异动解析",
-      "time": "2026-11-23 12:01:20",
-      "url": "https://www.jiuyangongshe.com/action/detail/2gwc5k2ajjy",
-      "source": "韭研公社APP",
-      "theme": "AI·物理AI",
-      "rank": 1
-    },
-    {
-      "title": "物理AI概念持续走强 凡拓数创20cm2连板",
-      "time": "2026-11-23 11:06:52",
-      "url": "https://m.21jingji.com/timeline/91d574d447ef68cc9a96d092e75fd205.html",
-      "source": "21世纪经济报道",
-      "theme": "AI·物理AI",
+      "title": "全球电子产业正面临印刷电路板（PCB）的严重短缺，板块迎机会",
+      "time": "2026-11-23 08:51:53",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "广发证券",
+      "theme": "AI服务器·PCB覆铜板",
       "rank": 2
     },
     {
-      "title": "中信建投证券：物理AI是人工智能下一波浪潮",
-      "time": "2026-11-17 08:50:28",
-      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=138441&infoType=1&funcCode=004,004001,004039,004039003,004040,004040001,006,006005",
-      "source": "中证金牛座",
-      "theme": "AI·物理AI",
+      "title": "多家PCB概念股涨停 上市公司回应",
+      "time": "2026-11-20 20:47:20",
+      "url": "https://m.21jingji.com/timeline/3f8e94fd3ca76a16f75aee194deb7682.html",
+      "source": "21世纪经济报道",
+      "theme": "AI服务器·PCB覆铜板",
       "rank": 3
     },
     {
-      "title": "华为将发布首款昇腾原生具身世界模型 物理AI或再迎重磅催化",
-      "time": "2026-11-16 07:56:44",
-      "url": "https://www.cls.cn/detail/2534830",
-      "source": "财联社",
-      "theme": "AI·物理AI",
-      "rank": 4
-    },
-    {
-      "title": "物理AI产业与行情共振公募抢抓第二波投资红利",
-      "time": "2026-11-16 07:01:03",
-      "url": "https://www.stcn.com/article/detail/4337299.html",
+      "title": "多股涨停，PCB逆市走强！全球缺货预警，短缺或延续至2027年上半年，机构密集调研股出炉",
+      "time": "2026-11-20 18:18:35",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA4MDU0MzQ4Mg==&mid=2653432208&idx=1&sn=9a893420dd137a59385a0f06cec0bea3&chksm=85e909ce048f2d036d8d27ebdf606e41d805c26a30163e2c32ec3ecfeeb210e98d5077b7d590#rd",
       "source": "证券时报",
-      "theme": "AI·物理AI",
-      "rank": 5
-    },
-    {
-      "title": "电科芯片：电机驱动芯片尚未完成机器人客户适配选型",
-      "time": "2026-11-16 14:07:33",
-      "url": "https://www.cls.cn/detail/2535242",
-      "source": "财联社",
-      "theme": "机器人·执行器",
-      "rank": 1
-    },
-    {
-      "title": "商米科技-W（06810）涨超20% 锚定商业物理AI领导者新愿景",
-      "time": "2026-11-23 13:57:03",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "传感器·电子鼻",
-      "rank": 1
-    },
-    {
-      "title": "异动快报：超颖电子（603175）11月23日13点49分触及涨停板",
-      "time": "2026-11-23 13:56:30",
-      "url": "https://stock.stockstar.com/RB2026112300018420.shtml",
-      "source": "证券之星",
-      "theme": "传感器·电子鼻",
-      "rank": 2
-    },
-    {
-      "title": "上谕集团控股有限公司（01633.HK）董事会会议通告 将审议中期业绩及中期股息",
-      "time": "2026-11-20 16:43:11",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "传感器·电子鼻",
-      "rank": 3
-    },
-    {
-      "title": "SenesTech（SNES.US）董事JoAnna Abrams获授95,129份期权",
-      "time": "2026-11-19 17:56:53",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "传感器·电子鼻",
+      "theme": "AI服务器·PCB覆铜板",
       "rank": 4
     },
     {
-      "title": "维珍妮（02199.HK）拟于11月26日举行董事会会议审议中期业绩及派息",
-      "time": "2026-11-17 01:26:28",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "传感器·电子鼻",
+      "title": "券商高呼“国产国用”！PCB概念回暖，中京电子封单超13亿元",
+      "time": "2026-11-19 12:53:37",
+      "url": "https://m.21jingji.com/article/20261119/herald/20b5933626384dad6a72ba5c14e9b820.html",
+      "source": "21世纪经济报道",
+      "theme": "AI服务器·PCB覆铜板",
       "rank": 5
     },
     {
-      "title": "电机板块异动拉升 华阳智能涨超10%",
-      "time": "2026-11-23 11:25:11",
-      "url": "https://m.21jingji.com/timeline/16703043c2f239579747fb9047f2d90e.html",
-      "source": "21世纪经济报道",
-      "theme": "机器人·轮边电机",
+      "title": "谷歌联手蓝色起源2029年发射AI卫星，探索太空太阳能数据中心",
+      "time": "2026-11-20 09:37:54",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "谷歌生态·AI应用",
       "rank": 1
     },
     {
-      "title": "奕帆传动(301023)：目前公司主要做减速电机、驱动控制类产品",
-      "time": "2026-11-23 09:20:48",
-      "url": "https://www.gelonghui.com/news/5359623",
+      "title": "谷歌-C（GOOG）涨超4% 发布Gemini 4系列新模型Neon",
+      "time": "2026-11-19 22:59:05",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "谷歌生态·AI应用",
+      "rank": 2
+    },
+    {
+      "title": "谷歌收购AI日程管理新创公司Howie，强化智能代理阵容",
+      "time": "2026-11-18 09:23:31",
+      "url": "https://www.gelonghui.com/live/2766695",
       "source": "格隆汇",
-      "theme": "机器人·轮边电机",
-      "rank": 2
-    },
-    {
-      "title": "伯特利首个电机项目正式投产，底盘核心能力再进一步",
-      "time": "2026-11-18 18:24:58",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2030338",
-      "source": "动态宝",
-      "theme": "机器人·轮边电机",
+      "theme": "谷歌生态·AI应用",
       "rank": 3
     },
     {
-      "title": "恒帅股份(300969)：依托谐波磁场电机，人形机器人多类电机送样推进",
-      "time": "2026-11-17 09:16:22",
-      "url": "https://www.gelonghui.com/news/5354691",
-      "source": "格隆汇",
-      "theme": "机器人·轮边电机",
+      "title": "财联社11月17日电，谷歌表示，将在2027年全年陆续推出更多先进AI工具。",
+      "time": "2026-11-17 01:03:07",
+      "url": "https://www.cls.cn/detail/2535992",
+      "source": "财联社",
+      "theme": "谷歌生态·AI应用",
       "rank": 4
     },
     {
-      "title": "恒帅股份：在人形机器人领域已针对直线关节电机等品种开展定制化开发",
-      "time": "2026-11-17 08:25:12",
-      "url": "https://m.21jingji.com/timeline/58db96bc96568b2fc2f1cf63848711a1.html",
-      "source": "21世纪经济报道",
-      "theme": "机器人·轮边电机",
+      "title": "【A股开盘】三大指数集体高开 沪指涨0.82% AI链涨幅居前",
+      "time": "2026-11-24 09:27:49",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "谷歌生态·AI应用",
       "rank": 5
     },
     {
-      "title": "今日午盘全市场共20股涨停，连板股5只",
-      "time": "2026-11-19 11:55:11",
-      "url": "https://m.21jingji.com/timeline/e55d99ae6749561e150b49566f1d5e3a.html",
-      "source": "21世纪经济报道",
-      "theme": "接力·昨日连板",
+      "title": "“AI行情”回归？黄仁勋复职英伟达暴涨31%，半导体设备ETF招商（561980）连续4日净流入！",
+      "time": "2026-11-24 09:07:05",
+      "url": "https://www.gelonghui.com/live/2775840",
+      "source": "格隆汇",
+      "theme": "国产替代·半导体设备材料",
       "rank": 1
     },
     {
-      "title": "11月18日连板股分析：连板股晋级率不足二成 国产算力板块持续发酵",
-      "time": "2026-11-18 15:35:33",
-      "url": "https://www.cls.cn/detail/2537835",
-      "source": "财联社",
-      "theme": "接力·昨日连板",
+      "title": "半导体设备板块震荡回落 中科飞测跌超10%",
+      "time": "2026-11-23 10:55:13",
+      "url": "https://m.21jingji.com/timeline/2b0fa4fc730b44e63e6f3f4aa4afacbc.html",
+      "source": "21世纪经济报道",
+      "theme": "国产替代·半导体设备材料",
       "rank": 2
     },
     {
-      "title": "今日午盘全市场共32股涨停，连板股8只",
-      "time": "2026-11-18 11:58:55",
-      "url": "https://m.21jingji.com/timeline/a76b34ea19d6add2604b07e36fe42fdb.html",
+      "title": "半导体板块震荡回调，半导体设备ETF易方达（159558）连续6日获资金净流入",
+      "time": "2026-11-20 12:58:05",
+      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1045810",
       "source": "21世纪经济报道",
-      "theme": "接力·昨日连板",
+      "theme": "国产替代·半导体设备材料",
       "rank": 3
     },
     {
-      "title": "11月17日连板股分析：连板股晋级率仅9% 九阳股份盘中上演“天地板”",
-      "time": "2026-11-17 15:37:54",
-      "url": "https://www.cls.cn/detail/2536572",
-      "source": "财联社",
-      "theme": "接力·昨日连板",
+      "title": "半导体设备行业标准落地，半导体设备ETF易方达（159558）盘中获3.57亿份净申购",
+      "time": "2026-11-20 10:58:25",
+      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1045624",
+      "source": "21世纪经济报道",
+      "theme": "国产替代·半导体设备材料",
       "rank": 4
     },
     {
-      "title": "11月16日连板股分析：连板股晋级率超四成 文投控股走出19天11板",
-      "time": "2026-11-16 15:47:35",
-      "url": "https://www.cls.cn/detail/2535430",
-      "source": "财联社",
-      "theme": "接力·昨日连板",
+      "title": "消费电子板块走强 龙旗科技（09611）涨8.10%、富智康集团（02038）涨7.94%",
+      "time": "2026-11-23 13:24:26",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "消费电子·产业链复苏",
+      "rank": 1
+    },
+    {
+      "title": "【券商聚焦】中信证券：展望2027年 “自主可控、AI”仍是绝对强主线",
+      "time": "2026-11-19 08:50:36",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "消费电子·产业链复苏",
+      "rank": 2
+    },
+    {
+      "title": "【港股开盘】港股开盘向好 恒指高开1.09% 联想集团（00992）涨10.40%",
+      "time": "2026-11-24 09:27:39",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "消费电子·产业链复苏",
+      "rank": 3
+    },
+    {
+      "title": "【A股开盘】三大指数集体高开 沪指涨0.82% AI链涨幅居前",
+      "time": "2026-11-24 09:27:49",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "消费电子·产业链复苏",
+      "rank": 4
+    },
+    {
+      "title": "酒泉召开神二十四号发布会 船箭及航天员状态良好 具备发射条件",
+      "time": "2026-11-24 09:27:33",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "消费电子·产业链复苏",
       "rank": 5
+    },
+    {
+      "title": "重庆发布86项低空产业发展机会清单 总投资约289亿元",
+      "time": "2026-11-21 17:29:24",
+      "url": "http://www.chinanews.com.cn/cj/2026/11-21/10735787.shtml",
+      "source": "中国新闻网",
+      "theme": "低空经济·无人机产业链",
+      "rank": 1
+    },
+    {
+      "title": "东莞控股（000828）低空经济业务布局再添新成果 “一网统飞”项目获全国一等奖",
+      "time": "2026-11-20 21:05:35",
+      "url": "https://www.cs.com.cn/ssgs/01/2026/11/20/detail_2026112010053705.html",
+      "source": "中国证券报·中证网",
+      "theme": "低空经济·无人机产业链",
+      "rank": 2
+    },
+    {
+      "title": "生产力局“低空经济监管沙盒『AI城市管理.一网统飞HKPC任务管理中心』成果巡礼”开幕仪式",
+      "time": "2026-11-17 11:30:00",
+      "url": "https://www.etnet.com.hk/www/tc/news/news-article.php?section=categorized&category=latest&newsid=2026111701",
+      "source": "经济通",
+      "theme": "低空经济·无人机产业链",
+      "rank": 3
     }
   ]
 }

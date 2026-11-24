@@ -1,13 +1,146 @@
 {
-  "updated_at": "2026-11-23 14:05",
+  "updated_at": "2026-11-24 09:31",
   "source": "新华财经资讯MCP(get_xhcj_hotNews) | 桥接写入",
   "items": [
     {
-      "title": "午评：创业板指探底回升涨超1% 人形机器人概念集体走强",
-      "pub": "2026-11-23 11:52:05",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549629726659108864/1",
+      "title": "英伟达涨超31%市值大增近万亿美元 黄仁勋：“迫不及待地想回去工作”",
+      "pub": "2026-11-24 09:02:42",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549948556778774528/1",
       "source": "新华财经",
       "rank": 1
+    },
+    {
+      "title": "【五大信披媒体精华摘要】11月24日",
+      "pub": "2026-11-24 08:01:05",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549933048288960512/1",
+      "source": "新华财经",
+      "rank": 2
+    },
+    {
+      "title": "【环球财经】连跌数日后 国际金价重新站上每盎司3600美元",
+      "pub": "2026-11-24 07:59:22",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549873390945918976/1",
+      "source": "新华财经",
+      "rank": 3
+    },
+    {
+      "title": "纽约联储主席威廉姆斯：抗通胀工作尚未完成 不排除连续加息",
+      "pub": "2026-11-24 07:44:16",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549930136909766656/1",
+      "source": "新华财经",
+      "rank": 4
+    },
+    {
+      "title": "【看新股】江丰电子递表港交所：全球靶材份额第二 上半年利润增77.5%",
+      "pub": "2026-11-24 07:35:50",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549685612907782144/1",
+      "source": "新华财经",
+      "rank": 5
+    },
+    {
+      "title": "产品数量5年扩容逾3倍 2027年惠民保步入商保创新药目录衔接新阶段",
+      "pub": "2026-11-24 07:30:58",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549928504578465792/1",
+      "source": "新华财经",
+      "rank": 6
+    },
+    {
+      "title": "向“新”寻“质”谋未来——洞见中国经济“新”力量",
+      "pub": "2026-11-24 07:19:15",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549925088817127424/1",
+      "source": "新华财经",
+      "rank": 7
+    },
+    {
+      "title": "【环球财经】黄仁勋复职谈感言 美股大幅反弹",
+      "pub": "2026-11-24 06:26:56",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549809977569927168/1",
+      "source": "新华财经",
+      "rank": 8
+    },
+    {
+      "title": "英伟达重新任命黄仁勋为CEO 美股盘前股价涨超31%",
+      "pub": "2026-11-23 22:29:10",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549792072245370880/1",
+      "source": "新华财经",
+      "rank": 9
+    },
+    {
+      "title": "【财经分析】土耳其里拉持续贬值 高利率能否稳住市场信心",
+      "pub": "2026-11-23 21:40:43",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549719376455180288/1",
+      "source": "新华财经",
+      "rank": 10
+    },
+    {
+      "title": "货币市场日报：11月23日",
+      "pub": "2026-11-23 20:40:57",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549759624187027456/1",
+      "source": "新华财经",
+      "rank": 11
+    },
+    {
+      "title": "监管明确两融调整细则",
+      "pub": "2026-11-23 19:15:35",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549743118019534848/1",
+      "source": "新华财经",
+      "rank": 12
+    },
+    {
+      "title": "商品日报（11月23日）：苹果涨超6%生猪涨停 BR橡胶大跌近5%",
+      "pub": "2026-11-23 17:52:52",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549683356070240256/1",
+      "source": "新华财经",
+      "rank": 13
+    },
+    {
+      "title": "新华财经晚报：社会保险基金监督条例公开征求意见",
+      "pub": "2026-11-23 17:47:55",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549703584825139200/1",
+      "source": "新华财经",
+      "rank": 14
+    },
+    {
+      "title": "债市日报：11月23日",
+      "pub": "2026-11-23 16:09:59",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549694530057265152/1",
+      "source": "新华财经",
+      "rank": 15
+    },
+    {
+      "title": "一周流动性观察 | 月末大额缴款关注央行投放 资金面有望保持均衡偏松",
+      "pub": "2026-11-23 15:31:15",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549671665827766272/1",
+      "source": "新华财经",
+      "rank": 16
+    },
+    {
+      "title": "收评：创业板指涨3.08% 人形机器人和AI视频产业链相关板块均大幅上涨",
+      "pub": "2026-11-23 15:23:04",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549683726179966976/1",
+      "source": "新华财经",
+      "rank": 17
+    },
+    {
+      "title": "新财观 | “不系之舟”——2027年全球大类资产展望",
+      "pub": "2026-11-23 15:15:51",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549680631739768832/1",
+      "source": "新华财经",
+      "rank": 18
+    },
+    {
+      "title": "【央行圆桌汇】美联储利率路径分歧加深（2026年11月23日）",
+      "pub": "2026-11-23 14:20:32",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549593516415229952/1",
+      "source": "新华财经",
+      "rank": 19
+    },
+    {
+      "title": "【新华解读】从“强供给”向“优适配”，“一老一小”服务如何升级？",
+      "pub": "2026-11-23 14:16:57",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/549621229980655616/1",
+      "source": "新华财经",
+      "rank": 20
     }
   ]
 }
