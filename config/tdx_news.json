@@ -1,165 +1,133 @@
 {
-  "updated_at": "2026-11-24 09:31",
-  "source": "通达信MCP(wenda_news_query) | 6题材合并去重 | 上限5/题材 总计≤40",
+  "updated_at": "2026-11-25 11:05",
+  "source": "通达信MCP(wenda_news_query) | 10题材合并去重 | 上限5/题材 总计≤40",
   "items": [
     {
-      "title": "光大同创：拟5亿元投建高速硅光模块智能制造基地项目 生产400G/800G硅光模块",
-      "time": "2026-11-23 19:06:18",
-      "url": "https://www.cls.cn/detail/2542020",
-      "source": "财联社",
-      "theme": "AI算力·光模块",
+      "title": "A股CPO股多数上涨，天孚通信大涨超10%，新易盛涨超3%",
+      "time": "2026-11-25 09:56:24",
+      "url": "https://www.gelonghui.com/live/2777771",
+      "source": "格隆汇",
+      "theme": "CPO光电共封装·光模块",
       "rank": 1
     },
     {
-      "title": "光模块，逆市爆拉超2%！新易盛飙升7.26%领涨光模三杰，什么信号？",
-      "time": "2026-11-23 10:38:24",
-      "url": "https://m.21jingji.com/article/20261123/herald/ffdb6182510c2e0e0220bcb36691e112.html",
+      "title": "CPO概念震荡反弹 天孚通信涨超11%",
+      "time": "2026-11-25 09:55:13",
+      "url": "https://m.21jingji.com/timeline/d957eb22f051a1d0fa23f6de84c1ee1a.html",
       "source": "21世纪经济报道",
-      "theme": "AI算力·光模块",
+      "theme": "CPO光电共封装·光模块",
       "rank": 2
     },
     {
-      "title": "新易盛(300502)：当前客户对光模块的需求指引明确，目前不存在需求预期下修或砍单情形",
-      "time": "2026-11-18 18:28:45",
-      "url": "https://www.gelonghui.com/news/5356576",
-      "source": "格隆汇",
-      "theme": "AI算力·光模块",
+      "title": "CPO概念股探底回升 蘅东光涨超10%",
+      "time": "2026-11-23 11:26:39",
+      "url": "https://m.21jingji.com/timeline/f8d73f51143f7c164f60e71f36bc41a0.html",
+      "source": "21世纪经济报道",
+      "theme": "CPO光电共封装·光模块",
       "rank": 3
     },
     {
-      "title": "中际旭创：NPO、XPO等产品需求有望于2027年下半年逐步释放",
-      "time": "2026-11-18 14:35:38",
-      "url": "https://m.21jingji.com/timeline/adcce659eb9eee0efb25c4e854cd2c19.html",
-      "source": "21世纪经济报道",
-      "theme": "AI算力·光模块",
-      "rank": 4
-    },
-    {
-      "title": "南亚新材(688519)：目前公司产品已覆盖800G/1.6T光模块 NPO/CPO等板材也在积极准备中",
-      "time": "2026-11-17 23:25:12",
-      "url": "https://www.gelonghui.com/news/5355716",
-      "source": "格隆汇",
-      "theme": "AI算力·光模块",
-      "rank": 5
+      "title": "PCB概念板块普涨 鼎泰高科（01377）涨超16% 中金看好AI PCB量价齐升",
+      "time": "2026-11-24 09:55:00",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "PCB·高端基材",
+      "rank": 1
     },
     {
       "title": "PCB概念板块走强 景旺电子（03228）涨近9% 机构指AI算力拉动高端PCB需求",
       "time": "2026-11-23 14:48:49",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "AI服务器·PCB覆铜板",
-      "rank": 1
+      "theme": "PCB·高端基材",
+      "rank": 2
     },
     {
       "title": "全球电子产业正面临印刷电路板（PCB）的严重短缺，板块迎机会",
       "time": "2026-11-23 08:51:53",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "广发证券",
-      "theme": "AI服务器·PCB覆铜板",
-      "rank": 2
-    },
-    {
-      "title": "多家PCB概念股涨停 上市公司回应",
-      "time": "2026-11-20 20:47:20",
-      "url": "https://m.21jingji.com/timeline/3f8e94fd3ca76a16f75aee194deb7682.html",
-      "source": "21世纪经济报道",
-      "theme": "AI服务器·PCB覆铜板",
+      "theme": "PCB·高端基材",
       "rank": 3
     },
     {
-      "title": "多股涨停，PCB逆市走强！全球缺货预警，短缺或延续至2027年上半年，机构密集调研股出炉",
-      "time": "2026-11-20 18:18:35",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzA4MDU0MzQ4Mg==&mid=2653432208&idx=1&sn=9a893420dd137a59385a0f06cec0bea3&chksm=85e909ce048f2d036d8d27ebdf606e41d805c26a30163e2c32ec3ecfeeb210e98d5077b7d590#rd",
-      "source": "证券时报",
-      "theme": "AI服务器·PCB覆铜板",
+      "title": "PCB概念震荡走高 胜宏科技（02476）涨4.81% 机构指单机柜PCB用量与价值量持续提升",
+      "time": "2026-11-18 09:51:12",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "PCB·高端基材",
       "rank": 4
     },
     {
-      "title": "券商高呼“国产国用”！PCB概念回暖，中京电子封单超13亿元",
-      "time": "2026-11-19 12:53:37",
-      "url": "https://m.21jingji.com/article/20261119/herald/20b5933626384dad6a72ba5c14e9b820.html",
-      "source": "21世纪经济报道",
-      "theme": "AI服务器·PCB覆铜板",
-      "rank": 5
-    },
-    {
-      "title": "谷歌联手蓝色起源2029年发射AI卫星，探索太空太阳能数据中心",
-      "time": "2026-11-20 09:37:54",
+      "title": "互动严选丨德尔股份：电芯中试线在调试过程中 PACK生产线已投入运行",
+      "time": "2026-11-24 07:34:04",
       "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "谷歌生态·AI应用",
+      "source": "趋势财经",
+      "theme": "液冷服务器·热管理",
       "rank": 1
     },
     {
-      "title": "谷歌-C（GOOG）涨超4% 发布Gemini 4系列新模型Neon",
-      "time": "2026-11-19 22:59:05",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "谷歌生态·AI应用",
+      "title": "华为大折叠屏全球发货量突破1200万台",
+      "time": "2026-11-24 21:13:36",
+      "url": "https://www.cs.com.cn/ssgs/01/2026/11/24/detail_2026112410054405.html",
+      "source": "中国证券报·中证网",
+      "theme": "华为产业链·昇腾/机器人",
+      "rank": 1
+    },
+    {
+      "title": "华为双品牌布局：发布星芒品牌首款鸿蒙AI手机",
+      "time": "2026-11-20 20:32:13",
+      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=138855&infoType=1&funcCode=004,004001,006,006005",
+      "source": "中证金牛座",
+      "theme": "华为产业链·昇腾/机器人",
       "rank": 2
     },
     {
-      "title": "谷歌收购AI日程管理新创公司Howie，强化智能代理阵容",
-      "time": "2026-11-18 09:23:31",
-      "url": "https://www.gelonghui.com/live/2766695",
-      "source": "格隆汇",
-      "theme": "谷歌生态·AI应用",
+      "title": "时隔六年！华为再启手机子品牌，首款鸿蒙AI手机亮相",
+      "time": "2026-11-20 20:20:26",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA3NjM5MjIwOQ==&mid=2652288105&idx=4&sn=ef1f5935985421f9b3ede84207e1efb2&chksm=8586fdc6db9eb975aaf09ce8a4b1ece3622c8a10adfa58c8a826b5ace629b6d1759fc7cfb520#rd",
+      "source": "券商中国",
+      "theme": "华为产业链·昇腾/机器人",
       "rank": 3
     },
     {
-      "title": "财联社11月17日电，谷歌表示，将在2027年全年陆续推出更多先进AI工具。",
-      "time": "2026-11-17 01:03:07",
-      "url": "https://www.cls.cn/detail/2535992",
+      "title": "京东与华为OSTA星芒达成战略合作 三年销售目标700亿",
+      "time": "2026-11-20 19:58:36",
+      "url": "https://www.cls.cn/detail/2540456",
       "source": "财联社",
-      "theme": "谷歌生态·AI应用",
+      "theme": "华为产业链·昇腾/机器人",
       "rank": 4
     },
     {
-      "title": "【A股开盘】三大指数集体高开 沪指涨0.82% AI链涨幅居前",
-      "time": "2026-11-24 09:27:49",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "谷歌生态·AI应用",
-      "rank": 5
-    },
-    {
-      "title": "“AI行情”回归？黄仁勋复职英伟达暴涨31%，半导体设备ETF招商（561980）连续4日净流入！",
-      "time": "2026-11-24 09:07:05",
-      "url": "https://www.gelonghui.com/live/2775840",
-      "source": "格隆汇",
-      "theme": "国产替代·半导体设备材料",
+      "title": "11月24日纵横通信（603602）股票异动解析：AI营销+字节豆包全力推进智能体APP和电商",
+      "time": "2026-11-24 11:50:31",
+      "url": "https://www.jiuyangongshe.com/action/detail/3fuc3bqtydc",
+      "source": "韭研公社APP",
+      "theme": "人工智能·AI智能体/应用端",
       "rank": 1
     },
     {
-      "title": "半导体设备板块震荡回落 中科飞测跌超10%",
-      "time": "2026-11-23 10:55:13",
-      "url": "https://m.21jingji.com/timeline/2b0fa4fc730b44e63e6f3f4aa4afacbc.html",
-      "source": "21世纪经济报道",
-      "theme": "国产替代·半导体设备材料",
+      "title": "物理AI的“ChatGPT时刻”或一年内到来！首程控股(0697)被投宇树获摩根大通上调目标价",
+      "time": "2026-11-25 09:35:00",
+      "url": "https://www.gelonghui.com/live/2777732",
+      "source": "格隆汇",
+      "theme": "人工智能·AI智能体/应用端",
       "rank": 2
     },
     {
-      "title": "半导体板块震荡回调，半导体设备ETF易方达（159558）连续6日获资金净流入",
-      "time": "2026-11-20 12:58:05",
-      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1045810",
-      "source": "21世纪经济报道",
-      "theme": "国产替代·半导体设备材料",
+      "title": "投资日历：周二资本市场大事提醒",
+      "time": "2026-11-24 07:49:08",
+      "url": "https://www.cls.cn/detail/2542419",
+      "source": "财联社",
+      "theme": "人工智能·AI智能体/应用端",
       "rank": 3
-    },
-    {
-      "title": "半导体设备行业标准落地，半导体设备ETF易方达（159558）盘中获3.57亿份净申购",
-      "time": "2026-11-20 10:58:25",
-      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1045624",
-      "source": "21世纪经济报道",
-      "theme": "国产替代·半导体设备材料",
-      "rank": 4
     },
     {
       "title": "消费电子板块走强 龙旗科技（09611）涨8.10%、富智康集团（02038）涨7.94%",
       "time": "2026-11-23 13:24:26",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "消费电子·产业链复苏",
+      "theme": "消费电子·AI终端",
       "rank": 1
     },
     {
@@ -167,55 +135,111 @@
       "time": "2026-11-19 08:50:36",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "消费电子·产业链复苏",
+      "theme": "消费电子·AI终端",
       "rank": 2
     },
     {
-      "title": "【港股开盘】港股开盘向好 恒指高开1.09% 联想集团（00992）涨10.40%",
-      "time": "2026-11-24 09:27:39",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "消费电子·产业链复苏",
+      "title": "消费电子ETF平安（561600）下跌3.61%，立讯精密控股子公司莱尼电气系统获颁亚洲区地区总部证书",
+      "time": "2026-11-20 16:23:21",
+      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2037585",
+      "source": "动态宝",
+      "theme": "消费电子·AI终端",
       "rank": 3
     },
     {
-      "title": "【A股开盘】三大指数集体高开 沪指涨0.82% AI链涨幅居前",
-      "time": "2026-11-24 09:27:49",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "消费电子·产业链复苏",
+      "title": "消电ETF国泰（561310）下跌3.96%，立讯精密控股子公司莱尼电气系统获颁亚洲区地区总部证书",
+      "time": "2026-11-20 16:23:19",
+      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2037571",
+      "source": "动态宝",
+      "theme": "消费电子·AI终端",
       "rank": 4
     },
     {
-      "title": "酒泉召开神二十四号发布会 船箭及航天员状态良好 具备发射条件",
-      "time": "2026-11-24 09:27:33",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "消费电子·产业链复苏",
-      "rank": 5
-    },
-    {
-      "title": "重庆发布86项低空产业发展机会清单 总投资约289亿元",
-      "time": "2026-11-21 17:29:24",
-      "url": "http://www.chinanews.com.cn/cj/2026/11-21/10735787.shtml",
-      "source": "中国新闻网",
-      "theme": "低空经济·无人机产业链",
+      "title": "流感季来袭催化行情？抗流感板块异动拉升，关注3条医药主线",
+      "time": "2026-11-25 10:59:30",
+      "url": "https://m.21jingji.com/article/20261125/herald/604119572132f381b8b1550b52df93f6.html",
+      "source": "21世纪经济报道",
+      "theme": "医药·抗流感/创新药",
       "rank": 1
     },
     {
-      "title": "东莞控股（000828）低空经济业务布局再添新成果 “一网统飞”项目获全国一等奖",
-      "time": "2026-11-20 21:05:35",
-      "url": "https://www.cs.com.cn/ssgs/01/2026/11/20/detail_2026112010053705.html",
-      "source": "中国证券报·中证网",
-      "theme": "低空经济·无人机产业链",
+      "title": "002728，1分钟直线涨停！超30万手封板",
+      "time": "2026-11-25 10:45:10",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzAwODUyMjIzOQ==&mid=2651986411&idx=1&sn=bbb39ea78624ba4059ad0f713ad74f92&chksm=817f48ed379a81387e9804d3ea6e75e3a65638d333585edb8b86bc88fa99dd8496f79d280450#rd",
+      "source": "e公司",
+      "theme": "医药·抗流感/创新药",
       "rank": 2
     },
     {
-      "title": "生产力局“低空经济监管沙盒『AI城市管理.一网统飞HKPC任务管理中心』成果巡礼”开幕仪式",
-      "time": "2026-11-17 11:30:00",
-      "url": "https://www.etnet.com.hk/www/tc/news/news-article.php?section=categorized&category=latest&newsid=2026111701",
-      "source": "经济通",
-      "theme": "低空经济·无人机产业链",
+      "title": "来得早，爬得快！流感季来袭，药店货架有哪些变化？",
+      "time": "2026-11-21 18:09:56",
+      "url": "https://www.cls.cn/detail/2540815",
+      "source": "财联社",
+      "theme": "医药·抗流感/创新药",
+      "rank": 3
+    },
+    {
+      "title": "流感用药销量翻倍，今冬呼吸道传染病防控有哪些新变化？",
+      "time": "2026-11-19 18:50:54",
+      "url": "https://m.21jingji.com/article/20261119/herald/f94ad892675a67c8181c061e2a914aec.html",
+      "source": "21世纪经济报道",
+      "theme": "医药·抗流感/创新药",
+      "rank": 4
+    },
+    {
+      "title": "今冬明春多种呼吸道病原体交替叠加 流感是主要威胁",
+      "time": "2026-11-18 18:13:22",
+      "url": "https://www.cls.cn/detail/2538080",
+      "source": "财联社",
+      "theme": "医药·抗流感/创新药",
+      "rank": 5
+    },
+    {
+      "title": "新消费概念板块走强 小米集团-W（01810）涨超7% 机构指消费板块的修复弹性值得重视",
+      "time": "2026-11-25 10:18:23",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "新零售/国企改革·消费复苏",
+      "rank": 1
+    },
+    {
+      "title": "【券商聚焦】中信建投：2026年双11美妆呈现温和增长、渠道分化的特征",
+      "time": "2026-11-25 08:49:12",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "新零售/国企改革·消费复苏",
+      "rank": 2
+    },
+    {
+      "title": "2026零售创新大会在沪召开 探索零售可持续增长路径",
+      "time": "2026-11-19 15:37:08",
+      "url": "http://www.chinanews.com.cn/cj/2026/11-19/10734661.shtml",
+      "source": "中国新闻网",
+      "theme": "新零售/国企改革·消费复苏",
+      "rank": 3
+    },
+    {
+      "title": "微盘股指数涨超2%",
+      "time": "2026-11-25 10:12:13",
+      "url": "https://www.gelonghui.com/live/2777799",
+      "source": "格隆汇",
+      "theme": "微小盘股·题材投机",
+      "rank": 1
+    },
+    {
+      "title": "沪指飘绿，小微盘强力反攻！3个点收益差下，为什么“反弹先小盘，小盘看增强”？",
+      "time": "2026-11-23 14:59:25",
+      "url": "https://m.21jingji.com/article/20261123/herald/e1e6a2c7a0b3df8aece5eba49fd32be4.html",
+      "source": "21世纪经济报道",
+      "theme": "微小盘股·题材投机",
+      "rank": 2
+    },
+    {
+      "title": "小微盘股指数集体走出“七连跌” ETF资金流向为何分化",
+      "time": "2026-11-21 09:15:33",
+      "url": "https://www.gelonghui.com/live/2773069",
+      "source": "格隆汇",
+      "theme": "微小盘股·题材投机",
       "rank": 3
     }
   ]
