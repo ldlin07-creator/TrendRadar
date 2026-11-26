@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-25 11:27",
+  "updated_at": "2026-11-26 14:58",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -1015,7 +1015,7 @@
       "time": "2026-11-19"
     },
     {
-      "theme": "数字媐体·AI应用",
+      "theme": "数字媒体·AI应用",
       "company": "",
       "kind": "industry",
       "source": "站酷ZCOOL",
@@ -2005,1574 +2005,254 @@
       "time": "2026-11-23"
     },
     {
-      "theme": "机器人·华为机器人",
+      "theme": "连板·龙头股",
       "company": "",
       "kind": "industry",
-      "source": "中国机器人网",
-      "site": "https://www.robot-china.com",
-      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
-      "url": "https://www.robot-china.com/news/202608/03/96250.html",
-      "time": "2026-11-23"
+      "source": "淘股吧",
+      "site": "https://www.tagubba.com",
+      "title": "淘股吧：连板高度/龙头分时/情绪周期核心题材复盘框架",
+      "url": "https://www.tagubba.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "中国机器人网",
-      "site": "https://www.robot-china.com",
-      "title": "人形机器人首次登顶6200米以上高峰，超8成相关专利申请于近五年",
-      "url": "https://www.robot-china.com/news/202606/26/95974.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "中国机器人网",
-      "site": "https://www.robot-china.com",
-      "title": "波士顿动力人形机器人首次进入半导体制造领域，Atlas明年在格罗方德工厂测试",
-      "url": "https://www.robot-china.com/news/202611/23/97525.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "中国机器人网",
-      "site": "https://www.robot-china.com",
-      "title": "七部门揭榜挂帅首次单列人形机器人专题，启动新一轮国家级技术攻坚",
-      "url": "https://www.robot-china.com/news/202608/03/96250.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
-      "url": "https://www.aibangbots.com/a/14744",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "国科感元破解电子皮肤中离子复合材料难题",
-      "url": "https://www.aibangbots.com/a/14729",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·轮边电机",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
-      "url": "https://www.aibangbots.com/a/14720",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
-      "url": "https://www.aibangbots.com/a/14744",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "国科感元破解电子皮肤中离子复合材料难题",
-      "url": "https://www.aibangbots.com/a/14729",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
-      "url": "https://www.aibangbots.com/a/14720",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·执行器",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "傲意科技完成D轮融资，将继续稳扎稳打，继续加速进化",
-      "url": "https://www.aibangbots.com/a/14744",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·执行器",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "国科感元破解电子皮肤中离子复合材料难题",
-      "url": "https://www.aibangbots.com/a/14729",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·执行器",
-      "company": "",
-      "kind": "industry",
-      "source": "艾邦机器人",
-      "site": "https://www.aibangbots.com",
-      "title": "MoTe电子感压纸 | 智能数字化测压方案，压力实时动态可视化",
-      "url": "https://www.aibangbots.com/a/14720",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·空心杯电机",
-      "company": "田中精机 300461",
+      "theme": "连板·龙头股",
+      "company": "杭州解百 600814",
       "kind": "company",
-      "source": "田中精机官网",
-      "site": "https://www.tanac.com.cn",
-      "title": "展会收官｜盛会落幕，匠心不止",
-      "url": "https://mp.weixin.qq.com/s/-Q7TqWBC_6_KyN46rcC_7A",
-      "time": "2026-11-23"
+      "source": "杭州解百官网",
+      "site": "https://www.jiebai.com",
+      "title": "杭州解百 投资者关系/定期报告/公司公告/股票信息",
+      "url": "https://www.jiebai.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "机器人·空心杯电机",
-      "company": "田中精机 300461",
+      "theme": "连板·龙头股",
+      "company": "北纬科技 600602",
       "kind": "company",
-      "source": "田中精机官网",
-      "site": "https://www.tanac.com.cn",
-      "title": "端午节｜粽香迎端午，清风叙安康",
-      "url": "https://mp.weixin.qq.com/s/eLN8r4DnnvGyLpcyl2cJ7A",
-      "time": "2026-11-23"
+      "source": "北纬科技官网",
+      "site": "https://www.bisp.com",
+      "title": "北纬科技 投资者关系/定期报告/公司公告/股票信息",
+      "url": "https://www.bisp.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "机器人·空心杯电机",
-      "company": "田中精机 300461",
+      "theme": "白银·贵金属",
+      "company": "",
+      "kind": "industry",
+      "source": "中国白银网",
+      "site": "https://www.chinasilver.com.cn",
+      "title": "中国白银网：白银现货/期货行情、供需分析、行业动态",
+      "url": "https://www.chinasilver.com.cn",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "白银·贵金属",
+      "company": "",
+      "kind": "industry",
+      "source": "91金属上海白银网",
+      "site": "https://www.shanghai-91.com/silver/",
+      "title": "91金属：上海白银现货价格/白银进出口/产业链企业名录",
+      "url": "https://www.shanghai-91.com/silver/",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "白银·贵金属",
+      "company": "盛达资源 000603",
       "kind": "company",
-      "source": "田中精机官网",
-      "site": "https://www.tanac.com.cn",
-      "title": "邀请函｜CWIEME SHANGHAI 2026",
-      "url": "https://mp.weixin.qq.com/s/80oDFrvtj0Tcm7PeJ4IS4w",
-      "time": "2026-11-23"
+      "source": "盛达资源官网",
+      "site": "https://www.sdkygf.com",
+      "title": "盛达资源：A股白银龙头 白银储备量近万吨 年采选能力198万吨",
+      "url": "https://www.sdkygf.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "机器人·华为机器人",
-      "company": "埃夫特 688165",
+      "theme": "白银·贵金属",
+      "company": "招金黄金 000506",
       "kind": "company",
-      "source": "埃夫特官网",
-      "site": "https://www.efort.com.cn",
-      "title": "游玮博士出席WAIC论坛｜筑好通用技术底座，埃夫特&启智交出工业具身落地答卷",
-      "url": "https://www.efort.com.cn/index.php/news/newsdetail/554.html",
-      "time": "2026-11-23"
+      "source": "招金国际黄金官网",
+      "site": "https://www.zjhj-gold.com",
+      "title": "招金黄金：全球运营90余年瓦图科拉金矿 2026年11月大使馆考察调研",
+      "url": "https://www.zjhj-gold.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "机器人·华为机器人",
-      "company": "埃夫特 688165",
-      "kind": "company",
-      "source": "埃夫特官网",
-      "site": "https://www.efort.com.cn",
-      "title": "埃夫特 · 启智亮相WAIC | 首发HumanGPT，以通用技术底座破解行业共创难",
-      "url": "https://www.efort.com.cn/index.php/news/newsdetail/553.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "埃夫特 688165",
-      "kind": "company",
-      "source": "埃夫特官网",
-      "site": "https://www.efort.com.cn",
-      "title": "埃夫特亮相全省推进会：以通用技术底座承载机器人产业进阶",
-      "url": "https://www.efort.com.cn/index.php/news/newsdetail/552.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "传感器·电子鼻",
-      "company": "汉威科技 600206",
-      "kind": "company",
-      "source": "汉威科技官网",
-      "site": "https://www.hanwei.cn",
-      "title": "助力具身智能与物理AI发展，汉威科技多模态传感器成上海MEMS会议焦点",
-      "url": "https://hanwei.cn/news_detail/237.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "传感器·电子鼻",
-      "company": "汉威科技 600206",
-      "kind": "company",
-      "source": "汉威科技官网",
-      "site": "https://www.hanwei.cn",
-      "title": "盛会蓉城启幕，汉威科技高端光学矩阵亮相第十九届在线分析展",
-      "url": "https://hanwei.cn/news_detail/236.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "传感器·电子鼻",
-      "company": "汉威科技 600206",
-      "kind": "company",
-      "source": "汉威科技官网",
-      "site": "https://www.hanwei.cn",
-      "title": "汉威科技以多模态感知+AI智能体智慧化方案，破解工业场景消防安全管理难题",
-      "url": "https://hanwei.cn/news_detail/235.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "中京电子 002579",
-      "kind": "company",
-      "source": "中京电子官网",
-      "site": "https://www.ceepcb.com",
-      "title": "CEE Technology Showcases at IZB 2026 in Germany, Exploring New Opportunities for International Cooperation",
-      "url": "https://www.ceepcb.com/blog_detail/107.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "中京电子 002579",
-      "kind": "company",
-      "source": "中京电子官网",
-      "site": "https://www.ceepcb.com",
-      "title": "Six CEE Products Selected for 2026 Second Batch of Guangdong Premium High-Technology Products",
-      "url": "https://www.ceepcb.com/blog_detail/106.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "机器人·华为机器人",
-      "company": "中京电子 002579",
-      "kind": "company",
-      "source": "中京电子官网",
-      "site": "https://www.ceepcb.com",
-      "title": "CEE Named Among the Top 50 Outstanding Enterprises in the Sixth China Electronic Circuit Industry Awards",
-      "url": "https://www.ceepcb.com/blog_detail/105.html",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "光纤在线",
-      "site": "https://www.fiberon.cn",
-      "title": "光纤在线：2026年中国光通信市场年度报告——800G/1.6T光模块放量加速",
-      "url": "https://www.fiberon.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "光纤在线",
-      "site": "https://www.fiberon.cn",
-      "title": "CIOE2026回顾：LPO/CPO技术路线之争 硅光子芯片量产时间表明确",
-      "url": "https://www.fiberon.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "光纤在线",
-      "site": "https://www.fiberon.cn",
-      "title": "英伟达GB300/GB200服务器网络架构解析：单机柜光模块用量超5000个",
-      "url": "https://www.fiberon.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "光纤在线",
-      "site": "https://www.fiberon.cn",
-      "title": "海外云厂商Capital Expenditure指引上调 光模块供应链景气度延续",
-      "url": "https://www.fiberon.cn",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "光纤在线",
-      "site": "https://www.fiberon.cn",
-      "title": "400G/800G光模块价格战白热化：头部厂商毛利率分化 加速出清",
-      "url": "https://www.fiberon.cn",
-      "time": "2026-11-14"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "深圳市光学光电子行业协会",
-      "site": "https://www.szop.org.cn",
-      "title": "深圳光协：2026年粤港澳大湾区光电子产业产值破万亿 光模块占比超30%",
-      "url": "https://www.szop.org.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "中际旭创 300308",
-      "kind": "company",
-      "source": "中际旭创官网",
-      "site": "https://www.accelink.com",
-      "title": "中际旭创 800G/1.6T光模块/硅光芯片/海外产能布局/投资者关系",
-      "url": "https://www.accelink.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "中际旭创 300308",
-      "kind": "company",
-      "source": "中际旭创官网",
-      "site": "https://www.accelink.com",
-      "title": "中际旭创三季报：营收同比增85% 800G光模块出货量全球第一",
-      "url": "https://www.accelink.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "新易盛 300502",
-      "kind": "company",
-      "source": "新易盛官网",
-      "site": "https://www.eoptolink.com",
-      "title": "新易盛 400G/800G/1.6T光模块/数据中心互联/投资者关系",
-      "url": "https://www.eoptolink.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "新易盛 300502",
-      "kind": "company",
-      "source": "新易盛官网",
-      "site": "https://www.eoptolink.com",
-      "title": "新易盛发布1.6T OSFP-XD DR8硅光模块 单波200Gbps PAM4技术量产",
-      "url": "https://www.eoptolink.com/news/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "光迅科技 002281",
-      "kind": "company",
-      "source": "光迅科技官网",
-      "site": "https://www.gxcom.com.cn",
-      "title": "光迅科技 光芯片/光器件/光模块/5G承载网/投资者关系",
-      "url": "https://www.gxcom.com.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI算力·光模块",
-      "company": "光迅科技 002281",
-      "kind": "company",
-      "source": "光迅科技官网",
-      "site": "https://www.gxcom.com.cn",
-      "title": "光迅科技：自产芯片占比提升至65% 800G EML/PD芯片批量供货",
-      "url": "https://www.gxcom.com.cn/ir/",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "IPC：2026Q3全球PCB行业景气指数回升至52.3 高多层/HDI/封装基板领涨",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "IPC-2581C标准发布：数字化工厂数据交换规范推动PCB智造升级",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "2026 IPC APEX EXPO中国行：先进封装基板/类载板工艺成焦点",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "ECIA：2026年电子元件分销市场报告——被动元件/连接器/传感器需求分化",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "授权分销商反馈：MLCC/电阻/电感库存去化完成 价格企稳回升",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "ECIA供应链韧性指数：中国大陆电子元件自给率提升至42% 创新高",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-15"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "景旺电子 高多层/HDI/封装基板/车载PCB/投资者关系",
-      "url": "https://www.kinwong.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "景旺电子三季报：封装基板营收占比突破20% 泰国二期工厂投产",
-      "url": "https://www.kinwong.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "东山精密 002384",
-      "kind": "company",
-      "source": "东山精密官网",
-      "site": "https://www.dsmt.com",
-      "title": "东山精密 柔性电路/天线模组/精密制造/消费电子/投资者关系",
-      "url": "https://www.dsmt.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "东山精密 002384",
-      "kind": "company",
-      "source": "东山精密官网",
-      "site": "https://www.dsmt.com",
-      "title": "东山精密：折叠屏手机FPC出货量全球前三 车载天线模组新增定点",
-      "url": "https://www.dsmt.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "沪士电子 002463",
-      "kind": "company",
-      "source": "沪士电子官网",
-      "site": "https://www.hushi.com.cn",
-      "title": "沪士电子 多层板/HDI/刚挠结合/服务器主板/投资者关系",
-      "url": "https://www.hushi.com.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "沪士电子 002463",
-      "kind": "company",
-      "source": "沪士电子官网",
-      "site": "https://www.hushi.com.cn",
-      "title": "沪士电子三季报：服务器主板营收同比增120% AI算力需求驱动",
-      "url": "https://www.hushi.com.cn/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "臻镭科技 001232",
-      "kind": "company",
-      "source": "臻镭科技官网",
-      "site": "https://www.zhenray.com",
-      "title": "臻镭科技 精密连接器/射频连接器/车规级产品/投资者关系",
-      "url": "https://www.zhenray.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "臻镭科技 001232",
-      "kind": "company",
-      "source": "臻镭科技官网",
-      "site": "https://www.zhenray.com",
-      "title": "臻镭科技：高速板卡连接器通过PCIe 6.0认证 AI服务器供应链入局",
-      "url": "https://www.zhenray.com/news/",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "红板科技 603459",
-      "kind": "company",
-      "source": "红板科技官网",
-      "site": "https://www.hongban.com",
-      "title": "红板科技 高频高速/封装基板/类载板/投资者关系",
-      "url": "https://www.hongban.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "AI服务器·PCB覆铜板",
-      "company": "红板科技 603459",
-      "kind": "company",
-      "source": "红板科技官网",
-      "site": "https://www.hongban.com",
-      "title": "红板科技三季报：封装基板良率突破92% 规模化量产迈关键步",
-      "url": "https://www.hongban.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "中国新闻技术工作者联合会",
-      "site": "https://www.cnjta.org",
-      "title": "中国新闻技术工作者联合会：生成式AI在新闻生产中的应用规范与案例",
-      "url": "https://www.cnjta.org",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "中国新闻技术工作者联合会",
-      "site": "https://www.cnjta.org",
-      "title": "2026年智能媒体创新发展大会：AIGC重塑内容生产全链路",
-      "url": "https://www.cnjta.org",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "中国新闻技术工作者联合会",
-      "site": "https://www.cnjta.org",
-      "title": "新闻业AI应用白皮书（2026）：多模态大模型落地路径与合规边界",
-      "url": "https://www.cnjta.org",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "站酷ZCOOL",
-      "site": "https://www.zcool.com.cn",
-      "title": "站酷设计周2026：AIGC设计工具全景图谱与商业落地案例库",
-      "url": "https://www.zcool.com.cn",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "站酷ZCOOL",
-      "site": "https://www.zcool.com.cn",
-      "title": "Midjourney v7 / Stable Diffusion 3.5 实战教程合集：从入门到商业变现",
-      "url": "https://www.zcool.com.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "",
-      "kind": "industry",
-      "source": "站酷ZCOOL",
-      "site": "https://www.zcool.com.cn",
-      "title": "AI视频生成工具（Sora/Runway Gen-3/Kling）横评：广告片/短剧/电商素材实测",
-      "url": "https://www.zcool.com.cn",
-      "time": "2026-11-17"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "视觉中国 000681",
-      "kind": "company",
-      "source": "视觉中国官网",
-      "site": "https://www.vcg.com",
-      "title": "视觉中国 AIGC版权图库/视频生成模型/数字内容授权平台/投资者关系",
-      "url": "https://www.vcg.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "视觉中国 000681",
-      "kind": "company",
-      "source": "视觉中国官网",
-      "site": "https://www.vcg.com",
-      "title": "视觉中国三季报：AI业务营收占比提升至18% 版权保护体系升级",
-      "url": "https://www.vcg.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "华数传媒 000156",
-      "kind": "company",
-      "source": "华数传媒官网",
-      "site": "https://www.wasu.cn",
-      "title": "华数传媒 智慧广电/数字文化/元宇宙内容生产基地/投资者关系",
-      "url": "https://www.wasu.cn",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "华数传媒 000156",
-      "kind": "company",
-      "source": "华数传媒官网",
-      "site": "https://www.wasu.cn",
-      "title": "华数传媒发布《数字文化产业白皮书》 AI赋能内容生产全流程",
-      "url": "https://www.wasu.cn/news/",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "昆仑万维 300418",
-      "kind": "company",
-      "source": "昆仑万维官网",
-      "site": "https://www.kunlun.com",
-      "title": "昆仑万维 天工大模型/Opera浏览器AI/游戏出海/AIGC全栈布局/投资者关系",
-      "url": "https://www.kunlun.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "谷歌生态·AI应用",
-      "company": "昆仑万维 300418",
-      "kind": "company",
-      "source": "昆仑万维官网",
-      "site": "https://www.kunlun.com",
-      "title": "昆仑万维《天工3.0》开源：MoE架构400B参数 中文效能超GPT-4",
-      "url": "https://www.kunlun.com/news/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "",
-      "kind": "industry",
-      "source": "SEMI大半导体产业网",
-      "site": "https://www.semi.org.cn",
-      "title": "SEMI与Linx联合发布《晶圆制造材料季度报告》：先进光刻胶占市场销售额80%以上",
-      "url": "https://www.semi.org.cn/site/semi/article/09e8fff68514461abce67ca187155e8e.html",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "",
-      "kind": "industry",
-      "source": "SEMI大半导体产业网",
-      "site": "https://www.semi.org.cn",
-      "title": "SEMI：2025年全球半导体材料市场营收达732亿美元 创历史新高",
-      "url": "https://www.semi.org/index.php/zh/node/172076",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "",
-      "kind": "industry",
-      "source": "CSIA中国半导体行业协会",
-      "site": "https://web.csia.net.cn/",
-      "title": "锚定AI算力时代 加速布局先进封装赛道 / 半导体产业链上市公司密集披露投资计划",
-      "url": "https://web.csia.net.cn/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "",
-      "kind": "industry",
-      "source": "集微网",
-      "site": "https://www.ijiwei.com/",
-      "title": "集微半导体产业大脑重磅升级 / 2026存算一体产业创新发展大会",
-      "url": "https://www.ijiwei.com/",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "北方华创 002371",
-      "kind": "company",
-      "source": "北方华创官网",
-      "site": "https://www.naura.com.cn",
-      "title": "北方华创 刻蚀/薄膜沉积/退火炉/清洗设备/投资者关系",
-      "url": "https://www.naura.com.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "北方华创 002371",
-      "kind": "company",
-      "source": "北方华创官网",
-      "site": "https://www.naura.com.cn",
-      "title": "北方华创三季报：归母净利润同比增45% 刻蚀设备国产化率持续提升",
-      "url": "https://www.naura.com.cn/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "中微公司 688012",
-      "kind": "company",
-      "source": "中微公司官网",
-      "site": "https://www.acmresearch.com",
-      "title": "中微公司 半导体刻蚀/薄膜沉积/清洗设备/投资者关系",
-      "url": "https://www.acmresearch.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "中微公司 688012",
-      "kind": "company",
-      "source": "中微公司官网",
-      "site": "https://www.acmresearch.com",
-      "title": "中微公司三季报：单晶硅刻蚀设备市占率提升 衬底材料业务高增",
-      "url": "https://www.acmresearch.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "华峰测控 688200",
-      "kind": "company",
-      "source": "华峰测控官网",
-      "site": "https://www.hftest.com.cn",
-      "title": "华峰测控 存储/SoC/射频测试机/投资者关系",
-      "url": "https://www.hftest.com.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "华峰测控 688200",
-      "kind": "company",
-      "source": "华峰测控官网",
-      "site": "https://www.hftest.com.cn",
-      "title": "华峰测控三季报：存储测试机出货量同比翻倍 高端SoC测试平台突破",
-      "url": "https://www.hftest.com.cn/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "拓荆科技 688072",
-      "kind": "company",
-      "source": "拓荆科技官网",
-      "site": "https://www.tokjing.com",
-      "title": "拓荆科技 CMP/清洗/电化学沉积设备/投资者关系",
-      "url": "https://www.tokjing.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "国产替代·半导体设备材料",
-      "company": "拓荆科技 688072",
-      "kind": "company",
-      "source": "拓荆科技官网",
-      "site": "https://www.tokjing.com",
-      "title": "拓荆科技三季报：CMP设备国产替代加速 先进封装清洗设备新增订单",
-      "url": "https://www.tokjing.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "中国家用电器协会",
-      "site": "https://www.cheaa.org",
-      "title": "2026年1-9月出口简报",
-      "url": "https://www.cheaa.org/contents/117/13617.html",
-      "time": "2026-11-14"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "中国家用电器协会",
-      "site": "https://www.cheaa.org",
-      "title": "2026年9月家电参考",
-      "url": "https://www.cheaa.org/contents/117/13616.html",
-      "time": "2026-11-14"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "中国家用电器协会",
-      "site": "https://www.cheaa.org",
-      "title": "2026年全国“优化消费环境月”启动仪式在泉州举行，中国家用电器协会等5家行业协会共同发起放心消费倡议",
-      "url": "https://www.cheaa.org/contents/116/13593.html",
-      "time": "2026-11-06"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "龙旗 600839",
-      "kind": "company",
-      "source": "龙旗官网",
-      "site": "https://www.longcheer.com",
-      "title": "龙旗 智能制造/手机ODM/车载电子/投资者关系",
-      "url": "https://www.longcheer.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "龙旗 600839",
-      "kind": "company",
-      "source": "龙旗官网",
-      "site": "https://www.longcheer.com",
-      "title": "龙旗三季报：手机ODM出货量回升 车载电子业务营收同比增60%",
-      "url": "https://www.longcheer.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "舜宇光学 02382.HK",
-      "kind": "company",
-      "source": "舜宇光学官网",
-      "site": "https://www.sunnyoptical.com",
-      "title": "舜宇光学 手机镜头/车载镜头/光学模组/投资者关系",
-      "url": "https://www.sunnyoptical.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "舜宇光学 02382.HK",
-      "kind": "company",
-      "source": "舜宇光学官网",
-      "site": "https://www.sunnyoptical.com",
-      "title": "舜宇光学三季报：车载镜头出货量同比增85% 高像素手机镜头渗透率提升",
-      "url": "https://www.sunnyoptical.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "瑞声科技 02018.HK",
-      "kind": "company",
-      "source": "瑞声科技官网",
-      "site": "https://www.aac.com.cn",
-      "title": "瑞声科技 声学/光学/精密制造/触觉马达/投资者关系",
-      "url": "https://www.aac.com.cn",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "瑞声科技 02018.HK",
-      "kind": "company",
-      "source": "瑞声科技官网",
-      "site": "https://www.aac.com.cn",
-      "title": "瑞声科技三季报：声学元件营收创新高 光学模组结构件双轮驱动",
-      "url": "https://www.aac.com.cn/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "领益智造 002600",
-      "kind": "company",
-      "source": "领益智造官网",
-      "site": "https://www.luxshare-ict.com",
-      "title": "领益智造 精密制造/连接器/天线/声学模组/投资者关系",
-      "url": "https://www.luxshare-ict.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "领益智造 002600",
-      "kind": "company",
-      "source": "领益智造官网",
-      "site": "https://www.luxshare-ict.com",
-      "title": "领益智造三季报：消费电子结构件出货回暖 新能源汽车零部件高增",
-      "url": "https://www.luxshare-ict.com/ir/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "鼎阳科技 688173",
-      "kind": "company",
-      "source": "鼎阳科技官网",
-      "site": "https://www.siglent.com",
-      "title": "鼎阳科技 示波器/频谱分析仪/信号源/测试测量/投资者关系",
-      "url": "https://www.siglent.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "消费电子·产业链复苏",
-      "company": "鼎阳科技 688173",
-      "kind": "company",
-      "source": "鼎阳科技官网",
-      "site": "https://www.siglent.com",
-      "title": "鼎阳科技三季报：高端示波器国产替代加速 海外营收占比提升至35%",
-      "url": "https://www.siglent.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "低空经济网",
-      "site": "https://laeb-cipast.com",
-      "title": "今日起正式实施！三部门发布无人机物项出口管制新规 助力低空经济安全有序国际化发展",
-      "url": "https://laeb-cipast.com/sys-nd/1869.html",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "低空经济网",
-      "site": "https://laeb-cipast.com",
-      "title": "大型运投无人机“长鹰-8”完成运输投送试验",
-      "url": "https://laeb-cipast.com/sys-nd/1866.html",
-      "time": "2026-11-17"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "低空经济网",
-      "site": "https://laeb-cipast.com",
-      "title": "东莞启动2026年低空经济产业专项资金申报12大方向扶持低空产业全链条发展",
-      "url": "https://laeb-cipast.com/sys-nd/1861.html",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "AOPA中国航空器拥有者及驾驶员协会",
-      "site": "https://www.aopa.org.cn",
-      "title": "征求意见|《无人驾驶航空器灾害应急救援作业服务导则》（征求意见稿）",
-      "url": "https://www.aopa.org.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "AOPA中国航空器拥有者及驾驶员协会",
-      "site": "https://www.aopa.org.cn",
-      "title": "AOPA会员公开课｜11月18日，读懂第49号公告后的无人机出海合规与订单风险管理",
-      "url": "https://www.aopa.org.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "",
-      "kind": "industry",
-      "source": "AOPA中国航空器拥有者及驾驶员协会",
-      "site": "https://www.aopa.org.cn",
-      "title": "关于第十六届中国航展专业观众团体证件办理名单的公示",
-      "url": "https://www.aopa.org.cn",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "亿航智能 EH.US",
-      "kind": "company",
-      "source": "亿航智能官网",
-      "site": "https://www.ehang.com",
-      "title": "亿航智能 eVTOL/无人驾驶航空器/城市空中交通/投资者关系",
-      "url": "https://www.ehang.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "亿航智能 EH.US",
-      "kind": "company",
-      "source": "亿航智能官网",
-      "site": "https://www.ehang.com",
-      "title": "亿航智能EH216-S获中国首张eVTOL型号合格证 商业化运营迈关键步",
-      "url": "https://www.ehang.com/news/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "峰飞航空",
-      "kind": "company",
-      "source": "峰飞航空官网",
-      "site": "https://www.volant-aero.com",
-      "title": "峰飞航空 eVTOL/倾转旋翼/长航程/投资者关系",
-      "url": "https://www.volant-aero.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "峰飞航空",
-      "kind": "company",
-      "source": "峰飞航空官网",
-      "site": "https://www.volant-aero.com",
-      "title": "峰飞航空V2000CG完成首飞验证 5座倾转旋翼eVTOL迈向适航取证",
-      "url": "https://www.volant-aero.com/news/",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "纵横股份 688070",
-      "kind": "company",
-      "source": "纵横股份官网",
-      "site": "https://www.zw-uav.com",
-      "title": "纵横股份 工业无人机/测绘/巡检/应急救援/投资者关系",
-      "url": "https://www.zw-uav.com",
-      "time": "2026-11-22"
-    },
-    {
-      "theme": "低空经济·无人机产业链",
-      "company": "纵横股份 688070",
-      "kind": "company",
-      "source": "纵横股份官网",
-      "site": "https://www.zw-uav.com",
-      "title": "纵横股份三季报：工业无人机出货量同比增40% 海外订单突破新高",
-      "url": "https://www.zw-uav.com/ir/",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "机器人在线",
-      "site": "https://www.imrobotic.com",
-      "title": "绿色造船 智能强船丨法奥亮相2026世界智能制造博览会暨长三角海事展",
-      "url": "https://www.imrobotic.com/news/detail/37852",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "机器人在线",
-      "site": "https://www.imrobotic.com",
-      "title": "五大技术源力迸发 爱普生赋能产业高质量发展",
-      "url": "https://www.imrobotic.com/news/detail/37855",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "机器人在线",
-      "site": "https://www.imrobotic.com",
-      "title": "向新而行，聚势共赢！多可机器人泰国分公司正式启用，加速东南亚本地化落地",
-      "url": "https://www.imrobotic.com/news/detail/37853",
-      "time": "2026-11-23"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "中国机械工业联合会机器人分会",
-      "site": "https://cria.mei.net.cn",
-      "title": "关于召开2026机器人国际交流对接活动的通知",
-      "url": "https://cria.mei.net.cn/news.asp?vid=4246",
-      "time": "2026-11-11"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "中国信息通信研究院",
-      "site": "https://www.caict.ac.cn",
-      "title": "2026年“5G+工业互联网”融合应用城市试点申报工作启动",
-      "url": "https://mp.weixin.qq.com/s/wBtrv17C0qJxesH0SppafQ",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "中国信息通信研究院",
-      "site": "https://www.caict.ac.cn",
-      "title": "34个上榜！2026年度领航级智能工厂培育名单公布",
-      "url": "https://mp.weixin.qq.com/s/UB_bwPZswMU3pC0SGzfcGA",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "人形机器人·核心零部件",
-      "company": "",
-      "kind": "industry",
-      "source": "中国信息通信研究院",
-      "site": "https://www.caict.ac.cn",
-      "title": "100个上榜！2026年“服务企业在基层”典型案例公布",
-      "url": "https://mp.weixin.qq.com/s/OxOR5QRzEWf4ErzdFiEUwg",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "SEMI大半导体产业网",
-      "site": "https://www.semi.org.cn",
-      "title": "SEMI与Linx联合发布《晶圆制造材料季度报告》：先进光刻胶占市场销售额80%以上",
-      "url": "https://www.semi.org.cn/site/semi/article/09e8fff68514461abce67ca187155e8e.html",
-      "time": ""
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "SEMI大半导体产业网",
-      "site": "https://www.semi.org.cn",
-      "title": "SEMI：2025年全球半导体材料市场营收达732亿美元 创历史新高",
-      "url": "https://www.semi.org/index.php/zh/node/172076",
-      "time": ""
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "",
-      "kind": "industry",
-      "source": "深圳市光学光电子行业协会",
-      "site": "https://www.szop.org.cn",
-      "title": "深圳光协：2026年粤港澳大湾区光电子产业产值破万亿 光模块占比超30%",
-      "url": "https://www.szop.org.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "IPC：2026Q3全球PCB行业景气指数回升至52.3 高多层/HDI/封装基板领涨",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "IPC-2581C标准发布：数字化工厂数据交换规范推动PCB智造升级",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "IPC全球电子工业协会",
-      "site": "https://www.ipc.org",
-      "title": "2026 IPC APEX EXPO中国行：先进封装基板/类载板工艺成焦点",
-      "url": "https://www.ipc.org",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "ECIA：2026年电子元件分销市场报告——被动元件/连接器/传感器需求分化",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "授权分销商反馈：MLCC/电阻/电感库存去化完成 价格企稳回升",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "ECIA电子元件行业协会",
-      "site": "https://www.eciaauthorized.com",
-      "title": "ECIA供应链韧性指数：中国大陆电子元件自给率提升至42% 创新高",
-      "url": "https://www.eciaauthorized.com",
-      "time": "2026-11-15"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "",
-      "kind": "industry",
-      "source": "中国电子电路行业协会",
-      "site": "https://www.cpca.org.cn",
-      "title": "CPCA：2026年中国印制电路板行业景气指数持续回升 高端基材需求强劲",
-      "url": "https://www.cpca.org.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "液冷服务器·热管理",
-      "company": "",
-      "kind": "industry",
-      "source": "冷却设备分会",
-      "site": "https://co.cgmia.org.cn",
-      "title": "2026年中国液冷产业发展白皮书：市场规模超百亿 标准体系加速构建",
-      "url": "https://co.cgmia.org.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "液冷服务器·热管理",
-      "company": "",
-      "kind": "industry",
-      "source": "开放数据中心委员会",
-      "site": "https://www.odcc.org.cn",
-      "title": "ODCC发布《数据中心液冷技术规范2.0》 推动冷板式/浸没式液冷标准化",
-      "url": "https://www.odcc.org.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "液冷服务器·热管理",
-      "company": "",
-      "kind": "industry",
-      "source": "中国信息通信研究院",
-      "site": "https://www.caict.ac.cn",
-      "title": "中国信通院测算2026年液冷服务器市场700-1050亿 年增速超70%",
-      "url": "https://www.caict.ac.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "华为产业链·昇腾/机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "昇腾社区",
-      "site": "https://www.ascend.huawei.com",
-      "title": "昇腾AI全栈能力开放 赋能80%具身智能企业 共建国产算力生态",
-      "url": "https://www.ascend.huawei.com",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "华为产业链·昇腾/机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "华为开发者官网",
-      "site": "https://developer.huawei.com.cn",
-      "title": "鸿蒙智联生态设备破亿台 星芒OSTA首款鸿蒙AI手机发布",
-      "url": "https://developer.huawei.com.cn",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "华为产业链·昇腾/机器人",
-      "company": "",
-      "kind": "industry",
-      "source": "开放数据中心委员会",
-      "site": "https://www.odcc.org.cn",
-      "title": "ODCC昇腾算力工作组成立 推动国产AI算力软硬件适配标准化",
-      "url": "https://www.odcc.org.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "人工智能·AI智能体/应用端",
-      "company": "",
-      "kind": "industry",
-      "source": "中国智能体行业网",
-      "site": "https://www.chinaaiagent.net",
-      "title": "2026中国AI智能体产业发展白皮书：多模态大模型驱动智能体商业化落地",
-      "url": "https://www.chinaaiagent.net",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "人工智能·AI智能体/应用端",
-      "company": "",
-      "kind": "industry",
-      "source": "中国信息通信研究院",
-      "site": "https://www.caict.ac.cn",
-      "title": "2026年人工智能大模型标准化测评结果发布 智能体能力成核心指标",
-      "url": "https://www.caict.ac.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "医药·抗流感/创新药",
-      "company": "",
-      "kind": "industry",
-      "source": "摩熵视野",
-      "site": "https://www.pharnexcloud.com",
-      "title": "2026年中国创新药研发投入榜：抗病毒/抗肿瘤/免疫调节三大赛道领跑",
-      "url": "https://www.pharnexcloud.com",
-      "time": "2026-11-21"
-    },
-    {
-      "theme": "医药·抗流感/创新药",
-      "company": "",
-      "kind": "industry",
-      "source": "国家药监局",
-      "site": "https://www.nmpa.gov.cn",
-      "title": "国家药监局发布《抗流感病毒创新药注册审评技术指导原则》加速审批通道",
-      "url": "https://www.nmpa.gov.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "医药·抗流感/创新药",
-      "company": "",
-      "kind": "industry",
-      "source": "中国医药生物技术协会",
-      "site": "https://www.cmba.org.cn",
-      "title": "2026年中国生物医药产业报告：创新药审批提速 CAR-T/ADC/双抗成主线",
-      "url": "https://www.cmba.org.cn",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "新零售/国企改革·消费复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "中国连锁经营协会",
-      "site": "https://www.ccfa.org.cn",
-      "title": "CCFA：2026年1-10月社会消费品零售总额同比增3.5% 即时零售/会员制店增速领跑",
-      "url": "https://www.ccfa.org.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "新零售/国企改革·消费复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "中国商业联合会",
-      "site": "https://www.cgcc.org.cn",
-      "title": "中国商业联合会：国企改革深化提升行动成效显著 零售央企数字化转型提速",
-      "url": "https://www.cgcc.org.cn",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "新零售/国企改革·消费复苏",
-      "company": "",
-      "kind": "industry",
-      "source": "国家发改委",
-      "site": "https://www.ndrc.gov.cn",
-      "title": "国家发改委研究扩大内需战略实施方案(2026-2030) 消费复苏成核心抓手",
-      "url": "https://www.ndrc.gov.cn",
-      "time": "2026-11-17"
-    },
-    {
-      "theme": "消费电子·AI终端",
-      "company": "",
-      "kind": "industry",
-      "source": "中国电子视像行业协会",
-      "site": "https://www.ceia.org.cn",
-      "title": "2026年中国AI手机渗透率预计达45% 折叠屏/直板旗舰双驱动",
-      "url": "https://www.ceia.org.cn",
-      "time": "2026-11-20"
-    },
-    {
-      "theme": "消费电子·AI终端",
-      "company": "",
-      "kind": "industry",
-      "source": "赛迪网",
-      "site": "https://www.ccidnet.com",
-      "title": "2026-2031年中国AI智能眼镜产业市场深度研究及发展前景投资预测分析报告",
-      "url": "https://www.ccidnet.com",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "微小盘股·题材投机",
+      "theme": "三季报预增·业绩",
       "company": "",
       "kind": "industry",
       "source": "东方财富网",
-      "site": "https://data.eastmoney.com",
-      "title": "东方财富网：微小盘股活跃度指数创年内新高 题材轮动加速",
-      "url": "https://data.eastmoney.com",
-      "time": "2026-11-22"
+      "site": "https://www.eastmoney.com",
+      "title": "东方财富：三季报预增/业绩说明会/机构调研热度榜单",
+      "url": "https://www.eastmoney.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "人形机器人·核心零部件",
-      "company": "克来机电 603960",
+      "theme": "三季报预增·业绩",
+      "company": "",
+      "kind": "industry",
+      "source": "SMM",
+      "site": "https://www.metal.com",
+      "title": "SMM：有色/新能源/稀贵金属行业深度报告与三季报业绩追踪",
+      "url": "https://www.metal.com",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "三季报预增·业绩",
+      "company": "康芝药业 300086",
       "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "克来机电 | 匠心与公益，铺展责任画卷",
-      "url": "https://www.sh-kelai.com/company-news/453.html",
-      "time": "2025-08-11"
+      "source": "康芝药业官网",
+      "site": "https://www.honz.com.cn",
+      "title": "康芝药业：儿童大健康战略/感冒清热颗粒中选集采/新品羧甲司坦颗粒上市",
+      "url": "https://www.honz.com.cn",
+      "time": "2026-11-26"
     },
     {
-      "theme": "人形机器人·核心零部件",
-      "company": "克来机电 603960",
+      "theme": "覆铜板·PCB·元件",
+      "company": "",
+      "kind": "industry",
+      "source": "IPC/全球电子协会",
+      "site": "https://www.ipc.org",
+      "title": "IPC：2026Q3全球PCB景气指数回升至52.3 高多层/HDI/封装基板领涨",
+      "url": "https://www.ipc.org",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "覆铜板·PCB·元件",
+      "company": "",
+      "kind": "industry",
+      "source": "赛迪传媒电子信息网",
+      "site": "https://www.ccidnet.com",
+      "title": "赛迪网：电子信息/PCB/半导体封装基板产业深度研究报告",
+      "url": "https://www.ccidnet.com",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "覆铜板·PCB·元件",
+      "company": "崇达技术 002815",
       "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "元宵佳节，灯谜添趣，共赏明月情更深！",
-      "url": "https://www.sh-kelai.com/company-news/451.html",
-      "time": "2025-02-12"
+      "source": "崇达技术官网",
+      "site": "https://www.suntakpcb.com",
+      "title": "崇达技术：全球PCB前25强 服务器/通信/医疗/汽车高多层板 2026亮相electronica",
+      "url": "https://www.suntakpcb.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "人形机器人·核心零部件",
-      "company": "克来机电 603960",
+      "theme": "覆铜板·PCB·元件",
+      "company": "超声电子 002406",
       "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "【喜报】热烈祝贺克来机电荣获“上海市五一劳动奖状”！",
-      "url": "https://www.sh-kelai.com/company-news/449.html",
-      "time": "2024-06-03"
+      "source": "超声电子官网",
+      "site": "https://www.gd-goworld.com",
+      "title": "超声电子：2026年三季报/股票异常波动/董事会决议/业绩预告公告密集发布",
+      "url": "https://www.gd-goworld.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "CPO光电共封装·光模块",
-      "company": "克来机电 603960",
+      "theme": "覆铜板·PCB·元件",
+      "company": "金禄电子 688287",
       "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "克来机电 | 匠心与公益，铺展责任画卷",
-      "url": "https://www.sh-kelai.com/company-news/453.html",
-      "time": "2025-08-11"
+      "source": "金禄电子官网",
+      "site": "https://www.camelotpcb.com",
+      "title": "金禄电子科技股份有限公司官网 WORLD销售区域",
+      "url": "https://www.camelotpcb.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "CPO光电共封装·光模块",
-      "company": "克来机电 603960",
+      "theme": "覆铜板·PCB·元件",
+      "company": "生益电子 688183",
       "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "自动化IGBT/SiC模块功率循环试验系统 - 柔性自动化装备",
-      "url": "https://www.sh-kelai.com/service/421.html",
-      "time": ""
+      "source": "生益电子官网",
+      "site": "https://www.sye.com.cn",
+      "title": "生益电子：AI计算HDI生产基地动工/2025可持续发展报告/2025年度业绩报告",
+      "url": "https://www.sye.com.cn",
+      "time": "2026-11-26"
     },
     {
-      "theme": "CPO光电共封装·光模块",
-      "company": "克来机电 603960",
-      "kind": "company",
-      "source": "克来机电官网",
-      "site": "https://www.sh-kelai.com",
-      "title": "新能源电机控制器（PEU）自动装配测试线 - 机器人柔性装配",
-      "url": "https://www.sh-kelai.com/service/38.html",
-      "time": ""
+      "theme": "博通概念·光模块·AI算力",
+      "company": "",
+      "kind": "industry",
+      "source": "博通官网",
+      "site": "https://www.broadcom.com",
+      "title": "博通：AI基础设施/光互连/定制芯片/VMware云平台 最新投资者资料",
+      "url": "https://www.broadcom.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "消费电子·AI终端",
-      "company": "联想集团 0992.HK",
-      "kind": "company",
-      "source": "联想官网",
-      "site": "https://www.lenovo.com.cn",
-      "title": "AI基建大潮方兴未艾，联想集团最佳财季诞生！",
-      "url": "https://brand.lenovo.com.cn/brand/ppn04206.html",
-      "time": "2026-11-19"
+      "theme": "博通概念·光模块·AI算力",
+      "company": "",
+      "kind": "industry",
+      "source": "LightCounting",
+      "site": "https://www.lightcounting.com",
+      "title": "LightCounting：光通信市场深度报告 800G/1.6T/硅光/CPO技术路线追踪",
+      "url": "https://www.lightcounting.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "消费电子·AI终端",
-      "company": "联想集团 0992.HK",
-      "kind": "company",
-      "source": "联想官网",
-      "site": "https://www.lenovo.com.cn",
-      "title": "联想刘军：混合式AI进入全面渗透期，AI从工具向价值跨越",
-      "url": "https://brand.lenovo.com.cn/brand/ppn04200.html",
-      "time": "2026-11-16"
-    },
-    {
-      "theme": "消费电子·AI终端",
-      "company": "联想集团 0992.HK",
-      "kind": "company",
-      "source": "联想官网",
-      "site": "https://www.lenovo.com.cn",
-      "title": "联想集团与南宁轨道科创签署战略合作协议",
-      "url": "https://brand.lenovo.com.cn/brand/ppn04203.html",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "景旺电子亮相台湾TPCA Show 2026，携手产业伙伴共探AI与先进封装发展新机遇",
-      "url": "https://mp.weixin.qq.com/s/KT51v4_6lC_RxpZjILbx9g",
-      "time": "2026-10-26"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "景旺电子“A+H”新程，行稳致远，久久为功",
-      "url": "https://mp.weixin.qq.com/s/PyYrq6T6nUFQFwH9QxXS9Q",
-      "time": "2026-10-10"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "智造启新程，景旺泰国基地正式投产！",
-      "url": "https://mp.weixin.qq.com/s/y9K6Om-wd2o9N4J7B3cj3Q",
-      "time": "2026-09-14"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "一图读懂 | 景旺电子2026年半年报",
-      "url": "https://mp.weixin.qq.com/s/KsZqdl2lM5sdlHSUZGt-NQ",
-      "time": "2026-08-22"
-    },
-    {
-      "theme": "PCB·高端基材",
-      "company": "景旺电子 603228",
-      "kind": "company",
-      "source": "景旺电子官网",
-      "site": "https://www.kinwong.com",
-      "title": "景旺电子PCB智能工厂入选2026年江西省先进级智能工厂名单",
-      "url": "https://mp.weixin.qq.com/s/tXiSDUmqZ2umZ88UTU0Gnw",
-      "time": "2026-06-10"
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "新易盛 300502",
-      "kind": "company",
-      "source": "新易盛官网",
-      "site": "https://www.eoptolink.com",
-      "title": "Eoptolink Demos IMDD 400G per Lambda Based 1.6T DR4 Optical Transceiver Solution at OFC 2026",
-      "url": "https://www.eoptolink.com/news/13-new-products/365-eoptolink-demos-imdd-400g-per-lambda-based-1-6t-dr4-optical-transceiver-solution-at-ofc-2026",
-      "time": "2026-11-19"
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "新易盛 300502",
-      "kind": "company",
-      "source": "新易盛官网",
-      "site": "https://www.eoptolink.com",
-      "title": "Eoptolink Demos Its NX200 and NX300 Series Optical Circuit Switching (OCS) Solution at OFC 2026",
-      "url": "https://www.eoptolink.com/news/13-new-products/367-eoptolink-demos-its-nx200-and-nx300-series-optical-circuit-switching-ocs-solution-at-ofc-2026",
-      "time": "2026-11-18"
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
-      "company": "新易盛 300502",
-      "kind": "company",
-      "source": "新易盛官网",
-      "site": "https://www.eoptolink.com",
-      "title": "Eoptolink Unveils High-Density 6.4T NPO Solution at OFC 2026",
-      "url": "https://www.eoptolink.com/news/13-new-products/366-eoptolink-unveils-high-density-6-4t-npo-solution-at-ofc-2026",
-      "time": "2026-11-17"
-    },
-    {
-      "theme": "CPO光电共封装·光模块",
+      "theme": "博通概念·光模块·AI算力",
       "company": "中际旭创 300308",
       "kind": "company",
       "source": "中际旭创官网",
-      "site": "https://www.accelink.com",
-      "title": "光迅科技亮相ECOC 2026，共话AI时代光通信新未来",
-      "url": "https://www.accelink.com/lighting_your_dreams/2102334802811191297.html",
-      "time": "2026-09-22"
+      "site": "https://www.zj-innolight.com",
+      "title": "中际旭创：Enlighten a Smarter World 2025营收382.4亿净利107.97亿 H股纳入恒生科技/综合指数",
+      "url": "https://www.zj-innolight.com",
+      "time": "2026-11-26"
     },
     {
-      "theme": "CPO光电共封装·光模块",
-      "company": "中际旭创 300308",
-      "kind": "company",
-      "source": "中际旭创官网",
-      "site": "https://www.accelink.com",
-      "title": "光迅科技12.8T XPO DR液冷实测，ECOC 2026现场见真章",
-      "url": "https://www.accelink.com/lighting_your_dreams/2101916634963804161.html",
-      "time": "2026-09-18"
+      "theme": "渔业·水产·食品安全",
+      "company": "",
+      "kind": "industry",
+      "source": "黄海水产研究所",
+      "site": "http://www.huanghai.org.cn",
+      "title": "黄海水产研究所：水产种质/养殖技术/渔业资源调查/食品安全检测",
+      "url": "http://www.huanghai.org.cn",
+      "time": "2026-11-26"
     },
     {
-      "theme": "CPO光电共封装·光模块",
-      "company": "中际旭创 300308",
-      "kind": "company",
-      "source": "中际旭创官网",
-      "site": "https://www.accelink.com",
-      "title": "光引未来·大咖说｜对话张博：AI算力时代，光迅科技如何布局光互联下一代技术？",
-      "url": "https://www.accelink.com/lighting_your_dreams/2097981713174003713.html",
-      "time": "2026-09-10"
+      "theme": "渔业·水产·食品安全",
+      "company": "",
+      "kind": "industry",
+      "source": "中国食品安全网",
+      "site": "https://www.foodsafetychina.org",
+      "title": "中国食品安全网：水产品/农产品/食品添加剂监管动态与风险预警",
+      "url": "https://www.foodsafetychina.org",
+      "time": "2026-11-26"
     },
     {
-      "theme": "华为产业链·昇腾/机器人",
-      "company": "华胜天成 600410",
+      "theme": "渔业·水产·食品安全",
+      "company": "中水渔业 000798",
       "kind": "company",
-      "source": "华胜天成官网",
-      "site": "https://www.teamsun.com.cn",
-      "title": "华胜天成 云服务 / 人工智能 / 算力业务",
-      "url": "https://www.teamsun.com.cn",
-      "time": "2026-11-20"
+      "source": "中水渔业官网",
+      "site": "https://www.cofc.com.cn",
+      "title": "E_DATA_UNAVAILABLE: 官网返回安全检查页面，无法提取有效内容",
+      "url": "https://www.cofc.com.cn",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "通信设备·低空经济",
+      "company": "",
+      "kind": "industry",
+      "source": "低空经济网",
+      "site": "https://www.lowaltitudeeconomy.com",
+      "title": "低空经济网：低空空域管理/eVTOL/无人机物流/通用机场建设政策动态",
+      "url": "https://www.lowaltitudeeconomy.com",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "通信设备·低空经济",
+      "company": "",
+      "kind": "industry",
+      "source": "天空之家",
+      "site": "https://www.uav.cn",
+      "title": "天空之家：无人机/低空经济/eVTOL/反无人机系统产业资讯与招投标",
+      "url": "https://www.uav.cn",
+      "time": "2026-11-26"
+    },
+    {
+      "theme": "通信设备·低空经济",
+      "company": "楚天龙 300353",
+      "kind": "company",
+      "source": "楚天龙官网",
+      "site": "https://www.ctdcn.com",
+      "title": "楚天龙：万物互联/数智畅行卡/苏心游熊猫智游/CEIC2026 eSIM论坛/数字人民币硬钱包中标",
+      "url": "https://www.ctdcn.com",
+      "time": "2026-11-26"
     }
   ]
 }

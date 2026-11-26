@@ -1,246 +1,286 @@
 {
-  "updated_at": "2026-11-25 11:05",
-  "source": "通达信MCP(wenda_news_query) | 10题材合并去重 | 上限5/题材 总计≤40",
+  "updated_at": "2026-11-26 14:58:30",
+  "source": "通达信MCP(wenda_news_query) | 7题材合并去重 | 上限5/题材 总计≤40",
   "items": [
     {
-      "title": "A股CPO股多数上涨，天孚通信大涨超10%，新易盛涨超3%",
-      "time": "2026-11-25 09:56:24",
-      "url": "https://www.gelonghui.com/live/2777771",
-      "source": "格隆汇",
-      "theme": "CPO光电共封装·光模块",
+      "title": "11月25日连板股分析：连板股晋级率30% 中京电子晋级5连板",
+      "time": "2026-11-25 15:55:15",
+      "url": "https://www.cls.cn/detail/2544100",
+      "source": "财联社",
+      "theme": "连板·龙头股",
       "rank": 1
     },
     {
-      "title": "CPO概念震荡反弹 天孚通信涨超11%",
-      "time": "2026-11-25 09:55:13",
-      "url": "https://m.21jingji.com/timeline/d957eb22f051a1d0fa23f6de84c1ee1a.html",
-      "source": "21世纪经济报道",
-      "theme": "CPO光电共封装·光模块",
+      "title": "11月24日连板股分析：连板股晋级率近三成 九阳股份走出6天4板",
+      "time": "2026-11-24 15:41:33",
+      "url": "https://www.cls.cn/detail/2542893",
+      "source": "财联社",
+      "theme": "连板·龙头股",
       "rank": 2
     },
     {
-      "title": "CPO概念股探底回升 蘅东光涨超10%",
-      "time": "2026-11-23 11:26:39",
-      "url": "https://m.21jingji.com/timeline/f8d73f51143f7c164f60e71f36bc41a0.html",
-      "source": "21世纪经济报道",
-      "theme": "CPO光电共封装·光模块",
+      "title": "11月23日连板股分析：连板股晋级率100% 机器人概念股集体爆发",
+      "time": "2026-11-23 15:46:31",
+      "url": "https://www.cls.cn/detail/2541691",
+      "source": "财联社",
+      "theme": "连板·龙头股",
       "rank": 3
     },
     {
-      "title": "PCB概念板块普涨 鼎泰高科（01377）涨超16% 中金看好AI PCB量价齐升",
-      "time": "2026-11-24 09:55:00",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "PCB·高端基材",
-      "rank": 1
-    },
-    {
-      "title": "PCB概念板块走强 景旺电子（03228）涨近9% 机构指AI算力拉动高端PCB需求",
-      "time": "2026-11-23 14:48:49",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "PCB·高端基材",
-      "rank": 2
-    },
-    {
-      "title": "全球电子产业正面临印刷电路板（PCB）的严重短缺，板块迎机会",
-      "time": "2026-11-23 08:51:53",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "广发证券",
-      "theme": "PCB·高端基材",
-      "rank": 3
-    },
-    {
-      "title": "PCB概念震荡走高 胜宏科技（02476）涨4.81% 机构指单机柜PCB用量与价值量持续提升",
-      "time": "2026-11-18 09:51:12",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "PCB·高端基材",
+      "title": "11月19日连板股分析：连板股晋级率37.5% 光刻机、光刻胶概念持续活跃",
+      "time": "2026-11-19 15:46:14",
+      "url": "https://www.cls.cn/detail/2538951",
+      "source": "财联社",
+      "theme": "连板·龙头股",
       "rank": 4
     },
     {
-      "title": "互动严选丨德尔股份：电芯中试线在调试过程中 PACK生产线已投入运行",
-      "time": "2026-11-24 07:34:04",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "趋势财经",
-      "theme": "液冷服务器·热管理",
-      "rank": 1
-    },
-    {
-      "title": "华为大折叠屏全球发货量突破1200万台",
-      "time": "2026-11-24 21:13:36",
-      "url": "https://www.cs.com.cn/ssgs/01/2026/11/24/detail_2026112410054405.html",
-      "source": "中国证券报·中证网",
-      "theme": "华为产业链·昇腾/机器人",
-      "rank": 1
-    },
-    {
-      "title": "华为双品牌布局：发布星芒品牌首款鸿蒙AI手机",
-      "time": "2026-11-20 20:32:13",
-      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=138855&infoType=1&funcCode=004,004001,006,006005",
-      "source": "中证金牛座",
-      "theme": "华为产业链·昇腾/机器人",
-      "rank": 2
-    },
-    {
-      "title": "时隔六年！华为再启手机子品牌，首款鸿蒙AI手机亮相",
-      "time": "2026-11-20 20:20:26",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzA3NjM5MjIwOQ==&mid=2652288105&idx=4&sn=ef1f5935985421f9b3ede84207e1efb2&chksm=8586fdc6db9eb975aaf09ce8a4b1ece3622c8a10adfa58c8a826b5ace629b6d1759fc7cfb520#rd",
-      "source": "券商中国",
-      "theme": "华为产业链·昇腾/机器人",
-      "rank": 3
-    },
-    {
-      "title": "京东与华为OSTA星芒达成战略合作 三年销售目标700亿",
-      "time": "2026-11-20 19:58:36",
-      "url": "https://www.cls.cn/detail/2540456",
-      "source": "财联社",
-      "theme": "华为产业链·昇腾/机器人",
-      "rank": 4
-    },
-    {
-      "title": "11月24日纵横通信（603602）股票异动解析：AI营销+字节豆包全力推进智能体APP和电商",
-      "time": "2026-11-24 11:50:31",
-      "url": "https://www.jiuyangongshe.com/action/detail/3fuc3bqtydc",
-      "source": "韭研公社APP",
-      "theme": "人工智能·AI智能体/应用端",
-      "rank": 1
-    },
-    {
-      "title": "物理AI的“ChatGPT时刻”或一年内到来！首程控股(0697)被投宇树获摩根大通上调目标价",
-      "time": "2026-11-25 09:35:00",
-      "url": "https://www.gelonghui.com/live/2777732",
-      "source": "格隆汇",
-      "theme": "人工智能·AI智能体/应用端",
-      "rank": 2
-    },
-    {
-      "title": "投资日历：周二资本市场大事提醒",
-      "time": "2026-11-24 07:49:08",
-      "url": "https://www.cls.cn/detail/2542419",
-      "source": "财联社",
-      "theme": "人工智能·AI智能体/应用端",
-      "rank": 3
-    },
-    {
-      "title": "消费电子板块走强 龙旗科技（09611）涨8.10%、富智康集团（02038）涨7.94%",
-      "time": "2026-11-23 13:24:26",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "消费电子·AI终端",
-      "rank": 1
-    },
-    {
-      "title": "【券商聚焦】中信证券：展望2027年 “自主可控、AI”仍是绝对强主线",
-      "time": "2026-11-19 08:50:36",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "消费电子·AI终端",
-      "rank": 2
-    },
-    {
-      "title": "消费电子ETF平安（561600）下跌3.61%，立讯精密控股子公司莱尼电气系统获颁亚洲区地区总部证书",
-      "time": "2026-11-20 16:23:21",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2037585",
-      "source": "动态宝",
-      "theme": "消费电子·AI终端",
-      "rank": 3
-    },
-    {
-      "title": "消电ETF国泰（561310）下跌3.96%，立讯精密控股子公司莱尼电气系统获颁亚洲区地区总部证书",
-      "time": "2026-11-20 16:23:19",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2037571",
-      "source": "动态宝",
-      "theme": "消费电子·AI终端",
-      "rank": 4
-    },
-    {
-      "title": "流感季来袭催化行情？抗流感板块异动拉升，关注3条医药主线",
-      "time": "2026-11-25 10:59:30",
-      "url": "https://m.21jingji.com/article/20261125/herald/604119572132f381b8b1550b52df93f6.html",
+      "title": "今日午盘全市场共20股涨停，连板股5只",
+      "time": "2026-11-19 11:55:11",
+      "url": "https://m.21jingji.com/timeline/e55d99ae6749561e150b49566f1d5e3a.html",
       "source": "21世纪经济报道",
-      "theme": "医药·抗流感/创新药",
-      "rank": 1
-    },
-    {
-      "title": "002728，1分钟直线涨停！超30万手封板",
-      "time": "2026-11-25 10:45:10",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzAwODUyMjIzOQ==&mid=2651986411&idx=1&sn=bbb39ea78624ba4059ad0f713ad74f92&chksm=817f48ed379a81387e9804d3ea6e75e3a65638d333585edb8b86bc88fa99dd8496f79d280450#rd",
-      "source": "e公司",
-      "theme": "医药·抗流感/创新药",
-      "rank": 2
-    },
-    {
-      "title": "来得早，爬得快！流感季来袭，药店货架有哪些变化？",
-      "time": "2026-11-21 18:09:56",
-      "url": "https://www.cls.cn/detail/2540815",
-      "source": "财联社",
-      "theme": "医药·抗流感/创新药",
-      "rank": 3
-    },
-    {
-      "title": "流感用药销量翻倍，今冬呼吸道传染病防控有哪些新变化？",
-      "time": "2026-11-19 18:50:54",
-      "url": "https://m.21jingji.com/article/20261119/herald/f94ad892675a67c8181c061e2a914aec.html",
-      "source": "21世纪经济报道",
-      "theme": "医药·抗流感/创新药",
-      "rank": 4
-    },
-    {
-      "title": "今冬明春多种呼吸道病原体交替叠加 流感是主要威胁",
-      "time": "2026-11-18 18:13:22",
-      "url": "https://www.cls.cn/detail/2538080",
-      "source": "财联社",
-      "theme": "医药·抗流感/创新药",
+      "theme": "连板·龙头股",
       "rank": 5
     },
     {
-      "title": "新消费概念板块走强 小米集团-W（01810）涨超7% 机构指消费板块的修复弹性值得重视",
-      "time": "2026-11-25 10:18:23",
+      "title": "白银日内跌1.65%至40.15美元/盎司 逼近逾14个月低位",
+      "time": "2026-11-25 20:49:59",
       "url": "https://data.tdx.com.cn/tdxfiles/",
       "source": "金吾财讯",
-      "theme": "新零售/国企改革·消费复苏",
+      "theme": "白银·贵金属",
       "rank": 1
     },
     {
-      "title": "【券商聚焦】中信建投：2026年双11美妆呈现温和增长、渠道分化的特征",
-      "time": "2026-11-25 08:49:12",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "新零售/国企改革·消费复苏",
-      "rank": 2
-    },
-    {
-      "title": "2026零售创新大会在沪召开 探索零售可持续增长路径",
-      "time": "2026-11-19 15:37:08",
-      "url": "http://www.chinanews.com.cn/cj/2026/11-19/10734661.shtml",
-      "source": "中国新闻网",
-      "theme": "新零售/国企改革·消费复苏",
-      "rank": 3
-    },
-    {
-      "title": "微盘股指数涨超2%",
-      "time": "2026-11-25 10:12:13",
-      "url": "https://www.gelonghui.com/live/2777799",
-      "source": "格隆汇",
-      "theme": "微小盘股·题材投机",
-      "rank": 1
-    },
-    {
-      "title": "沪指飘绿，小微盘强力反攻！3个点收益差下，为什么“反弹先小盘，小盘看增强”？",
-      "time": "2026-11-23 14:59:25",
-      "url": "https://m.21jingji.com/article/20261123/herald/e1e6a2c7a0b3df8aece5eba49fd32be4.html",
+      "title": "现货白银日内跌2%",
+      "time": "2026-11-24 14:08:22",
+      "url": "https://m.21jingji.com/timeline/6445c832471d3647d3291d3c73d20300.html",
       "source": "21世纪经济报道",
-      "theme": "微小盘股·题材投机",
+      "theme": "白银·贵金属",
       "rank": 2
     },
     {
-      "title": "小微盘股指数集体走出“七连跌” ETF资金流向为何分化",
-      "time": "2026-11-21 09:15:33",
-      "url": "https://www.gelonghui.com/live/2773069",
-      "source": "格隆汇",
-      "theme": "微小盘股·题材投机",
+      "title": "白银（XAG/USD）开报近42美元 12月大幅加息担忧降温",
+      "time": "2026-11-23 11:19:53",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "白银·贵金属",
       "rank": 3
+    },
+    {
+      "title": "白银延续跌势现报42美元/盎司，或创3月以来最差周表现",
+      "time": "2026-11-20 22:39:05",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "白银·贵金属",
+      "rank": 4
+    },
+    {
+      "title": "现货白银日内跌幅扩大至3%",
+      "time": "2026-11-20 10:35:09",
+      "url": "https://m.21jingji.com/timeline/1ff969973b63707839e7d98a1cfe1f5e.html",
+      "source": "21世纪经济报道",
+      "theme": "白银·贵金属",
+      "rank": 5
+    },
+    {
+      "title": "AI智能体商业化提速+企业级推理需求接棒！强劲需求支撑增长基本面",
+      "time": "2026-11-26 14:51:31",
+      "url": "http://www.zhitongcaijing.com/content/detail/1529147.html",
+      "source": "智通财经",
+      "theme": "三季报预增·业绩",
+      "rank": 1
+    },
+    {
+      "title": "东鹏饮料(09980)拟12月9日举行2026年第三季度业绩说明会",
+      "time": "2026-11-23 18:18:01",
+      "url": "https://www.gelonghui.com/news/5360163",
+      "source": "格隆汇",
+      "theme": "三季报预增·业绩",
+      "rank": 2
+    },
+    {
+      "title": "中瑞股份(301587)：2026年前三季度终端市场需求持续释放，下游客户采购订单增加",
+      "time": "2026-11-20 17:56:59",
+      "url": "https://www.gelonghui.com/news/5358855",
+      "source": "格隆汇",
+      "theme": "三季报预增·业绩",
+      "rank": 3
+    },
+    {
+      "title": "三德科技：管理层对公司今年Q4业绩保持增长持审慎乐观态度",
+      "time": "2026-11-19 19:55:10",
+      "url": "https://m.21jingji.com/timeline/380c285a0527d9cf9cb96e7b3945186f.html",
+      "source": "21世纪经济报道",
+      "theme": "三季报预增·业绩",
+      "rank": 4
+    },
+    {
+      "title": "新华文轩(00811)拟11月26日召开2026年第三季度业绩说明会",
+      "time": "2026-11-19 18:06:14",
+      "url": "https://www.gelonghui.com/news/5357590",
+      "source": "格隆汇",
+      "theme": "三季报预增·业绩",
+      "rank": 5
+    },
+    {
+      "title": "11月26日贤丰控股（002141）股票异动解析",
+      "time": "2026-11-26 11:52:07",
+      "url": "https://www.jiuyangongshe.com/action/detail/20ehxv0f7es",
+      "source": "韭研公社APP",
+      "theme": "覆铜板·PCB·元件",
+      "rank": 1
+    },
+    {
+      "title": "大手笔！350亿PCB概念股拟30亿元投建高端覆铜板项目 盘后公告集锦",
+      "time": "2026-11-24 20:42:54",
+      "url": "https://www.cls.cn/detail/2543271",
+      "source": "财联社",
+      "theme": "覆铜板·PCB·元件",
+      "rank": 2
+    },
+    {
+      "title": "南亚新材：全资子公司拟28.8亿元投建高端覆铜板生产项目",
+      "time": "2026-11-24 18:49:43",
+      "url": "https://www.cls.cn/detail/2543173",
+      "source": "财联社",
+      "theme": "覆铜板·PCB·元件",
+      "rank": 3
+    },
+    {
+      "title": "花旗：覆铜板涨价还能走到2027年，2028年才见均衡",
+      "time": "2026-11-23 16:41:29",
+      "url": "https://www.gelonghui.com/p/7526617",
+      "source": "格隆汇",
+      "theme": "覆铜板·PCB·元件",
+      "rank": 4
+    },
+    {
+      "title": "多股涨停，PCB逆市走强！全球缺货预警，短缺或延续至2027年上半年",
+      "time": "2026-11-20 18:18:35",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA4MDU0MzQ4Mg==&mid=2653432208&idx=1&sn=9a893420dd137a59385a0f06cec0bea3&chksm=85e909ce048f2d036d8d27ebdf606e41d805c26a30163e2c32ec3ecfeeb210e98d5077b7d590#rd",
+      "source": "证券时报",
+      "theme": "覆铜板·PCB·元件",
+      "rank": 5
+    },
+    {
+      "title": "图达通(02665)微跌创新低,现报0.925元",
+      "time": "2026-11-26 14:15:00",
+      "url": "https://www.etnet.com.hk/www/tc/news/news-article.php?section=categorized&category=latest&newsid=20261126142",
+      "source": "经济通",
+      "theme": "博通概念·光模块·AI算力",
+      "rank": 1
+    },
+    {
+      "title": "财联社11月25日电，博通跌幅扩大至7%，为2025年7月以来新低。",
+      "time": "2026-11-25 22:41:02",
+      "url": "https://www.cls.cn/detail/2544611",
+      "source": "财联社",
+      "theme": "博通概念·光模块·AI算力",
+      "rank": 2
+    },
+    {
+      "title": "金融科技ETF博时（516860）下跌2.97%，广电运通参编的算电协同技术白皮...",
+      "time": "2026-11-25 16:14:19",
+      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2047423",
+      "source": "动态宝",
+      "theme": "博通概念·光模块·AI算力",
+      "rank": 3
+    },
+    {
+      "title": "智通港股投资日志 11月19日",
+      "time": "2026-11-19 00:00:01",
+      "url": "http://www.zhitongcaijing.com/content/detail/1525331.html",
+      "source": "智通财经",
+      "theme": "博通概念·光模块·AI算力",
+      "rank": 4
+    },
+    {
+      "title": "智通港股投资日志 11月26日",
+      "time": "2026-11-26 00:00:02",
+      "url": "http://www.zhitongcaijing.com/content/detail/1528961.html",
+      "source": "智通财经",
+      "theme": "博通概念·光模块·AI算力",
+      "rank": 5
+    },
+    {
+      "title": "11月26日中水渔业（000798）股票异动解析",
+      "time": "2026-11-26 11:52:07",
+      "url": "https://www.jiuyangongshe.com/action/detail/k0lgezc6ts",
+      "source": "韭研公社APP",
+      "theme": "渔业·水产·食品安全",
+      "rank": 1
+    },
+    {
+      "title": "水产板块异动拉升 东方海洋5天4板",
+      "time": "2026-11-26 09:45:18",
+      "url": "https://m.21jingji.com/timeline/781be7e414e6e4566d738ce3c6b54b0c.html",
+      "source": "21世纪经济报道",
+      "theme": "渔业·水产·食品安全",
+      "rank": 2
+    },
+    {
+      "title": "异动快报：中水渔业（000798）11月26日9点33分触及涨停板",
+      "time": "2026-11-26 09:37:34",
+      "url": "https://stock.stockstar.com/RB2026112600010366.shtml",
+      "source": "证券之星",
+      "theme": "渔业·水产·食品安全",
+      "rank": 3
+    },
+    {
+      "title": "水产指数盘中大涨5%，好当家、獐子岛涨停，上市公司回应",
+      "time": "2026-11-25 19:33:21",
+      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=139176&infoType=1&funcCode=004,004001,006,006005",
+      "source": "中证金牛座",
+      "theme": "渔业·水产·食品安全",
+      "rank": 4
+    },
+    {
+      "title": "水产概念震荡走高 獐子岛、好当家涨停",
+      "time": "2026-11-25 10:25:13",
+      "url": "https://m.21jingji.com/timeline/7aa0441a3c24b248951d3eb5eed75875.html",
+      "source": "21世纪经济报道",
+      "theme": "渔业·水产·食品安全",
+      "rank": 5
+    },
+    {
+      "title": "三部委发文推进新一代通信网建设，中证全指通信设备指数涨超1%，天弘通信设备基金覆盖光模块、CPO光引擎等全产业链环节",
+      "time": "2026-11-26 10:03:54",
+      "url": "https://m.21jingji.com/article/20261126/herald/0b21fc3351ee734c5c6f50354ae5a873.html",
+      "source": "21世纪经济报道",
+      "theme": "通信设备·低空经济",
+      "rank": 1
+    },
+    {
+      "title": "三部委：加强6G基站和核心网设备、高速光网络设备、卫星设备等研制",
+      "time": "2026-11-26 08:25:31",
+      "url": "https://www.cls.cn/detail/2544816",
+      "source": "财联社",
+      "theme": "通信设备·低空经济",
+      "rank": 2
+    },
+    {
+      "title": "中兴通讯（000063）：中标中国联合网络通信有限公司湖北省分公司采购项目，中标金额为154.50万元",
+      "time": "2026-11-25 15:38:49",
+      "url": "https://tongbicapital.com/article/detail?id=1477598",
+      "source": "同壁财经",
+      "theme": "通信设备·低空经济",
+      "rank": 3
+    },
+    {
+      "title": "“易中天”相继发布公告，中证全指通信设备指数涨近5%，天弘通信设备基金覆盖光模块、CPO等产业链环节",
+      "time": "2026-11-23 15:35:01",
+      "url": "https://m.21jingji.com/article/20261123/herald/67815c700b7be5e2a01877e7a052296e.html",
+      "source": "21世纪经济报道",
+      "theme": "通信设备·低空经济",
+      "rank": 4
+    },
+    {
+      "title": "中国通号：国内首款4.9GHz无蜂窝基站获证商用",
+      "time": "2026-11-21 16:05:15",
+      "url": "https://www.cls.cn/detail/2540799",
+      "source": "财联社",
+      "theme": "通信设备·低空经济",
+      "rank": 5
     }
   ]
 }
