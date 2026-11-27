@@ -1,285 +1,325 @@
 {
-  "updated_at": "2026-11-26 14:58:30",
-  "source": "通达信MCP(wenda_news_query) | 7题材合并去重 | 上限5/题材 总计≤40",
+  "updated_at": "2026-11-27 11:13",
+  "source": "通达信问达新闻查询(wenda_news_query) | 桥接写入",
   "items": [
     {
-      "title": "11月25日连板股分析：连板股晋级率30% 中京电子晋级5连板",
-      "time": "2026-11-25 15:55:15",
-      "url": "https://www.cls.cn/detail/2544100",
-      "source": "财联社",
-      "theme": "连板·龙头股",
-      "rank": 1
-    },
-    {
-      "title": "11月24日连板股分析：连板股晋级率近三成 九阳股份走出6天4板",
-      "time": "2026-11-24 15:41:33",
-      "url": "https://www.cls.cn/detail/2542893",
-      "source": "财联社",
-      "theme": "连板·龙头股",
-      "rank": 2
-    },
-    {
-      "title": "11月23日连板股分析：连板股晋级率100% 机器人概念股集体爆发",
-      "time": "2026-11-23 15:46:31",
-      "url": "https://www.cls.cn/detail/2541691",
-      "source": "财联社",
-      "theme": "连板·龙头股",
-      "rank": 3
-    },
-    {
-      "title": "11月19日连板股分析：连板股晋级率37.5% 光刻机、光刻胶概念持续活跃",
-      "time": "2026-11-19 15:46:14",
-      "url": "https://www.cls.cn/detail/2538951",
-      "source": "财联社",
-      "theme": "连板·龙头股",
-      "rank": 4
-    },
-    {
-      "title": "今日午盘全市场共20股涨停，连板股5只",
-      "time": "2026-11-19 11:55:11",
-      "url": "https://m.21jingji.com/timeline/e55d99ae6749561e150b49566f1d5e3a.html",
-      "source": "21世纪经济报道",
-      "theme": "连板·龙头股",
-      "rank": 5
-    },
-    {
-      "title": "白银日内跌1.65%至40.15美元/盎司 逼近逾14个月低位",
-      "time": "2026-11-25 20:49:59",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "白银·贵金属",
-      "rank": 1
-    },
-    {
-      "title": "现货白银日内跌2%",
-      "time": "2026-11-24 14:08:22",
-      "url": "https://m.21jingji.com/timeline/6445c832471d3647d3291d3c73d20300.html",
-      "source": "21世纪经济报道",
-      "theme": "白银·贵金属",
-      "rank": 2
-    },
-    {
-      "title": "白银（XAG/USD）开报近42美元 12月大幅加息担忧降温",
-      "time": "2026-11-23 11:19:53",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "白银·贵金属",
-      "rank": 3
-    },
-    {
-      "title": "白银延续跌势现报42美元/盎司，或创3月以来最差周表现",
-      "time": "2026-11-20 22:39:05",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "白银·贵金属",
-      "rank": 4
-    },
-    {
-      "title": "现货白银日内跌幅扩大至3%",
-      "time": "2026-11-20 10:35:09",
-      "url": "https://m.21jingji.com/timeline/1ff969973b63707839e7d98a1cfe1f5e.html",
-      "source": "21世纪经济报道",
-      "theme": "白银·贵金属",
-      "rank": 5
-    },
-    {
-      "title": "AI智能体商业化提速+企业级推理需求接棒！强劲需求支撑增长基本面",
-      "time": "2026-11-26 14:51:31",
-      "url": "http://www.zhitongcaijing.com/content/detail/1529147.html",
-      "source": "智通财经",
-      "theme": "三季报预增·业绩",
-      "rank": 1
-    },
-    {
-      "title": "东鹏饮料(09980)拟12月9日举行2026年第三季度业绩说明会",
-      "time": "2026-11-23 18:18:01",
-      "url": "https://www.gelonghui.com/news/5360163",
+      "title": "港股异动丨多重催化助推！阿里巴巴拉升涨近3%",
+      "time": "2026-11-27 11:03:44",
+      "url": "https://www.gelonghui.com/live/2782452",
       "source": "格隆汇",
-      "theme": "三季报预增·业绩",
-      "rank": 2
-    },
-    {
-      "title": "中瑞股份(301587)：2026年前三季度终端市场需求持续释放，下游客户采购订单增加",
-      "time": "2026-11-20 17:56:59",
-      "url": "https://www.gelonghui.com/news/5358855",
-      "source": "格隆汇",
-      "theme": "三季报预增·业绩",
-      "rank": 3
-    },
-    {
-      "title": "三德科技：管理层对公司今年Q4业绩保持增长持审慎乐观态度",
-      "time": "2026-11-19 19:55:10",
-      "url": "https://m.21jingji.com/timeline/380c285a0527d9cf9cb96e7b3945186f.html",
-      "source": "21世纪经济报道",
-      "theme": "三季报预增·业绩",
-      "rank": 4
-    },
-    {
-      "title": "新华文轩(00811)拟11月26日召开2026年第三季度业绩说明会",
-      "time": "2026-11-19 18:06:14",
-      "url": "https://www.gelonghui.com/news/5357590",
-      "source": "格隆汇",
-      "theme": "三季报预增·业绩",
-      "rank": 5
-    },
-    {
-      "title": "11月26日贤丰控股（002141）股票异动解析",
-      "time": "2026-11-26 11:52:07",
-      "url": "https://www.jiuyangongshe.com/action/detail/20ehxv0f7es",
-      "source": "韭研公社APP",
-      "theme": "覆铜板·PCB·元件",
+      "theme": "AI算力",
       "rank": 1
     },
     {
-      "title": "大手笔！350亿PCB概念股拟30亿元投建高端覆铜板项目 盘后公告集锦",
-      "time": "2026-11-24 20:42:54",
-      "url": "https://www.cls.cn/detail/2543271",
-      "source": "财联社",
-      "theme": "覆铜板·PCB·元件",
+      "title": "作为一个快三十年经验的中关村民工，想问问 算力 到底是啥？看炒作 算力=以前的服务器出租？这不是扯淡吗？",
+      "time": "2024-03-20 14:47:00",
+      "url": "https://xueqiu.com/2651088264/282794566",
+      "source": "SNS社区",
+      "theme": "AI算力",
       "rank": 2
     },
     {
-      "title": "南亚新材：全资子公司拟28.8亿元投建高端覆铜板生产项目",
-      "time": "2026-11-24 18:49:43",
-      "url": "https://www.cls.cn/detail/2543173",
-      "source": "财联社",
-      "theme": "覆铜板·PCB·元件",
-      "rank": 3
-    },
-    {
-      "title": "花旗：覆铜板涨价还能走到2027年，2028年才见均衡",
-      "time": "2026-11-23 16:41:29",
-      "url": "https://www.gelonghui.com/p/7526617",
+      "title": "报告：AI算力高速发展 上半年规模实现同比增长约45%",
+      "time": "2023-08-19 21:28:01",
+      "url": "https://www.gelonghui.com/live/1180790",
       "source": "格隆汇",
-      "theme": "覆铜板·PCB·元件",
-      "rank": 4
-    },
-    {
-      "title": "多股涨停，PCB逆市走强！全球缺货预警，短缺或延续至2027年上半年",
-      "time": "2026-11-20 18:18:35",
-      "url": "http://mp.weixin.qq.com/s?__biz=MzA4MDU0MzQ4Mg==&mid=2653432208&idx=1&sn=9a893420dd137a59385a0f06cec0bea3&chksm=85e909ce048f2d036d8d27ebdf606e41d805c26a30163e2c32ec3ecfeeb210e98d5077b7d590#rd",
-      "source": "证券时报",
-      "theme": "覆铜板·PCB·元件",
-      "rank": 5
-    },
-    {
-      "title": "图达通(02665)微跌创新低,现报0.925元",
-      "time": "2026-11-26 14:15:00",
-      "url": "https://www.etnet.com.hk/www/tc/news/news-article.php?section=categorized&category=latest&newsid=20261126142",
-      "source": "经济通",
-      "theme": "博通概念·光模块·AI算力",
-      "rank": 1
-    },
-    {
-      "title": "财联社11月25日电，博通跌幅扩大至7%，为2025年7月以来新低。",
-      "time": "2026-11-25 22:41:02",
-      "url": "https://www.cls.cn/detail/2544611",
-      "source": "财联社",
-      "theme": "博通概念·光模块·AI算力",
-      "rank": 2
-    },
-    {
-      "title": "金融科技ETF博时（516860）下跌2.97%，广电运通参编的算电协同技术白皮...",
-      "time": "2026-11-25 16:14:19",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=2047423",
-      "source": "动态宝",
-      "theme": "博通概念·光模块·AI算力",
+      "theme": "AI算力",
       "rank": 3
     },
     {
-      "title": "智通港股投资日志 11月19日",
-      "time": "2026-11-19 00:00:01",
-      "url": "http://www.zhitongcaijing.com/content/detail/1525331.html",
-      "source": "智通财经",
-      "theme": "博通概念·光模块·AI算力",
+      "title": "AI算力需求带来交换机规格和数量均大幅提升",
+      "time": "2023-08-16 10:42:02",
+      "url": "https://xueqiu.com/7616822446/258403435",
+      "source": "SNS社区",
+      "theme": "AI算力",
       "rank": 4
     },
     {
-      "title": "智通港股投资日志 11月26日",
-      "time": "2026-11-26 00:00:02",
-      "url": "http://www.zhitongcaijing.com/content/detail/1528961.html",
-      "source": "智通财经",
-      "theme": "博通概念·光模块·AI算力",
+      "title": "网页链接 - 中国工程院院士高文：建设国家算力网，让算力像电力一样方便 ～～～AI算力",
+      "time": "2023-04-02 10:32:02",
+      "url": "https://xueqiu.com/1723652683/246238268",
+      "source": "SNS社区",
+      "theme": "AI算力",
       "rank": 5
     },
     {
-      "title": "11月26日中水渔业（000798）股票异动解析",
-      "time": "2026-11-26 11:52:07",
-      "url": "https://www.jiuyangongshe.com/action/detail/k0lgezc6ts",
-      "source": "韭研公社APP",
-      "theme": "渔业·水产·食品安全",
+      "title": "中兴通讯(000063)：公司研发和生产光传输网络相干光模块，主要用于长距光传输场景，应用在公司光传输设备",
+      "time": "2026-08-17 17:18:51",
+      "url": "https://www.gelonghui.com/news/5286947",
+      "source": "格隆汇",
+      "theme": "光模块",
       "rank": 1
     },
     {
-      "title": "水产板块异动拉升 东方海洋5天4板",
-      "time": "2026-11-26 09:45:18",
-      "url": "https://m.21jingji.com/timeline/781be7e414e6e4566d738ce3c6b54b0c.html",
-      "source": "21世纪经济报道",
-      "theme": "渔业·水产·食品安全",
+      "title": "中兴通讯(000063)：主要聚焦研发和生产光传输网络的中长距光模块，应用于公司自身光传输设备",
+      "time": "2024-08-15 16:51:37",
+      "url": "https://www.gelonghui.com/news/4826686",
+      "source": "格隆汇",
+      "theme": "光模块",
       "rank": 2
     },
     {
-      "title": "异动快报：中水渔业（000798）11月26日9点33分触及涨停板",
-      "time": "2026-11-26 09:37:34",
-      "url": "https://stock.stockstar.com/RB2026112600010366.shtml",
+      "title": "光模块类似于u盘插在pc上，光模块插在交换机的光口上",
+      "time": "2024-03-25 19:42:02",
+      "url": "https://xueqiu.com/3227630717/283449664",
+      "source": "SNS社区",
+      "theme": "光模块",
+      "rank": 3
+    },
+    {
+      "title": "热点题材光通信模块概念是什么？热门概念股有哪些",
+      "time": "2023-05-24 16:20:06",
+      "url": "https://stock.stockstar.com/SS2023052400022071.shtml",
       "source": "证券之星",
-      "theme": "渔业·水产·食品安全",
-      "rank": 3
-    },
-    {
-      "title": "水产指数盘中大涨5%，好当家、獐子岛涨停，上市公司回应",
-      "time": "2026-11-25 19:33:21",
-      "url": "https://jnz.cs.com.cn/html/details/Information-details.html?infoId=139176&infoType=1&funcCode=004,004001,006,006005",
-      "source": "中证金牛座",
-      "theme": "渔业·水产·食品安全",
+      "theme": "光模块",
       "rank": 4
     },
     {
-      "title": "水产概念震荡走高 獐子岛、好当家涨停",
-      "time": "2026-11-25 10:25:13",
-      "url": "https://m.21jingji.com/timeline/7aa0441a3c24b248951d3eb5eed75875.html",
-      "source": "21世纪经济报道",
-      "theme": "渔业·水产·食品安全",
+      "title": "$全信股份(SZ300447)$ 这个光模块咋没资金炒？文心一言给的回答...",
+      "time": "2023-04-17 18:02:01",
+      "url": "https://xueqiu.com/5502848342/247663973",
+      "source": "SNS社区",
+      "theme": "光模块",
       "rank": 5
     },
     {
-      "title": "三部委发文推进新一代通信网建设，中证全指通信设备指数涨超1%，天弘通信设备基金覆盖光模块、CPO光引擎等全产业链环节",
-      "time": "2026-11-26 10:03:54",
-      "url": "https://m.21jingji.com/article/20261126/herald/0b21fc3351ee734c5c6f50354ae5a873.html",
-      "source": "21世纪经济报道",
-      "theme": "通信设备·低空经济",
+      "title": "重要信号：史诗级暴跌之后，开始有大机构转多！",
+      "time": "2026-11-27 11:07:05",
+      "url": "https://www.gelonghui.com/p/7576404",
+      "source": "格隆汇",
+      "theme": "服务器",
       "rank": 1
     },
     {
-      "title": "三部委：加强6G基站和核心网设备、高速光网络设备、卫星设备等研制",
-      "time": "2026-11-26 08:25:31",
-      "url": "https://www.cls.cn/detail/2544816",
-      "source": "财联社",
-      "theme": "通信设备·低空经济",
+      "title": "恒科指数换血，瑞声科技回归：AI时代核心资产的价值重估",
+      "time": "2026-11-27 11:02:01",
+      "url": "https://www.gelonghui.com/news/5364298",
+      "source": "格隆汇",
+      "theme": "服务器",
       "rank": 2
     },
     {
-      "title": "中兴通讯（000063）：中标中国联合网络通信有限公司湖北省分公司采购项目，中标金额为154.50万元",
-      "time": "2026-11-25 15:38:49",
-      "url": "https://tongbicapital.com/article/detail?id=1477598",
-      "source": "同壁财经",
-      "theme": "通信设备·低空经济",
+      "title": "服务器的大头是互联网企业，它们业绩咋样还没逼数",
+      "time": "2023-06-26 14:07:02",
+      "url": "https://xueqiu.com/1652329269/254034216",
+      "source": "SNS社区",
+      "theme": "服务器",
       "rank": 3
     },
     {
-      "title": "“易中天”相继发布公告，中证全指通信设备指数涨近5%，天弘通信设备基金覆盖光模块、CPO等产业链环节",
-      "time": "2026-11-23 15:35:01",
-      "url": "https://m.21jingji.com/article/20261123/herald/67815c700b7be5e2a01877e7a052296e.html",
-      "source": "21世纪经济报道",
-      "theme": "通信设备·低空经济",
+      "title": "船舶是我们的优势行业，服务器一定不是的，服务器顶多就是一个简单的加工制造业",
+      "time": "2023-06-20 10:07:04",
+      "url": "https://xueqiu.com/3581578319/253636966",
+      "source": "SNS社区",
+      "theme": "服务器",
       "rank": 4
     },
     {
-      "title": "中国通号：国内首款4.9GHz无蜂窝基站获证商用",
-      "time": "2026-11-21 16:05:15",
-      "url": "https://www.cls.cn/detail/2540799",
+      "title": "三星表示，预计下半年服务器市场的不确定性很高。",
+      "time": "2022-07-28 10:09:40",
+      "url": "https://www.cls.cn/detail/1083870",
       "source": "财联社",
-      "theme": "通信设备·低空经济",
+      "theme": "服务器",
+      "rank": 5
+    },
+    {
+      "title": "雷神科技：信创产品已在党、政领域，金融、教育、医疗等八大重点行业及其他行业广泛采用",
+      "time": "2026-11-24 23:59:26",
+      "url": "https://www.cls.cn/detail/2543435",
+      "source": "财联社",
+      "theme": "信创",
+      "rank": 1
+    },
+    {
+      "title": "华西证券：信创政策持续落地助力信创产业加速成长",
+      "time": "2022-12-12 15:05:40",
+      "url": "https://www.stcn.com/article/detail/752660.html",
+      "source": "证券时报",
+      "theme": "信创",
+      "rank": 2
+    },
+    {
+      "title": "信创概念，买票进场",
+      "time": "2022-10-31 11:50:00",
+      "url": "https://www.55188.com/thread-10312627-1-1.html",
+      "source": "SNS社区",
+      "theme": "信创",
+      "rank": 3
+    },
+    {
+      "title": "什么是信创",
+      "time": "2022-10-20 07:51:00",
+      "url": "https://www.55188.com/thread-10291767-1-1.html",
+      "source": "SNS社区",
+      "theme": "信创",
+      "rank": 4
+    },
+    {
+      "title": "涨的热火朝天的信创到底是什么？",
+      "time": "2022-10-12 21:06:00",
+      "url": "https://www.55188.com/thread-10279087-1-1.html",
+      "source": "SNS社区",
+      "theme": "信创",
+      "rank": 5
+    },
+    {
+      "title": "喜讯！上海财安金融服务集团股份有限公司获得“国家信息系统安全三级等保认证”",
+      "time": "2024-12-30 11:02:24",
+      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=719501",
+      "source": "动态宝",
+      "theme": "数据安全",
+      "rank": 1
+    },
+    {
+      "title": "金融监管总局：银行保险机构应当建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
+      "time": "2024-12-27 19:57:35",
+      "url": "https://www.gelonghui.com/live/1800922",
+      "source": "格隆汇",
+      "theme": "数据安全",
+      "rank": 2
+    },
+    {
+      "title": "金融监管总局：银行保险机构应当建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
+      "time": "2024-12-27 19:56:35",
+      "url": "https://www.cls.cn/detail/1902569",
+      "source": "财联社",
+      "theme": "数据安全",
+      "rank": 3
+    },
+    {
+      "title": "金融监管总局印发银行保险机构数据安全管理办法",
+      "time": "2024-12-27 19:53:24",
+      "url": "https://www.gelonghui.com/live/1800916",
+      "source": "格隆汇",
+      "theme": "数据安全",
+      "rank": 4
+    },
+    {
+      "title": "国家金融监督管理总局：要求银行保险机构建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
+      "time": "2024-03-22 18:41:12",
+      "url": "https://www.gelonghui.com/live/1457277",
+      "source": "格隆汇",
+      "theme": "数据安全",
+      "rank": 5
+    },
+    {
+      "title": "月之暗面：Kimi科研支持计划现已开放申请",
+      "time": "2026-11-27 11:02:25",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "半导体 国产替代",
+      "rank": 1
+    },
+    {
+      "title": "【券商聚焦】招银国际：地缘风险加剧 料中国半导体国产替代的趋势有望加速",
+      "time": "2025-04-09 12:25:00",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "theme": "半导体 国产替代",
+      "rank": 2
+    },
+    {
+      "title": "芯片半导体国产替代核心上市公司",
+      "time": "2022-10-21 08:30:00",
+      "url": "https://www.55188.com/thread-10293820-1-1.html",
+      "source": "SNS社区",
+      "theme": "半导体 国产替代",
+      "rank": 3
+    },
+    {
+      "title": "中金：配套供应链国产替代仍为半导体产业链发展的主旋律",
+      "time": "2022-08-22 07:52:19",
+      "url": "https://www.gelonghui.com/live/771868",
+      "source": "格隆汇",
+      "theme": "半导体 国产替代",
+      "rank": 4
+    },
+    {
+      "title": "板块异动   半导体国产替代进程加快 半导体及元件板块快速回暖",
+      "time": "2022-08-09 14:41:22",
+      "url": "http://www.zhitongcaijing.com/content/detail/768253.html",
+      "source": "智通财经",
+      "theme": "半导体 国产替代",
+      "rank": 5
+    },
+    {
+      "title": "大模型叫“盘古”;操作系统叫“鸿蒙”；手机芯片叫“麒麟”...",
+      "time": "2024-03-12 23:51:59",
+      "url": "https://xueqiu.com/5389433038/281792108",
+      "source": "SNS社区",
+      "theme": "华为",
+      "rank": 1
+    },
+    {
+      "title": "鸿蒙初开，鲲鹏展翅……高科技尖儿货命名能有多浪漫？华为注册了几乎整本山海经！",
+      "time": "2023-09-23 15:16:31",
+      "url": "https://www.cls.cn/detail/1470594",
+      "source": "财联社",
+      "theme": "华为",
+      "rank": 2
+    },
+    {
+      "title": "华为鸿蒙操作系统来了！关注成为鸿蒙示范区！",
+      "time": "2023-09-08 06:32:01",
+      "url": "https://xueqiu.com/5389433038/260602155",
+      "source": "SNS社区",
+      "theme": "华为",
+      "rank": 3
+    },
+    {
+      "title": "盘古大模型华为旗下的盘古系列AI大模型盘古大模型，是华为旗下的盘古系列AI大模型...",
+      "time": "2023-04-08 00:22:02",
+      "url": "https://xueqiu.com/8277150842/246819225",
+      "source": "SNS社区",
+      "theme": "华为",
+      "rank": 4
+    },
+    {
+      "title": "华为盘古AI大模型即将上线",
+      "time": "2023-04-04 11:32:13",
+      "url": "https://www.aigupiao.com/topic/detail/2027",
+      "source": "热门话题",
+      "theme": "华为",
+      "rank": 5
+    },
+    {
+      "title": "财联社9月24日电，微软与OpenAI的竞争对手Anthropic合作开发AI COPILOT。",
+      "time": "2025-09-24 23:03:25",
+      "url": "https://www.cls.cn/detail/2155110",
+      "source": "财联社",
+      "theme": "微软生态",
+      "rank": 1
+    },
+    {
+      "title": "微软为Copilot Studio国际版新增自主智能体功能",
+      "time": "2024-10-22 11:33:05",
+      "url": "https://www.cls.cn/detail/1832993",
+      "source": "财联社",
+      "theme": "微软生态",
+      "rank": 2
+    },
+    {
+      "title": "微软新品推动AI应用加速落地",
+      "time": "2023-09-22 10:32:00",
+      "url": "https://www.aigupiao.com/topic/detail/2550",
+      "source": "热门话题",
+      "theme": "微软生态",
+      "rank": 3
+    },
+    {
+      "title": "微软推动全民AI办公时代降临",
+      "time": "2023-09-22 10:22:01",
+      "url": "https://www.aigupiao.com/topic/detail/2550",
+      "source": "热门话题",
+      "theme": "微软生态",
+      "rank": 4
+    },
+    {
+      "title": "微软（MSFT）将把聊天机器人技术植入Office",
+      "time": "2023-03-17 08:56:59",
+      "url": "https://www.gelonghui.com/live/934461",
+      "source": "格隆汇",
+      "theme": "微软生态",
       "rank": 5
     }
   ]

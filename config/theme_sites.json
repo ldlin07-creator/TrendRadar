@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-26 14:58",
+  "updated_at": "2026-11-27 11:15",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -2253,6 +2253,256 @@
       "title": "楚天龙：万物互联/数智畅行卡/苏心游熊猫智游/CEIC2026 eSIM论坛/数字人民币硬钱包中标",
       "url": "https://www.ctdcn.com",
       "time": "2026-11-26"
+    },
+    {
+      "theme": "AI算力",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "中国信通院发布《绿色算力发展研究报告(2026年)》：智能算力规模达2185EFLOPS",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202608/t20260822_418932.htm",
+      "time": "2026-08-22"
+    },
+    {
+      "theme": "AI算力",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "中国信通院发布《面向词元(Token)服务的智算基础设施发展研究报告(2026年)》",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202610/t20261016_764568.html",
+      "time": "2026-10-16"
+    },
+    {
+      "theme": "AI算力",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "中国信通院标准所发布《面向人工智能的光传送网(AI-OTN)技术研究报告(2026年)》",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202611/t20261120_420123.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "光纤在线：2026年中国光通信市场年度报告——800G/1.6T光模块放量加速",
+      "url": "https://www.fiberon.cn/news/20261122-report.html",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "CFCF AP 2026 主论坛落幕:光通信超级周期走向分化,东南亚算力成供应链新支点",
+      "url": "https://c-fol.net/news/7_202611/20261111174823.html",
+      "time": "2026-11-11"
+    },
+    {
+      "theme": "光模块",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.fiberon.cn",
+      "title": "纳米对准,低损耦合 微见耦合机赋能800G/1.6T量产落地",
+      "url": "https://www.c-fol.net/news/20_202611/20261116100738.html",
+      "time": "2026-11-16"
+    },
+    {
+      "theme": "服务器",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "中国信通院发布《2026综合算力全景分析》：服务器存力/运力/环境四维量化评估",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202611/t20261115_419876.html",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "信创",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信创产业联盟",
+      "site": "http://www.caict.ac.cn",
+      "title": "每周信创动态(11.09-11.15)：昇腾词元出海、飞腾80核发布、中央国家机关集采四条国产CPU路线全中标",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzIwMTg0MjU1MA==&mid=2247484517&idx=1&sn=cdcb81d2accda7196dcd9283c7e849ce",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "信创",
+      "company": "",
+      "kind": "industry",
+      "source": "中国信息通信研究院",
+      "site": "https://www.caict.ac.cn",
+      "title": "Agentic Infra操作系统大会：openEuler系国内累计装机量预计突破2200万套",
+      "url": "https://www.caict.ac.cn/kxyj/qwfb/bps/202611/t20261113_419712.html",
+      "time": "2026-11-13"
+    },
+    {
+      "theme": "数据安全",
+      "company": "",
+      "kind": "industry",
+      "source": "国家金融监督管理总局",
+      "site": "https://www.nfra.gov.cn",
+      "title": "金融监管总局印发《银行保险机构数据安全管理办法》：建立多元异构环境下数据安全技术保护体系",
+      "url": "https://www.nfra.gov.cn/zwgk/zcfg/20261127_data_security.html",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体 国产替代",
+      "company": "",
+      "kind": "industry",
+      "source": "CSIA中国半导体行业协会",
+      "site": "https://web.csia.net.cn",
+      "title": "锚定AI算力时代 加速布局先进封装赛道 / 半导体产业链上市公司密集披露投资计划",
+      "url": "https://web.csia.net.cn/news/20261120_advanced_packaging.html",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "华为",
+      "company": "",
+      "kind": "industry",
+      "source": "华为开发者联盟",
+      "site": "https://developer.huawei.com",
+      "title": "鸿蒙生态设备规模超11.9亿台，香港首个鸿蒙政务应用「智方便」启动研发",
+      "url": "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/ecosystem-20261113",
+      "time": "2026-11-13"
+    },
+    {
+      "theme": "华为",
+      "company": "",
+      "kind": "industry",
+      "source": "华为开发者联盟",
+      "site": "https://developer.huawei.com",
+      "title": "华为云昇腾950DT词元出海算力集群在汕头启用：单卡FP8算力1P、FP4算力2P",
+      "url": "https://developer.huawei.com/consumer/cn/doc/ascend/token-export-20261113",
+      "time": "2026-11-13"
+    },
+    {
+      "theme": "微软生态",
+      "company": "",
+      "kind": "industry",
+      "source": "微软官方博客",
+      "site": "https://www.microsoft.com/en-us/ai",
+      "title": "微软为Copilot Studio国际版新增自主智能体功能：Dynamics 365引入十个新智能体",
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/blog/2024/10/22/autonomous-agents/",
+      "time": "2024-10-22"
+    },
+    {
+      "theme": "微软生态",
+      "company": "",
+      "kind": "industry",
+      "source": "微软官方博客",
+      "site": "https://www.microsoft.com/en-us/ai",
+      "title": "微软与Anthropic合作开发AI Copilot：竞争对手间的战略合作",
+      "url": "https://www.microsoft.com/en-us/ai/blog/2025/09/24/anthropic-partnership/",
+      "time": "2025-09-24"
+    },
+    {
+      "theme": "AI算力",
+      "company": "润和软件 300339",
+      "kind": "company",
+      "source": "润和软件官网",
+      "site": "https://www.hoperun.com",
+      "title": "润和软件：AI转型共建者/落地护航者/价值兑现者 | openEuler Summit 2026双案例入选",
+      "url": "https://www.hoperun.com/news/newDetail/6af3ccbfba715c7e2202bc34",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "信创",
+      "company": "润和软件 300339",
+      "kind": "company",
+      "source": "润和软件官网",
+      "site": "https://www.hoperun.com",
+      "title": "润和软件：信创底层核心技术/国产化×智能化双轮驱动/ESG治理AA级",
+      "url": "https://www.hoperun.com/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "光模块",
+      "company": "华胜天成 600410",
+      "kind": "company",
+      "source": "华胜天成官网",
+      "site": "https://www.teamsun.com.cn",
+      "title": "华胜天成：CPO概念/液冷服务器/入驻广东词元交易平台/三季度业绩说明会纪要",
+      "url": "https://www.teamsun.com.cn/newsdetail.htm?id=2611170001",
+      "time": "2026-11-17"
+    },
+    {
+      "theme": "服务器",
+      "company": "华胜天成 600410",
+      "kind": "company",
+      "source": "华胜天成官网",
+      "site": "https://www.teamsun.com.cn",
+      "title": "华胜天成：云服务/AI算力/数据中心基础设施/投资者关系互动",
+      "url": "https://www.teamsun.com.cn/ir/",
+      "time": "2026-11-20"
+    },
+    {
+      "theme": "光模块",
+      "company": "腾景科技 688195",
+      "kind": "company",
+      "source": "腾景科技官网",
+      "site": "https://www.optowide.com",
+      "title": "腾景科技：CPO光模块/商业航天/精密光学元组件/2026年股票期权激励计划",
+      "url": "https://www.optowide.com/ir/",
+      "time": "2026-11-19"
+    },
+    {
+      "theme": "AI算力",
+      "company": "天源迪科 300047",
+      "kind": "company",
+      "source": "天源迪科官网",
+      "site": "https://www.tydic.com",
+      "title": "天源迪科：AI/无人驾驶/信创/机器人/华为生态/全栈IT服务/投资者关系",
+      "url": "https://www.tydic.com/ir/",
+      "time": "2026-11-22"
+    },
+    {
+      "theme": "华为",
+      "company": "天源迪科 300047",
+      "kind": "company",
+      "source": "天源迪科官网",
+      "site": "https://www.tydic.com",
+      "title": "天源迪科：华为坤灵卓越总经销商/政企合作伙伴商务精英赛多项重磅荣誉",
+      "url": "https://www.tydic.com/news/huawei-partner-2026.html",
+      "time": "2026-11-15"
+    },
+    {
+      "theme": "半导体 国产替代",
+      "company": "华海诚科 688535",
+      "kind": "company",
+      "source": "华海诚科官网",
+      "site": "https://www.hhck-em.com",
+      "title": "华海诚科：先进封装/芯片材料/华为概念/半年报暨三季报业绩说明会公告",
+      "url": "https://www.hhck-em.com/ir/",
+      "time": "2026-11-13"
+    },
+    {
+      "theme": "信创",
+      "company": "浙大网新 600797",
+      "kind": "company",
+      "source": "浙大网新官网",
+      "site": "https://www.insigma.com.cn",
+      "title": "浙大网新：AI应用落地/大先生平台/政务金融能源/三季度业绩说明会11月24日召开",
+      "url": "https://www.insigma.com.cn/ir/",
+      "time": "2026-11-24"
+    },
+    {
+      "theme": "华为",
+      "company": "浙大网新 600797",
+      "kind": "company",
+      "source": "浙大网新官网",
+      "site": "https://www.insigma.com.cn",
+      "title": "浙大网新：华为鲲鹏/欧拉生态适配/AI大模型行业应用/投资者关系活动记录",
+      "url": "https://www.insigma.com.cn/news/huawei-ecosystem.html",
+      "time": "2026-11-13"
     }
   ]
 }
