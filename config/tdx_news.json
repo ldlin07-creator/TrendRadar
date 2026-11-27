@@ -1,325 +1,285 @@
 {
-  "updated_at": "2026-11-27 11:13",
-  "source": "通达信问达新闻查询(wenda_news_query) | 桥接写入",
+  "updated_at": "2026-11-27 14:45",
+  "source": "通达信问达新闻查询(wenda_news_query) | 7主题×5条/主题 | 7日回溯(2026-11-20至2026-11-27)",
   "items": [
     {
-      "title": "港股异动丨多重催化助推！阿里巴巴拉升涨近3%",
-      "time": "2026-11-27 11:03:44",
-      "url": "https://www.gelonghui.com/live/2782452",
-      "source": "格隆汇",
-      "theme": "AI算力",
-      "rank": 1
-    },
-    {
-      "title": "作为一个快三十年经验的中关村民工，想问问 算力 到底是啥？看炒作 算力=以前的服务器出租？这不是扯淡吗？",
-      "time": "2024-03-20 14:47:00",
-      "url": "https://xueqiu.com/2651088264/282794566",
-      "source": "SNS社区",
-      "theme": "AI算力",
-      "rank": 2
-    },
-    {
-      "title": "报告：AI算力高速发展 上半年规模实现同比增长约45%",
-      "time": "2023-08-19 21:28:01",
-      "url": "https://www.gelonghui.com/live/1180790",
-      "source": "格隆汇",
-      "theme": "AI算力",
-      "rank": 3
-    },
-    {
-      "title": "AI算力需求带来交换机规格和数量均大幅提升",
-      "time": "2023-08-16 10:42:02",
-      "url": "https://xueqiu.com/7616822446/258403435",
-      "source": "SNS社区",
-      "theme": "AI算力",
-      "rank": 4
-    },
-    {
-      "title": "网页链接 - 中国工程院院士高文：建设国家算力网，让算力像电力一样方便 ～～～AI算力",
-      "time": "2023-04-02 10:32:02",
-      "url": "https://xueqiu.com/1723652683/246238268",
-      "source": "SNS社区",
-      "theme": "AI算力",
-      "rank": 5
-    },
-    {
-      "title": "中兴通讯(000063)：公司研发和生产光传输网络相干光模块，主要用于长距光传输场景，应用在公司光传输设备",
-      "time": "2026-08-17 17:18:51",
-      "url": "https://www.gelonghui.com/news/5286947",
-      "source": "格隆汇",
-      "theme": "光模块",
-      "rank": 1
-    },
-    {
-      "title": "中兴通讯(000063)：主要聚焦研发和生产光传输网络的中长距光模块，应用于公司自身光传输设备",
-      "time": "2024-08-15 16:51:37",
-      "url": "https://www.gelonghui.com/news/4826686",
-      "source": "格隆汇",
-      "theme": "光模块",
-      "rank": 2
-    },
-    {
-      "title": "光模块类似于u盘插在pc上，光模块插在交换机的光口上",
-      "time": "2024-03-25 19:42:02",
-      "url": "https://xueqiu.com/3227630717/283449664",
-      "source": "SNS社区",
-      "theme": "光模块",
-      "rank": 3
-    },
-    {
-      "title": "热点题材光通信模块概念是什么？热门概念股有哪些",
-      "time": "2023-05-24 16:20:06",
-      "url": "https://stock.stockstar.com/SS2023052400022071.shtml",
-      "source": "证券之星",
-      "theme": "光模块",
-      "rank": 4
-    },
-    {
-      "title": "$全信股份(SZ300447)$ 这个光模块咋没资金炒？文心一言给的回答...",
-      "time": "2023-04-17 18:02:01",
-      "url": "https://xueqiu.com/5502848342/247663973",
-      "source": "SNS社区",
-      "theme": "光模块",
-      "rank": 5
-    },
-    {
-      "title": "重要信号：史诗级暴跌之后，开始有大机构转多！",
-      "time": "2026-11-27 11:07:05",
-      "url": "https://www.gelonghui.com/p/7576404",
-      "source": "格隆汇",
-      "theme": "服务器",
-      "rank": 1
-    },
-    {
-      "title": "恒科指数换血，瑞声科技回归：AI时代核心资产的价值重估",
-      "time": "2026-11-27 11:02:01",
-      "url": "https://www.gelonghui.com/news/5364298",
-      "source": "格隆汇",
-      "theme": "服务器",
-      "rank": 2
-    },
-    {
-      "title": "服务器的大头是互联网企业，它们业绩咋样还没逼数",
-      "time": "2023-06-26 14:07:02",
-      "url": "https://xueqiu.com/1652329269/254034216",
-      "source": "SNS社区",
-      "theme": "服务器",
-      "rank": 3
-    },
-    {
-      "title": "船舶是我们的优势行业，服务器一定不是的，服务器顶多就是一个简单的加工制造业",
-      "time": "2023-06-20 10:07:04",
-      "url": "https://xueqiu.com/3581578319/253636966",
-      "source": "SNS社区",
-      "theme": "服务器",
-      "rank": 4
-    },
-    {
-      "title": "三星表示，预计下半年服务器市场的不确定性很高。",
-      "time": "2022-07-28 10:09:40",
-      "url": "https://www.cls.cn/detail/1083870",
-      "source": "财联社",
-      "theme": "服务器",
-      "rank": 5
-    },
-    {
-      "title": "雷神科技：信创产品已在党、政领域，金融、教育、医疗等八大重点行业及其他行业广泛采用",
-      "time": "2026-11-24 23:59:26",
-      "url": "https://www.cls.cn/detail/2543435",
-      "source": "财联社",
-      "theme": "信创",
-      "rank": 1
-    },
-    {
-      "title": "华西证券：信创政策持续落地助力信创产业加速成长",
-      "time": "2022-12-12 15:05:40",
-      "url": "https://www.stcn.com/article/detail/752660.html",
+      "theme": "半导体·靶材",
+      "title": "多只上证科创板半导体材料设备主题指数ETF涨停",
+      "time": "2026-11-27 14:31:43",
+      "url": "https://www.stcn.com/article/detail/4356937.html",
       "source": "证券时报",
-      "theme": "信创",
-      "rank": 2
-    },
-    {
-      "title": "信创概念，买票进场",
-      "time": "2022-10-31 11:50:00",
-      "url": "https://www.55188.com/thread-10312627-1-1.html",
-      "source": "SNS社区",
-      "theme": "信创",
-      "rank": 3
-    },
-    {
-      "title": "什么是信创",
-      "time": "2022-10-20 07:51:00",
-      "url": "https://www.55188.com/thread-10291767-1-1.html",
-      "source": "SNS社区",
-      "theme": "信创",
-      "rank": 4
-    },
-    {
-      "title": "涨的热火朝天的信创到底是什么？",
-      "time": "2022-10-12 21:06:00",
-      "url": "https://www.55188.com/thread-10279087-1-1.html",
-      "source": "SNS社区",
-      "theme": "信创",
-      "rank": 5
-    },
-    {
-      "title": "喜讯！上海财安金融服务集团股份有限公司获得“国家信息系统安全三级等保认证”",
-      "time": "2024-12-30 11:02:24",
-      "url": "http://www.dongtaibao.cn/#/releaseDetail?id=719501",
-      "source": "动态宝",
-      "theme": "数据安全",
       "rank": 1
     },
     {
-      "title": "金融监管总局：银行保险机构应当建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
-      "time": "2024-12-27 19:57:35",
-      "url": "https://www.gelonghui.com/live/1800922",
-      "source": "格隆汇",
-      "theme": "数据安全",
-      "rank": 2
-    },
-    {
-      "title": "金融监管总局：银行保险机构应当建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
-      "time": "2024-12-27 19:56:35",
-      "url": "https://www.cls.cn/detail/1902569",
+      "theme": "半导体·靶材",
+      "title": "广东印发算力发展规划，南方基金旗下低费率产品半导体ETF南方（159325）盘中活跃",
+      "time": "2026-11-27 14:24:31",
+      "url": "https://www.cls.cn/detail/2546440",
       "source": "财联社",
-      "theme": "数据安全",
-      "rank": 3
-    },
-    {
-      "title": "金融监管总局印发银行保险机构数据安全管理办法",
-      "time": "2024-12-27 19:53:24",
-      "url": "https://www.gelonghui.com/live/1800916",
-      "source": "格隆汇",
-      "theme": "数据安全",
-      "rank": 4
-    },
-    {
-      "title": "国家金融监督管理总局：要求银行保险机构建立针对大数据、云计算、移动互联网、物联网等多元异构环境下的数据安全技术保护体系",
-      "time": "2024-03-22 18:41:12",
-      "url": "https://www.gelonghui.com/live/1457277",
-      "source": "格隆汇",
-      "theme": "数据安全",
-      "rank": 5
-    },
-    {
-      "title": "月之暗面：Kimi科研支持计划现已开放申请",
-      "time": "2026-11-27 11:02:25",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "半导体 国产替代",
-      "rank": 1
-    },
-    {
-      "title": "【券商聚焦】招银国际：地缘风险加剧 料中国半导体国产替代的趋势有望加速",
-      "time": "2025-04-09 12:25:00",
-      "url": "https://data.tdx.com.cn/tdxfiles/",
-      "source": "金吾财讯",
-      "theme": "半导体 国产替代",
       "rank": 2
     },
     {
-      "title": "芯片半导体国产替代核心上市公司",
-      "time": "2022-10-21 08:30:00",
-      "url": "https://www.55188.com/thread-10293820-1-1.html",
-      "source": "SNS社区",
-      "theme": "半导体 国产替代",
-      "rank": 3
-    },
-    {
-      "title": "中金：配套供应链国产替代仍为半导体产业链发展的主旋律",
-      "time": "2022-08-22 07:52:19",
-      "url": "https://www.gelonghui.com/live/771868",
-      "source": "格隆汇",
-      "theme": "半导体 国产替代",
-      "rank": 4
-    },
-    {
-      "title": "板块异动   半导体国产替代进程加快 半导体及元件板块快速回暖",
-      "time": "2022-08-09 14:41:22",
-      "url": "http://www.zhitongcaijing.com/content/detail/768253.html",
+      "theme": "半导体·靶材",
+      "title": "ETF异动 易方达亚洲半导体ETF(03486)午后涨近11% 风偏修复叠加监管强力稳市 全球半导体供应链共振回暖",
+      "time": "2026-11-27 14:19:36",
+      "url": "http://www.zhitongcaijing.com/content/detail/1529872.html",
       "source": "智通财经",
-      "theme": "半导体 国产替代",
-      "rank": 5
-    },
-    {
-      "title": "大模型叫“盘古”;操作系统叫“鸿蒙”；手机芯片叫“麒麟”...",
-      "time": "2024-03-12 23:51:59",
-      "url": "https://xueqiu.com/5389433038/281792108",
-      "source": "SNS社区",
-      "theme": "华为",
-      "rank": 1
-    },
-    {
-      "title": "鸿蒙初开，鲲鹏展翅……高科技尖儿货命名能有多浪漫？华为注册了几乎整本山海经！",
-      "time": "2023-09-23 15:16:31",
-      "url": "https://www.cls.cn/detail/1470594",
-      "source": "财联社",
-      "theme": "华为",
-      "rank": 2
-    },
-    {
-      "title": "华为鸿蒙操作系统来了！关注成为鸿蒙示范区！",
-      "time": "2023-09-08 06:32:01",
-      "url": "https://xueqiu.com/5389433038/260602155",
-      "source": "SNS社区",
-      "theme": "华为",
       "rank": 3
     },
     {
-      "title": "盘古大模型华为旗下的盘古系列AI大模型盘古大模型，是华为旗下的盘古系列AI大模型...",
-      "time": "2023-04-08 00:22:02",
-      "url": "https://xueqiu.com/8277150842/246819225",
-      "source": "SNS社区",
-      "theme": "华为",
-      "rank": 4
-    },
-    {
-      "title": "华为盘古AI大模型即将上线",
-      "time": "2023-04-04 11:32:13",
-      "url": "https://www.aigupiao.com/topic/detail/2027",
-      "source": "热门话题",
-      "theme": "华为",
-      "rank": 5
-    },
-    {
-      "title": "财联社9月24日电，微软与OpenAI的竞争对手Anthropic合作开发AI COPILOT。",
-      "time": "2025-09-24 23:03:25",
-      "url": "https://www.cls.cn/detail/2155110",
-      "source": "财联社",
-      "theme": "微软生态",
-      "rank": 1
-    },
-    {
-      "title": "微软为Copilot Studio国际版新增自主智能体功能",
-      "time": "2024-10-22 11:33:05",
-      "url": "https://www.cls.cn/detail/1832993",
-      "source": "财联社",
-      "theme": "微软生态",
-      "rank": 2
-    },
-    {
-      "title": "微软新品推动AI应用加速落地",
-      "time": "2023-09-22 10:32:00",
-      "url": "https://www.aigupiao.com/topic/detail/2550",
-      "source": "热门话题",
-      "theme": "微软生态",
-      "rank": 3
-    },
-    {
-      "title": "微软推动全民AI办公时代降临",
-      "time": "2023-09-22 10:22:01",
-      "url": "https://www.aigupiao.com/topic/detail/2550",
-      "source": "热门话题",
-      "theme": "微软生态",
-      "rank": 4
-    },
-    {
-      "title": "微软（MSFT）将把聊天机器人技术植入Office",
-      "time": "2023-03-17 08:56:59",
-      "url": "https://www.gelonghui.com/live/934461",
+      "theme": "半导体·靶材",
+      "title": "半导体产业链领涨，半导体设备ETF、科创半导体设备ETF涨超8%",
+      "time": "2026-11-27 12:15:29",
+      "url": "https://www.gelonghui.com/news/5364330",
       "source": "格隆汇",
-      "theme": "微软生态",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·靶材",
+      "title": "台积电、中芯国际财报验证全球半导体需求强度，半导体设备ETF万家（159327）标的指数涨4.68%",
+      "time": "2026-11-24 10:32:29",
+      "url": "https://tongbicapital.com/article/detail?id=1475792",
+      "source": "同壁财经",
+      "rank": 5
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "title": "国产算力进入新阶段、自主可控与需求放量双轮驱动，科创综指ETF南方(589660)标的指数盘中涨近4%",
+      "time": "2026-11-27 14:29:01",
+      "url": "https://www.cls.cn/detail/2546451",
+      "source": "财联社",
+      "rank": 1
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "title": "11月27日中电鑫龙（002298）股票异动解析",
+      "time": "2026-11-27 11:56:52",
+      "url": "https://www.jiuyangongshe.com/action/detail/2gwjr3jyqr4",
+      "source": "韭研公社APP",
+      "rank": 2
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "title": "易方达芯片ETF：存储超级周期从“涨价”走向“断供”，芯片板块的定价逻辑正在被重写",
+      "time": "2026-11-27 10:06:23",
+      "url": "https://www.popcj.com/songta/662611739938",
+      "source": "泡财经",
+      "rank": 3
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "title": "财联社11月26日电，全球芯片LOF(501225)将于2026年11月27日开市起至当日10:30停牌",
+      "time": "2026-11-26 19:34:17",
+      "url": "https://www.cls.cn/detail/2545754",
+      "source": "财联社",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "title": "11月26日中电鑫龙（002298）股票异动解析",
+      "time": "2026-11-26 15:21:12",
+      "url": "https://www.jiuyangongshe.com/action/detail/2zcgg8gdb02",
+      "source": "韭研公社APP",
+      "rank": 5
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "title": "海外算力供给收紧，国产HBM方案披露，科创创业人工智能ETF永赢（159141）布局算力产业链",
+      "time": "2026-11-27 12:08:42",
+      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1053292",
+      "source": "21世纪经济报道",
+      "rank": 1
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "title": "兆科眼科-B（06622.HK）11月26日回购16,500股",
+      "time": "2026-11-27 09:21:56",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 2
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "title": "北京同仁堂科技发展股份有限公司（01666.HK）拟修订公司章程并召开临时股东会",
+      "time": "2026-11-26 17:04:19",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 3
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "title": "Benchmark Bankshares（BMBN.US）宣布半年度股息每股0.52美元，较此前增加4%",
+      "time": "2026-11-24 23:31:19",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "title": "健倍苗苗（02161.HK）建议分拆保济元和独立上市 记录日期定于12月7日",
+      "time": "2026-11-23 22:34:09",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 5
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "title": "电力设备股板块走强 亿华通（02402）涨近15% “十五五”电网投资有望突破5万亿",
+      "time": "2026-11-27 14:34:38",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 1
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "title": "芯片股走强 芯碁微装（09630）涨11.00%、长光辰芯（03277）涨7.56%",
+      "time": "2026-11-27 10:24:09",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 2
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "title": "【券商聚焦】国海证券：硅光技术成AI算力核心底座 维持电子推荐",
+      "time": "2026-11-25 16:13:19",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 3
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "title": "光通信板块午后走强 剑桥科技（06166）涨超9% 机构看好中国光通信的长期发展趋势",
+      "time": "2026-11-23 14:23:25",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "title": "长光辰芯（03277.HK）将于12月10日召开临时股东会 审议持续关连交易上限及董事委任",
+      "time": "2026-11-20 23:03:29",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 5
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "title": "甬矽电子盘中涨停",
+      "time": "2026-11-27 14:32:59",
+      "url": "https://www.stcn.com/article/detail/4356979.html",
+      "source": "证券时报",
+      "rank": 1
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "title": "三友化工(600409)：年产10万吨电池级碳酸钠项目产品已能够供应下游钠电正极材料企业生产应用",
+      "time": "2026-11-26 17:50:06",
+      "url": "https://www.gelonghui.com/news/5363616",
+      "source": "格隆汇",
+      "rank": 2
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "title": "翰博高新：构建“显示材料+半导体材料”双轮驱动格局",
+      "time": "2026-11-25 18:57:10",
+      "url": "https://m.21jingji.com/timeline/3c1f8906621820f28a3a032f93102ec9.html",
+      "source": "21世纪经济报道",
+      "rank": 3
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "title": "联盛化学：“52.6万吨/年电子和专用化学品改建项目(一期)”主体已基本建成",
+      "time": "2026-11-23 20:07:24",
+      "url": "https://m.21jingji.com/timeline/d1b6f45f242648f1e8c1b822966572f3.html",
+      "source": "21世纪经济报道",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "title": "联盛化学：公司电子化学品和化妆品业务增速相对较快",
+      "time": "2026-11-23 20:07:24",
+      "url": "https://m.21jingji.com/timeline/0ef46c559cdd0c81509ab99d1eef1c77.html",
+      "source": "21世纪经济报道",
+      "rank": 5
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "title": "科创创新药ETF国泰（589720）11月26日融资净买入710.88万元",
+      "time": "2026-11-27 09:16:35",
+      "url": "https://tongbicapital.com/article/detail?id=1479813",
+      "source": "同壁财经",
+      "rank": 1
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "title": "政金债ETF富国（511520）11月25日融资净买入604.96万元",
+      "time": "2026-11-26 09:16:58",
+      "url": "https://tongbicapital.com/article/detail?id=1478508",
+      "source": "同壁财经",
+      "rank": 2
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "title": "十年国债ETF国泰（511260）11月24日融资净买入799.83万元",
+      "time": "2026-11-25 09:18:09",
+      "url": "https://tongbicapital.com/article/detail?id=1477171",
+      "source": "同壁财经",
+      "rank": 3
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "title": "半导体设备ETF国泰（159516）11月23日融资净买入2454.46万元",
+      "time": "2026-11-24 09:17:39",
+      "url": "https://tongbicapital.com/article/detail?id=1475638",
+      "source": "同壁财经",
+      "rank": 4
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "title": "半导体设备ETF国泰（159516）11月19日融资净买入1.4亿元，居全市场ETF前列",
+      "time": "2026-11-20 09:17:41",
+      "url": "https://tongbicapital.com/article/detail?id=1468909",
+      "source": "同壁财经",
+      "rank": 5
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "title": "光通信板块强势 罗博特科（03757）涨10.92%、中际旭创（03308）涨6.20%",
+      "time": "2026-11-26 09:40:54",
+      "url": "https://data.tdx.com.cn/tdxfiles/",
+      "source": "金吾财讯",
+      "rank": 1
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "title": "兆驰股份(002429)：光芯片端，25G以下的DFB完成批量出货",
+      "time": "2026-11-25 21:20:53",
+      "url": "https://www.gelonghui.com/news/5362829",
+      "source": "格隆汇",
+      "rank": 2
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "title": "11月24日东山精密（002384）股票异动解析",
+      "time": "2026-11-24 11:50:30",
+      "url": "https://www.jiuyangongshe.com/action/detail/1hyfgt073gn",
+      "source": "韭研公社APP",
+      "rank": 3
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "title": "光大同创：拟5亿元投建高速硅光模块智能制造基地项目 生产400G/800G硅光模块",
+      "time": "2026-11-23 19:06:18",
+      "url": "https://www.cls.cn/detail/2542020",
+      "source": "财联社",
+      "rank": 4
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "title": "天孚通信拟投建高速光器件项目，通信ETF银华（159994）等逆市上涨",
+      "time": "2026-11-23 09:49:12",
+      "url": "https://terminal.sfccn.com/news-detail/newsDetail/1/1047758",
+      "source": "21世纪经济报道",
       "rank": 5
     }
   ]

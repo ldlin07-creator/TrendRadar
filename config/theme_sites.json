@@ -1,7 +1,7 @@
 {
   "_说明": "题材专项信息源台账（行业网站+公司网站）。纪律：只 append 新记录，禁止修改/删除已有记录；公司可挂多个题材，历史题材永久保留。",
   "_模型": "公司↔题材多对多：A公司原属题材A，新增题材B时追加一条(公司A,题材B)记录，题材A记录不动。深挖题材X时按 theme 字段过滤，同公司多题材会被各自带出。",
-  "updated_at": "2026-11-27 11:15",
+  "updated_at": "2026-11-27 14:50",
   "source": "WebSearch+WebFetch | 题材行业网站+公司网站发现",
   "items": [
     {
@@ -2503,6 +2503,146 @@
       "title": "浙大网新：华为鲲鹏/欧拉生态适配/AI大模型行业应用/投资者关系活动记录",
       "url": "https://www.insigma.com.cn/news/huawei-ecosystem.html",
       "time": "2026-11-13"
+    },
+    {
+      "theme": "半导体·靶材",
+      "company": "",
+      "kind": "industry",
+      "source": "SEMI大半导体产业网",
+      "site": "https://www.semi.org.cn",
+      "title": "SEMI中国：2026年溅射靶材市场跟踪报告——先进制程靶材国产化率提速",
+      "url": "https://www.semi.org.cn",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·靶材",
+      "company": "江丰电子 300666",
+      "kind": "company",
+      "source": "江丰电子官网",
+      "site": "https://www.kfmic.com",
+      "title": "江丰电子：高纯金属靶材/硅基薄膜/半导体清洗耗材/投资者关系",
+      "url": "https://www.kfmic.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "company": "",
+      "kind": "industry",
+      "source": "中国半导体行业协会",
+      "site": "https://www.csia.net.cn",
+      "title": "CSIA：中国存储器产业发展白皮书2026——长鑫存储引领DRAM国产替代",
+      "url": "https://www.csia.net.cn",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·长鑫存储概念",
+      "company": "长鑫存储",
+      "kind": "company",
+      "source": "长鑫存储官网",
+      "site": "https://www.cxmt.com",
+      "title": "长鑫存储：LPDDR5X/DRAM量产进度/华为鲲鹏生态适配/投资者关系",
+      "url": "https://www.cxmt.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "company": "",
+      "kind": "industry",
+      "source": "JEDEC标准组织/存储器产业联盟",
+      "site": "https://www.jedec.org",
+      "title": "JEDEC发布HBM4标准草案：单包带宽超1.6TB/s 存算一体接口规范同步推进",
+      "url": "https://www.jedec.org",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·高带宽存储器HBM",
+      "company": "精测电子 300567",
+      "kind": "company",
+      "source": "精测电子官网",
+      "site": "https://www.wuhanjingce.com",
+      "title": "精测电子：HBM封装测试设备/先进封装量测/存储器测试方案/投资者关系",
+      "url": "https://www.wuhanjingce.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "company": "",
+      "kind": "industry",
+      "source": "SEMI中国硅光委员会/宜兴市光通信产业联盟",
+      "site": "https://www.semi.org.cn",
+      "title": "SEMI硅光委员会：2026年硅光子芯片产业链图谱——CPO/光引擎/波导工艺全景",
+      "url": "https://www.semi.org.cn",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·光芯片硅光",
+      "company": "长光华芯 688048",
+      "kind": "company",
+      "source": "长光华芯官网",
+      "site": "https://www.everbrightphotonics.com",
+      "title": "长光华芯：硅光调制器/探测器/CPO光引擎/车载激光雷达芯片/投资者关系",
+      "url": "https://www.everbrightphotonics.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "company": "",
+      "kind": "industry",
+      "source": "中国电子材料行业协会",
+      "site": "https://www.cemia.org.cn",
+      "title": "CEMIA：2026年电子化学品行业运行报告——光刻胶/显影液/刻蚀气体国产化突破",
+      "url": "https://www.cemia.org.cn",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·电子化学品材料",
+      "company": "菲沃泰 688371",
+      "kind": "company",
+      "source": "菲沃泰官网",
+      "site": "https://www.favoredtech.com",
+      "title": "菲沃泰：半导体湿法刻蚀/清洗化学品/光刻胶配套材料/投资者关系",
+      "url": "https://www.favoredtech.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "company": "",
+      "kind": "industry",
+      "source": "国家集成电路产业投资基金官网",
+      "site": "https://www.icfund.com.cn",
+      "title": "大基金三期：累计投资超3000亿元 重点布局存储/先进封装/设备材料/EDA工具链",
+      "url": "https://www.icfund.com.cn",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "半导体·国家大基金持股",
+      "company": "燕东微 688172",
+      "kind": "company",
+      "source": "燕东微官网",
+      "site": "https://www.ydme.com",
+      "title": "燕东微：大基金持股/射频前端/功率器件/8英寸/12英寸双产线/投资者关系",
+      "url": "https://www.ydme.com",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "company": "",
+      "kind": "industry",
+      "source": "光纤在线",
+      "site": "https://www.c-fol.net",
+      "title": "光纤在线：CPO/硅光/1.6T光模块产业链深度追踪——2026年量产时间表与供应链图谱",
+      "url": "https://www.c-fol.net",
+      "time": "2026-11-27"
+    },
+    {
+      "theme": "通信设备·光模块CPO",
+      "company": "长盈通 300162",
+      "kind": "company",
+      "source": "长盈通官网",
+      "site": "https://www.yoec.com.cn",
+      "title": "长盈通：CPO光模块/光引擎/硅光芯片封装/海外产能布局/投资者关系",
+      "url": "https://www.yoec.com.cn",
+      "time": "2026-11-27"
     }
   ]
 }

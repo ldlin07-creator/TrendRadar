@@ -1,146 +1,111 @@
 {
-  "updated_at": "2026-11-27 11:02",
+  "updated_at": "2026-11-27 14:28",
   "source": "新华财经资讯MCP(get_xhcj_hotNews) | 桥接写入",
   "items": [
+    {
+      "title": "【监管部门：将进一步健全资本市场法律制度体系】11月27日召开的国务院常务会议，研究持续深化资本市场投融资综合改革工作。监管部门表示，将进一步健全资本市场法律制度体系，着力提高资本市场监管和治理水平，不断完善全链条监管体系，加快构建行政刑事民事有效衔接的追责体系。推进监管数智化转型，加强RWA代币化等新型业务监管和风险防控。进一步完善符合我国国情市情的投资者保护体系，积极营造公开公平公正的市场环境。",
+      "pub": "2026-11-27 13:57:21",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551112406500745216/1",
+      "source": "新华财经",
+      "rank": 1
+    },
+    {
+      "title": "【监管部门：更加精准支持优质科技企业发行上市】11月27日召开的国务院常务会议，研究持续深化资本市场投融资综合改革工作。监管部门表示，将在维护市场稳定运行的前提下，进一步聚焦国家战略大局，更加精准支持优质科技企业发行上市。同时密切跟踪科技产业发展最新趋势，提高相关制度的包容性、精准性，严防“伪科技”借机上市、无真实业绩公司“注水”上市，切实维护公平有序的新股发行秩序。",
+      "pub": "2026-11-27 13:24:55",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551103231301378048/1",
+      "source": "新华财经",
+      "rank": 2
+    },
+    {
+      "title": "【监管部门：持续筑牢资本市场风险防波堤防浪堤，全力维护资本市场平稳运行。】11月27日召开的国务院常务会议，研究持续深化资本市场投融资综合改革工作。监管部门表示，将加强跨境风险监测研判和政策工具储备，巩固完善稳市机制建设，持续筑牢资本市场风险防波堤防浪堤，全力维护资本市场平稳运行。",
+      "pub": "2026-11-27 13:23:25",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551102529614831616/1",
+      "source": "新华财经",
+      "rank": 3
+    },
+    {
+      "title": "【监管部门：将全力推动中长期资金入市政策文件取得更多成效】11月27日召开的国务院常务会议，研究持续深化资本市场投融资综合改革工作。监管部门表示，将全力推动中长期资金入市政策文件取得更多成效，持续健全“长钱长投”的市场机制和生态，进一步推动长周期考核全面落实落地，持续深化公募基金改革，研究推出更多务实管用的新政策新举措，推动形成长期投资回报稳定、投融资协调发展和市场功能有效发挥的良性互动。",
+      "pub": "2026-11-27 13:18:49",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551102967731314688/1",
+      "source": "新华财经",
+      "rank": 4
+    },
+    {
+      "title": "疗效、支付与服务——脑机接口闯关商业化观察",
+      "pub": "2026-11-27 12:01:40",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551061346339446784/1",
+      "source": "新华财经",
+      "rank": 5
+    },
+    {
+      "title": "欧盟特别峰会未就七年预算达成一致",
+      "pub": "2026-11-27 11:52:26",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551079817492668416/1",
+      "source": "新华财经",
+      "rank": 6
+    },
+    {
+      "title": "午评：创业板指半日涨3.79% 华为昇腾概念集体走强",
+      "pub": "2026-11-27 11:50:37",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551078713614327808/1",
+      "source": "新华财经",
+      "rank": 7
+    },
+    {
+      "title": "普京：俄需更新2036年前人工智能国家战略",
+      "pub": "2026-11-27 10:43:20",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551063601868365824/1",
+      "source": "新华财经",
+      "rank": 8
+    },
+    {
+      "title": "【新华财经调查】智谱的创新与商业账本：一家基座公司的长期探索",
+      "pub": "2026-11-27 10:31:31",
+      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550817437428408320/1",
+      "source": "新华财经",
+      "rank": 9
+    },
     {
       "title": "遇见未来 | 在喧嚣处立尺，向无人处“探路”——对话智谱CEO张鹏",
       "pub": "2026-11-27 09:56:49",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551038360735637504/1",
       "source": "新华财经",
-      "rank": 1
+      "rank": 10
     },
     {
       "title": "国家统计局：1—10月份规模以上工业企业利润保持较快增长",
       "pub": "2026-11-27 09:38:36",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551047023525748736/1",
       "source": "新华财经",
-      "rank": 2
+      "rank": 11
     },
     {
       "title": "【五大信披媒体精华摘要】11月27日",
       "pub": "2026-11-27 08:13:18",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551021084753977344/1",
       "source": "新华财经",
-      "rank": 3
+      "rank": 12
     },
     {
       "title": "【读财报】三季度券商普惠金融规模稳增：中信证券、中金公司等领跑同业",
       "pub": "2026-11-27 07:53:23",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550777084683935744/1",
       "source": "新华财经",
-      "rank": 4
+      "rank": 13
     },
     {
       "title": "英国央行释放千亿英镑放贷能力 警示资本要求再降将危及金融稳定",
       "pub": "2026-11-27 07:33:19",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/551016244413915136/1",
       "source": "新华财经",
-      "rank": 5
+      "rank": 14
     },
     {
       "title": "特朗普：在与普京会谈中敦促其尽快与乌克兰达成协议",
       "pub": "2026-11-27 06:23:52",
       "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550902428883836928/1",
       "source": "新华财经",
-      "rank": 6
-    },
-    {
-      "title": "【新华解读】从连接“人”到连接“智能体” 新一代通信网建设路线图出炉",
-      "pub": "2026-11-26 21:39:44",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550859388169134080/1",
-      "source": "新华财经",
-      "rank": 7
-    },
-    {
-      "title": "货币市场日报：11月26日",
-      "pub": "2026-11-26 20:38:31",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550849476743585792/1",
-      "source": "新华财经",
-      "rank": 8
-    },
-    {
-      "title": "商务部解读《服务贸易发展“十五五”规划》亮点",
-      "pub": "2026-11-26 20:09:36",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550837499598118912/1",
-      "source": "新华财经",
-      "rank": 9
-    },
-    {
-      "title": "新华财经晚报：《服务贸易发展“十五五”规划》印发 明确发展人工智能服务贸易新业态",
-      "pub": "2026-11-26 18:47:31",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550765972114710528/1",
-      "source": "新华财经",
-      "rank": 10
-    },
-    {
-      "title": "商品日报（11月26日）：能化走强燃料油涨近7% 氢氧化锂上市首日跌超7%",
-      "pub": "2026-11-26 18:42:50",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550772964711833600/1",
-      "source": "新华财经",
-      "rank": 11
-    },
-    {
-      "title": "债市日报：11月26日",
-      "pub": "2026-11-26 16:22:55",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550785774921555968/1",
-      "source": "新华财经",
-      "rank": 12
-    },
-    {
-      "title": "【中经社信号】AI漫剧主角变身“代言人” 合规与信任是必答题",
-      "pub": "2026-11-26 16:21:14",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550785113932357632/1",
-      "source": "新华财经",
-      "rank": 13
-    },
-    {
-      "title": "收评：创业板指涨0.29% 贵金属和元件板块涨幅靠前",
-      "pub": "2026-11-26 15:31:07",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550770877084655616/1",
-      "source": "新华财经",
-      "rank": 14
-    },
-    {
-      "title": "商务部：坚决反对美对中国等经济体加征301关税",
-      "pub": "2026-11-26 15:12:44",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550769233928314880/1",
-      "source": "新华财经",
       "rank": 15
-    },
-    {
-      "title": "氢氧化锂期货今日在广期所挂牌上市",
-      "pub": "2026-11-26 14:06:44",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550752757678940160/1",
-      "source": "新华财经",
-      "rank": 16
-    },
-    {
-      "title": "美批准马斯克旗下公司部署百万卫星 建太空数据中心",
-      "pub": "2026-11-26 13:26:29",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550741354280574976/1",
-      "source": "新华财经",
-      "rank": 17
-    },
-    {
-      "title": "午评：创业板指冲高回落微涨 PCB、化工股集体走强",
-      "pub": "2026-11-26 11:53:23",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550715656358780928/1",
-      "source": "新华财经",
-      "rank": 18
-    },
-    {
-      "title": "国家能源局：2026年1-10月全国电力市场交易电量同比增长18.3%",
-      "pub": "2026-11-26 11:19:09",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550708936169873408/1",
-      "source": "新华财经",
-      "rank": 19
-    },
-    {
-      "title": "香港金管局正式推出CMU数字资产平台 首批10家CMU会员参与",
-      "pub": "2026-11-26 11:18:10",
-      "url": "https://bm.cnfic.com.cn/sharing/share/articleDetail/550695418997612544/1",
-      "source": "新华财经",
-      "rank": 20
     }
   ]
 }
